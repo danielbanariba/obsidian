@@ -1,0 +1,173 @@
+{
+  "main": {
+    "id": "e60b3f84523f4fcc",
+    "type": "split",
+    "children": [
+      {
+        "id": "a114ff9a6631ea35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2ddd2e70f141cdc2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/Azure.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b9cc9ead7be3627",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cc73dce27a2adbb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9bffff4ecbdae91d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e25cea47aad6af16",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ddab6b991413b262",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1d557ebc4901ae80",
+    "type": "split",
+    "children": [
+      {
+        "id": "74b76a5910869764",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "169f8fbb9acd3174",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sistemas Expertos/Azure.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d4f5a4cce4f91f51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sistemas Expertos/Azure.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f0f32eb22bbc64ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9be0aab925c3871e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sistemas Expertos/Azure.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
+    }
+  },
+  "active": "9bffff4ecbdae91d",
+  "lastOpenFiles": [
+    "Sistemas Expertos/Astro.md",
+    "Seguridad  Informatica/Primer Parcial.md",
+    "Git & Github/Comandos en Git.md",
+    "Sistemas Expertos/Taiwind.md",
+    "Sistemas Expertos/NEXT.js.md",
+    "Sistemas Expertos/FastAPI.md",
+    "Sistemas Expertos/Azure.md",
+    "Plugins y comandos para Obsidian.md",
+    "Sin título.canvas",
+    "Hola.md",
+    "2024-09-17.md",
+    "Git & Github",
+    "Seguridad  Informatica",
+    "img/tailwind-css.svg",
+    "img",
+    "img/logo-teal.png",
+    "nextjs.png",
+    "Sistemas Expertos",
+    "Sistemas Expertos.md",
+    "2024-09-16.md"
+  ]
+}
