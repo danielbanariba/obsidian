@@ -1,114 +1,97 @@
-**Comandos en Git
+---
+tags:
+  - Git
+  - Backend
+  - Github
+  - Shell
+  - Terminal
+---
+---
+## Comandos en Git
 
-//Hace el repositorio
-
+Hace el repositorio
 ```bash
 git init 
 ```
 
-
-  
-
- //Agrega el archivo al repositorio
-
+Agrega el archivo al repositorio
+```bash
 git add <<El nombre del archivo>>
+```
 
-  
-
-//Agrega todos los archivos al repositorio
-
+Agrega todos los archivos al repositorio
+```bash
 git add .
+```
 
-  
-
-//Es el que manda los últimos cambios a la base de datos del control de versiones
-
+Es el que manda los últimos cambios a la base de datos del control de versiones
+```bash
 git commit -m “Version 1”
+```
 
-  
-
-//Ver el estado de la base de datos
-
+Ver el estado de la base de datos
+```bash
 git status
+```
 
-  
-
-//Miras todos los cambios históricos hechos en el repositorio
-
+Miras todos los cambios históricos hechos en el repositorio
+```bash
 git show
+```
 
-  
-
-//Mira la historia entera de un archivo
-
+Mira la historia entera de un archivo
+```bash
 git log <<Nombre del archivo>>
+```
 
-  
-
-//Manda el repositorio a un servidor remoto
-
+Manda el repositorio a un servidor remoto
+```bash
 git push
+```
 
-  
-
-//Crear carpetas
-
+Crear carpetas
+```bash
 mkdir <<Nombre de la carpeta>>
+```
 
-  
-
-//Crear archivos
-
+Crear archivo en blanco
+```bash
 touch <<Nombre del archivo con su extencion>>
+```
 
-  
-
-//Ver el contenido de un archivo
-
+Ver el contenido de un archivo
+```bash
 cat <<Nombre del archivo>>
+```
 
-  
-
-//Eliminar el archivo
-
+Eliminar el archivo
+```bash
 rm<<Nombre del archivo>>
+```
 
-  
-
-//Agrega un nombre
-
+Agrega un nombre
+```bash
 git config –global user.name <<”Nombre de la persona”>>
+```
 
-  
+Agrega un correo
 
-//Agrega un correo
-
+```bash
 git config –global user.email <<”La dirrecion de correo electronico”>>
+```
 
-  
-
-//Mira el historial de un archivo
-
+Mira el historial de un archivo
+```bash
 git log <<Nombre del archivo>>
+```
 
-  
-  
-
-//Mira detalles y modificaciones de un archivo
-
+Mira detalles y modificaciones de un archivo
+```bash
 git show <<Nombre del archivo>>
+```
 
-  
-  
-  
 
-Curso de MoureDEV
-
-  
-
-//Crea un archivo en blanco
-
-touch <<Nombre del archivo>>
+### Curso de MoureDEV
 
   
 

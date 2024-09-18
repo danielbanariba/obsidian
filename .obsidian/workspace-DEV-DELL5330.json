@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "89e69947f155a804",
+        "id": "cabd74c01df76332",
         "type": "tabs",
         "children": [
           {
-            "id": "3422e11c3becc7a0",
+            "id": "663712d05d31f255",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Plugins y comandos para Obsidian.md",
+                "file": "Sistemas Expertos/Astro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Plugins y comandos para Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Plugins y comandos para Obsidian.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Plugins y comandos para Obsidian.md"
+                "file": "Hola.md"
               }
             }
           }
@@ -143,31 +141,24 @@
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false
+      "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "3422e11c3becc7a0",
+  "active": "9bffff4ecbdae91d",
   "lastOpenFiles": [
-    "img/Pasted image 20240917193403.png",
-    "img/Pasted image 20240917193417.png",
-    "img/Pasted image 20240917203301.png",
     "Plugins y comandos para Obsidian.md",
-    "Sistemas Expertos/Taiwind.md",
+    "Plugins y comandos para.md",
+    "Sistemas Expertos/Astro.md",
+    "Hola.md",
+    "Git & Github/Comandos en Git.md",
     "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/FastAPI.md",
-    "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/Astro.md",
     "Seguridad  Informatica/Primer Parcial.md",
-    "Ingles/Vocabulary.md",
-    "Git & Github/Comandos en Git.md",
-    "Ingles",
-    "Sin título.canvas",
-    "Hola.md",
-    "2024-09-17.md",
     "Git & Github",
+    "Sistemas Expertos/Taiwind.md",
     "Seguridad  Informatica",
     "img/tailwind-css.svg",
+    "Sistemas Expertos/Azure.md",
     "img",
     "img/logo-teal.png",
     "nextjs.png",
