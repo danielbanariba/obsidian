@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "eb717670abeef4d3",
+        "id": "cabd74c01df76332",
         "type": "tabs",
         "children": [
           {
-            "id": "96aed4a7ee575b47",
+            "id": "663712d05d31f255",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas Expertos/Portafolios que inspiran.md",
+                "file": "Sistemas Expertos/Astro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemas Expertos/Portafolios que inspiran.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemas Expertos/Portafolios que inspiran.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,32 +123,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemas Expertos/Portafolios que inspiran.md"
+                "file": "Hola.md"
               }
             }
-          },
-          {
-            "id": "61d43b876fcb282d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "46932e2045773012",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 466.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,41 +144,30 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "96aed4a7ee575b47",
+  "active": "9bffff4ecbdae91d",
   "lastOpenFiles": [
-    "img/portafolio/Pasted image 20240919000511.png",
-    "img/portafolio/Pasted image 20240919002031.png",
-    "img/portafolio/Pasted image 20240919002108.png",
-    "Sistemas Expertos/Portafolios que inspiran.md",
-    "img/portafolio/Pasted image 20240919040036.png",
-    "img/portafolio/Pasted image 20240919040018.png",
-    "img/portafolio/Pasted image 20240919035959.png",
-    "img/portafolio/Pasted image 20240919035934.png",
-    "img/portafolio/Pasted image 20240919035829.png",
-    "img/portafolio/Pasted image 20240919035041.png",
-    "img/portafolio/Pasted image 20240919033921.png",
-    "img/portafolio/Pasted image 20240919010957.png",
-    "img/portafolio",
-    "Sistemas Expertos/Astro.md",
-    "Seguridad  Informatica/Primer Parcial.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 23 08.md",
     "smart-chats",
-    "Sistemas Expertos/Taiwind.md",
-    "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/FastAPI.md",
-    "Sistemas Expertos/NEXT.js.md",
+    "img/Pasted image 20240917203301.png",
+    "img/Pasted image 20240917193417.png",
+    "img/Pasted image 20240917193403.png",
     "Ingles/Vocabulary.md",
-    "Plugins y comandos para Obsidian.md",
-    "Git & Github/Comandos en Git.md",
     "Ingles",
-    "Sin título.canvas",
+    "Plugins y comandos para Obsidian.md",
+    "Plugins y comandos para.md",
+    "Sistemas Expertos/Astro.md",
     "Hola.md",
-    "2024-09-17.md",
+    "Git & Github/Comandos en Git.md",
+    "Sistemas Expertos/NEXT.js.md",
+    "Sistemas Expertos/FastAPI.md",
+    "Seguridad  Informatica/Primer Parcial.md",
     "Git & Github",
+    "Sistemas Expertos/Taiwind.md",
     "Seguridad  Informatica",
+    "img/tailwind-css.svg",
+    "Sistemas Expertos/Azure.md",
     "img",
+    "img/logo-teal.png",
+    "nextjs.png",
     "Sistemas Expertos",
     "Sistemas Expertos.md",
     "2024-09-16.md"
