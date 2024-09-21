@@ -135,7 +135,7 @@ Me gustaria mas que todo quedaran asi, vivo y no apagado
  * Objetivo: Crear el texto base para cada sección sin preocuparte por el código.
 	-  Tareas:
 		- Escribir una introducción personal que refleje quién eres y qué haces.
-			- "Ingeniero en sistemas/Programador, con sólida experiencia en resolver problemas mediante el desarrollo de soluciones tecnológicas. Tengo experiencia en el desarrollo de software utilizando Java, Python, JavaScript, entre otras tecnologías, así como en la gestión de bases de datos relacionales con Oracle. Mi capacidad para traducir ideas creativas en productos se refleja en proyectos destacados que he realizado. Con un compromiso inquebrantable con la excelencia y una mentalidad orientada a resultados, estoy preparado para aportar soluciones innovadoras y superar los desafíos tecnológicos que se presenten."
+			- "Ingeniero en sistemas/Programador entusiasta, con sólida experiencia en resolver problemas mediante el desarrollo de soluciones tecnológicas. Tengo experiencia en el desarrollo de software utilizando Java, Python, JavaScript, entre otras tecnologías, así como en la gestión de bases de datos relacionales con Oracle. Mi capacidad para traducir ideas creativas en productos se refleja en proyectos destacados que he realizado. Con un compromiso inquebrantable con la excelencia y una mentalidad orientada a resultados, estoy preparado para aportar soluciones innovadoras y superar los desafíos tecnológicos que se presenten."
 			
 		- Describir detalladamente cada proyecto o experiencia que incluirás.
 			- 1. Analyzepy: Analizador Léxico y Traductor de Código
@@ -184,13 +184,10 @@ Me gustaria mas que todo quedaran asi, vivo y no apagado
 
 • Objetivo: Visualizar cómo se organizará el contenido en el sitio web.
 
-• Tareas:
-
-• Hacer bocetos de la disposición de cada página o sección.
-
-• Decidir la navegación y cómo los usuarios interactuarán con el sitio.
-
-• Elegir una paleta de colores y estilo visual acorde a tu marca personal.
+ - Tareas:
+	 - Hacer bocetos de la disposición de cada página o sección.
+	 - Decidir la navegación y cómo los usuarios interactuarán con el sitio.
+	 - Elegir una paleta de colores y estilo visual acorde a tu marca personal.
 - https://colorhunt.co/palette/151515301b3f3c415cb4a5a5
 ![[Pasted image 20240919035829.png]]
 - https://colorhunt.co/palette/635985443c6839305318122b
@@ -239,7 +236,7 @@ Me gustaria mas que todo quedaran asi, vivo y no apagado
 
 • Organizar todos los archivos y recursos en carpetas estructuradas.
 
-• Familiarizarte con las herramientas y tecnologías que utilizarás (e.g., Tailwind, AstroJS).
+• Familiarizarte con las herramientas y tecnologías que utilizarás (e.g., [[Tailwind]],  [[AstroJS]]).
 
 • Planificar un cronograma para la fase de desarrollo.
 
@@ -250,3 +247,9 @@ Foto de perfil
 ![[Pasted image 20240919000511.png]]
 
 ![[Pasted image 20240919010345.png]]
+
+NOTAS IMPORTANTES:
+Es importante darse vender y no tanto lo que sabes
+Si vas a poner certificados que sean para resolver problemas y en que puedo ayudar a la empresa 
+En los proyectos que he trabajado y que los ingenieros les ha encantado, decriles que dejen algunn comentario con su nombre en mi pagina para que de esa menera darle mas credebilidad
+Tener un solo estilo en cada pagina

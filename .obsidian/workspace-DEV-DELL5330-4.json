@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "49530d42dc68afb5",
+        "id": "ea97b8c80fcf8366",
         "type": "tabs",
         "children": [
           {
-            "id": "c4041215f5b9d0ca",
+            "id": "7a3c014ca7ad2d3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas Expertos/Typscript.md",
+                "file": "Seguridad  Informatica/Primer Parcial.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,6 +80,35 @@
         "type": "tabs",
         "children": [
           {
+            "id": "169f8fbb9acd3174",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Seguridad  Informatica/Primer Parcial.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d4f5a4cce4f91f51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Seguridad  Informatica/Primer Parcial.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
             "id": "f0f32eb22bbc64ec",
             "type": "leaf",
             "state": {
@@ -91,23 +120,17 @@
             }
           },
           {
-            "id": "4e1300ddff45e277",
+            "id": "9be0aab925c3871e",
             "type": "leaf",
             "state": {
-              "type": "copilot-chat-view",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "Seguridad  Informatica/Primer Parcial.md"
+              }
             }
           },
           {
-            "id": "de9a35b2e777f4f2",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "ab08903727636092",
+            "id": "61d43b876fcb282d",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -115,10 +138,10 @@
             }
           },
           {
-            "id": "d903d09b77c15567",
+            "id": "46932e2045773012",
             "type": "leaf",
             "state": {
-              "type": "chatbot-view",
+              "type": "smart-connections-view",
               "state": {}
             }
           }
@@ -127,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 466.5
+    "width": 466.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -136,37 +160,19 @@
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "copilot:Copilot Chat": false,
-      "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false,
-      "bmo-chatbot:BMO Chatbot": false
+      "command-palette:Abrir paleta de comandos": false
     }
   },
   "active": "9bffff4ecbdae91d",
   "lastOpenFiles": [
-    "img/Pasted image 20240921002134.png",
-    "Sistemas Expertos/Tailwind.md",
+    "Linux",
     "Sistemas Expertos/Portafolios que inspiran.md",
+    "Sistemas Expertos/Tailwind.md",
+    "Tailwind.md",
+    "Sistemas Expertos/AstroJS.md",
     "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/AstroJS.md",
-    "BMO/Profiles/BMO.md",
-    "BMO/Profiles",
-    "BMO",
-    "smart-chats/UNTITLED CHAT 2024-09-21 03 07 19.md",
-    "smart-chats",
-    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
-    "copilot-conversations",
-    "Sistemas Expertos/Typscript.md",
-    "Seguridad  Informatica/Primer Parcial.md",
-    "Linux/Comandos-banar.md",
-    "Linux/Comandos.md",
-    "Linux/Sin título.md",
-    "Linux",
-    "Sin nombre",
-    "Tailwind.md",
     "img/portafolio/Pasted image 20240919000511.png",
     "img/portafolio/Pasted image 20240919002031.png",
     "img/portafolio/Pasted image 20240919002108.png",
@@ -178,9 +184,11 @@
     "img/portafolio/Pasted image 20240919035041.png",
     "img/portafolio/Pasted image 20240919033921.png",
     "img/portafolio",
+    "Seguridad  Informatica/Primer Parcial.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 23 08.md",
+    "smart-chats",
     "Ingles/Vocabulary.md",
     "Plugins y comandos para Obsidian.md",
     "Git & Github/Comandos en Git.md",
@@ -190,6 +198,8 @@
     "2024-09-17.md",
     "Git & Github",
     "Seguridad  Informatica",
+    "img",
+    "Sistemas Expertos",
     "Sistemas Expertos.md",
     "2024-09-16.md"
   ]
