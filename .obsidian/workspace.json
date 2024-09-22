@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "49530d42dc68afb5",
+        "id": "26f9d34f2d4c498a",
         "type": "tabs",
         "children": [
           {
-            "id": "c4041215f5b9d0ca",
+            "id": "79db2ad9540b2c68",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sistemas Expertos/Typscript.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -145,21 +141,25 @@
   },
   "active": "9bffff4ecbdae91d",
   "lastOpenFiles": [
+    "BMO/Profiles/BMO.md",
+    "Comandos en Visual Estudio Code.md",
+    "Ingles/Vocabulary.md",
+    "Sistemas Expertos/AstroJS.md",
+    "Sistemas Expertos/Azure.md",
+    "Sistemas Expertos/FastAPI.md",
+    "Sistemas Expertos/Typscript.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
+    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
+    "Sistemas Expertos/Terraform.md",
+    "Sistemas Expertos/Docker.md",
     "img/Pasted image 20240921002134.png",
     "Sistemas Expertos/Tailwind.md",
-    "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/NEXT.js.md",
-    "Sistemas Expertos/FastAPI.md",
-    "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/AstroJS.md",
-    "BMO/Profiles/BMO.md",
     "BMO/Profiles",
     "BMO",
     "smart-chats/UNTITLED CHAT 2024-09-21 03 07 19.md",
     "smart-chats",
-    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
     "copilot-conversations",
-    "Sistemas Expertos/Typscript.md",
     "Seguridad  Informatica/Primer Parcial.md",
     "Linux/Comandos-banar.md",
     "Linux/Comandos.md",
@@ -176,12 +176,10 @@
     "img/portafolio/Pasted image 20240919035934.png",
     "img/portafolio/Pasted image 20240919035829.png",
     "img/portafolio/Pasted image 20240919035041.png",
-    "img/portafolio/Pasted image 20240919033921.png",
     "img/portafolio",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 23 08.md",
-    "Ingles/Vocabulary.md",
     "Plugins y comandos para Obsidian.md",
     "Git & Github/Comandos en Git.md",
     "Ingles",
@@ -189,8 +187,6 @@
     "Hola.md",
     "2024-09-17.md",
     "Git & Github",
-    "Seguridad  Informatica",
-    "Sistemas Expertos.md",
-    "2024-09-16.md"
+    "Seguridad  Informatica"
   ]
 }
