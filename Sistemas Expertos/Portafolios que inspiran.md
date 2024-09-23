@@ -186,7 +186,12 @@ Me gustaria mas que todo quedaran asi, vivo y no apagado
 
  - Tareas:
 	 - Hacer bocetos de la disposición de cada página o sección.
+	 - ![[Pasted image 20240923002519.png]]
+	 - ![[Pasted image 20240923002548.png]]
+	 - ![[Pasted image 20240923002554.png]]
+	 - 
 	 - Decidir la navegación y cómo los usuarios interactuarán con el sitio.
+		 - Va a tener responsibe, osea quiero hacerlo de tal manera que sea vea bien en computadoras, laptos y celulares
 	 - Elegir una paleta de colores y estilo visual acorde a tu marca personal.
 - https://colorhunt.co/palette/151515301b3f3c415cb4a5a5
 ![[Pasted image 20240919035829.png]]

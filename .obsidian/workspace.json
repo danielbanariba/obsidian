@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "26f9d34f2d4c498a",
+        "id": "295db7346711b05b",
         "type": "tabs",
         "children": [
           {
-            "id": "79db2ad9540b2c68",
+            "id": "b83eaab08ad2f506",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/AstroJS.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -87,43 +91,50 @@
             }
           },
           {
-            "id": "4e1300ddff45e277",
+            "id": "f308b7c4d1ad4670",
             "type": "leaf",
             "state": {
-              "type": "copilot-chat-view",
-              "state": {}
+              "type": "backlink",
+              "state": {
+                "file": "Sistemas Expertos/AstroJS.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           },
           {
-            "id": "de9a35b2e777f4f2",
+            "id": "6730a00fe0802760",
             "type": "leaf",
             "state": {
-              "type": "smart-connections-view",
-              "state": {}
+              "type": "outgoing-link",
+              "state": {
+                "file": "Sistemas Expertos/AstroJS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           },
           {
-            "id": "ab08903727636092",
+            "id": "04d99e77ac700c20",
             "type": "leaf",
             "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "d903d09b77c15567",
-            "type": "leaf",
-            "state": {
-              "type": "chatbot-view",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "Sistemas Expertos/AstroJS.md"
+              }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 466.5
+    "width": 466.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -132,50 +143,47 @@
       "canvas:Crear nuevo lienzo": false,
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
-      "copilot:Copilot Chat": false,
-      "smart-connections:Open: View Smart Connections": false,
-      "smart-connections:Open: Smart Chat Conversation": false,
-      "bmo-chatbot:BMO Chatbot": false
+      "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9bffff4ecbdae91d",
+  "active": "b83eaab08ad2f506",
   "lastOpenFiles": [
-    "BMO/Profiles/BMO.md",
-    "Comandos en Visual Estudio Code.md",
-    "Ingles/Vocabulary.md",
-    "Sistemas Expertos/AstroJS.md",
-    "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/FastAPI.md",
-    "Sistemas Expertos/Typscript.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
-    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
-    "Sistemas Expertos/Terraform.md",
-    "Sistemas Expertos/Docker.md",
-    "img/Pasted image 20240921002134.png",
-    "Sistemas Expertos/Tailwind.md",
+    "Sistemas Expertos/Portafolios_que_inspiran.docx",
+    "img/portafolio/Pasted image 20240923002519.png",
+    "img/portafolio/Pasted image 20240919022057.png",
+    "img/portafolio/Pasted image 20240923002554.png",
+    "img/portafolio/Pasted image 20240923002548.png",
+    "img/portafolio/Pasted image 20240919002031.png",
+    "Pasted image 20240923002554.png",
+    "Pasted image 20240923002548.png",
+    "Pasted image 20240923002519.png",
+    "img/portafolio/Pasted image 20240919000511.png",
+    "img/tailwind-css.svg",
     "Sistemas Expertos/NEXT.js.md",
+    "Sistemas Expertos/FastAPI.md",
+    "Sistemas Expertos/Docker.md",
+    "Sistemas Expertos/Azure.md",
+    "Sistemas Expertos/AstroJS.md",
+    "Ingles/Vocabulary.md",
+    "Sistemas Expertos/Typscript.md",
+    "Reflex",
+    "Linux/Comandos-banar.md",
+    "BMO/Profiles/BMO.md",
+    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
+    "Comandos en Visual Estudio Code.md",
+    "Sistemas Expertos/Terraform.md",
+    "Sistemas Expertos/Tailwind.md",
     "BMO/Profiles",
     "BMO",
     "smart-chats/UNTITLED CHAT 2024-09-21 03 07 19.md",
     "smart-chats",
     "copilot-conversations",
     "Seguridad  Informatica/Primer Parcial.md",
-    "Linux/Comandos-banar.md",
     "Linux/Comandos.md",
     "Linux/Sin título.md",
     "Linux",
-    "Sin nombre",
     "Tailwind.md",
-    "img/portafolio/Pasted image 20240919000511.png",
-    "img/portafolio/Pasted image 20240919002031.png",
-    "img/portafolio/Pasted image 20240919002108.png",
-    "img/portafolio/Pasted image 20240919040036.png",
-    "img/portafolio/Pasted image 20240919040018.png",
-    "img/portafolio/Pasted image 20240919035959.png",
-    "img/portafolio/Pasted image 20240919035934.png",
-    "img/portafolio/Pasted image 20240919035829.png",
-    "img/portafolio/Pasted image 20240919035041.png",
     "img/portafolio",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
@@ -185,8 +193,6 @@
     "Ingles",
     "Sin título.canvas",
     "Hola.md",
-    "2024-09-17.md",
-    "Git & Github",
-    "Seguridad  Informatica"
+    "Git & Github"
   ]
 }

@@ -88,12 +88,6 @@ Slot =  es como una especia de variable para poder remplazar un componente, es p
 <Slot>
 ```
 
-
-EL .map() escomo un forech
-```typescript
-.map()
-```
-
 mdx son archivos markodown (o como se escriba xd) 
 
 ---

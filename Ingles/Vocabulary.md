@@ -4,5 +4,6 @@ tags:
   - Vocabulario
 ---
 ---
-Yay = 
-So = 
+Yay = YYYYYYYY???
+So = Asi que/Entonces, 
+
