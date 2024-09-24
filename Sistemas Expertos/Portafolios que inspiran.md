@@ -77,6 +77,13 @@ Me gusta como como fragmenta los lenguajes y skills que puede dominar
 Me gustaria mas que todo quedaran asi, vivo y no apagado  
 ![[Pasted image 20240919011025.png]]
 
+https://mattfarley.ca/
+Me gustaria poder dividirlo asi como aqui, frontend, backend y bases de datos
+![[Pasted image 20240924024535.png]]
+
+Ahora lo quiero dejar asi xd
+https://astro-moon-landing.netlify.app/
+![[Pasted image 20240924034756.png]]
 ---
 • Identificar tendencias y buenas prácticas en diseño y contenido.
 * Buena estructura y que se mire buena información clara y ordenada
@@ -251,6 +258,7 @@ Extra:
 Foto de perfil 
 ![[Pasted image 20240919000511.png]]
 
+https://www.adhamdannaway.com/
 ![[Pasted image 20240919010345.png]]
 
 NOTAS IMPORTANTES:

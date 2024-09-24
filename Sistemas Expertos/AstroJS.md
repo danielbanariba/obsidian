@@ -70,18 +70,7 @@ import { defineCollection, z} from "astro:content";
 
 
 
-
-
-
-
-
-
-[[Typscript]]
-
----
-NOTA:
-Aprender Typescript
-
+--- 
 
 Slot =  es como una especia de variable para poder remplazar un componente, es para evitar reescribir todo
 ```html

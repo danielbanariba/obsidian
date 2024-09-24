@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d4e7e49d6b5a489c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/Portafolios que inspiran.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemas Expertos/AstroJS.md",
+                "file": "Sistemas Expertos/Portafolios que inspiran.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemas Expertos/AstroJS.md",
+                "file": "Sistemas Expertos/Portafolios que inspiran.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemas Expertos/AstroJS.md"
+                "file": "Sistemas Expertos/Portafolios que inspiran.md"
               }
             }
           }
@@ -146,8 +159,11 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b83eaab08ad2f506",
+  "active": "d4e7e49d6b5a489c",
   "lastOpenFiles": [
+    "Pasted image 20240924034756.png",
+    "Pasted image 20240924024535.png",
+    "Sistemas Expertos/AstroJS.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
     "img/portafolio/Pasted image 20240923002519.png",
@@ -159,12 +175,10 @@
     "Pasted image 20240923002548.png",
     "Pasted image 20240923002519.png",
     "img/portafolio/Pasted image 20240919000511.png",
-    "img/tailwind-css.svg",
     "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Docker.md",
     "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/AstroJS.md",
     "Ingles/Vocabulary.md",
     "Sistemas Expertos/Typscript.md",
     "Reflex",
