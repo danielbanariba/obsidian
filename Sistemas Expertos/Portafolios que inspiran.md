@@ -59,6 +59,8 @@ Como presenta los proyectos, cuando se pasa el cursos se quita el titulo y solo 
 ---
 Hasan = las animaciones que van apareciendo (En la forma de escritorio, no se como seria en responsibe), 
 Como divide la experiencia laboral, como si fuera una linea de tiempo del viejo al mas reciente, destacando los logros que ha hecho, con los logos de las marcas y la fecha, eso me encanto
+
+JODER! Se me ocurre que esa linea vaya esa linea como raya, osea esta https://www.aceternity.com/components/moving-line
 ![[Pasted image 20240919005751.png]]
 
 La parte de los testimonios, se ve bien y le da una cierta credibilidad
@@ -84,6 +86,12 @@ Me gustaria poder dividirlo asi como aqui, frontend, backend y bases de datos
 Ahora lo quiero dejar asi xd
 https://astro-moon-landing.netlify.app/
 ![[Pasted image 20240924034756.png]]
+
+
+
+
+
+
 ---
 • Identificar tendencias y buenas prácticas en diseño y contenido.
 * Buena estructura y que se mire buena información clara y ordenada
@@ -121,8 +129,6 @@ https://astro-moon-landing.netlify.app/
 				- Scrapper Deathgrind: Extraer información de forma automática 
 				- Auto Click Editor: Automatización de edición de videos para mi canal de YouTube.
 			- Logros:
-				* Creé y gestiono el canal de YouTube "Daniel Banariba", enfocado en música extrema, donde promuevo discos y contenidos relacionados con géneros musicales de nicho.
-				* Implementé un sistema de scraping de mi propio canal de YouTube para identificar bandas y álbumes.
 				* Excelencia Académica en los años 2020, 2021, 2022
 				* Participación en el Concierto de la semana de la Carrera de Ingeniería en Sistemas
 		- Priorizar la información según su importancia y relevancia.
@@ -263,6 +269,28 @@ https://www.adhamdannaway.com/
 
 NOTAS IMPORTANTES:
 Es importante darse vender y no tanto lo que sabes
+
 Si vas a poner certificados que sean para resolver problemas y en que puedo ayudar a la empresa 
-En los proyectos que he trabajado y que los ingenieros les ha encantado, decriles que dejen algunn comentario con su nombre en mi pagina para que de esa menera darle mas credebilidad
+En los proyectos que he trabajado y que los ingenieros les ha encantado, decirles que dejen algun comentario con su nombre en mi pagina para que de esa menera darle mas credibilidad
+
 Tener un solo estilo en cada pagina
+
+---
+# IDEAS:
+
+Se me ocurre hacer que este sistema solar, roten todos los tools que se manejar, que el mas cercano sea el que mas domino y el mas lejano es que me cuesta un poco o tengo muy poca experiencia
+
+En pocas palabras lo que son circulos va hacer los logos de los tools (Git, Github, Visual Studio Code, ect,) [[Typscript]]
+
+Link: https://uiverse.io/VashonG/hard-sheep-18
+
+![[Pasted image 20240926033607.png]]
+
+En la parte de EXTRA:
+Poder esto que al darle click se desplegue y diga que soy un gran coleccionista de musica y amante de la musica, no se, solo digo xd
+Link: https://uiverse.io/TheAbieza/nasty-vampirebat-71
+![[Pasted image 20240926034856.png]]
+
+Al igual que el cafesito.
+Link: https://uiverse.io/AnnixArt/wonderful-liger-82
+![[Pasted image 20240926040007.png]]
