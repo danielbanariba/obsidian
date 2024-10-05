@@ -43,10 +43,10 @@ resource "azurerm_resource_group" "rg" {
 ```
 
 ---
-## Comandos 
+### Comandos 
 
 Configura el entorno de trabajo de Terraform
-Posdata, tiene que estar ya programado el main.tf para que funcione el comando
+Posdata, tiene que estar ya programado el **main.tf** para que funcione el comando
 ```shell
 terraform init 
 ```
@@ -74,3 +74,25 @@ terraform apply
 ```
 
 ---
+### VNets & Subnets
+
+**variables.tf**  Variables de entorno, donde se especifica las constantes y solo al poner . y ya tener el valor fijo de la variable, me recuerda bastante a los **enum** de [[Python]]
+``` java
+variable "project" {
+    description = "the name project"
+    default     = "otd"
+}
+
+variable "environment" {
+    description = "The environment to release"
+    default     = "dev"
+}
+
+variable "location" {
+    description = "Azure region"
+    default     = "East US 2"
+}
+```
+
+---
+### Configuración de la [[Bases de Datos]]

@@ -21,7 +21,6 @@ Legacy =
 8) Create
 
 ---
-
 ### Calculadora Azure
 App service plan: Arquitectura de un sistema contable
 ![[Pasted image 20241002164325.png]]

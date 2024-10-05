@@ -4,23 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "7a62654bf12dd6f7",
+        "id": "c4dc4114b9ae2f2e",
         "type": "tabs",
         "children": [
           {
-            "id": "a73e518bbbe7cf35",
+            "id": "04815e136f7baf82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas Expertos/Azure.md",
+                "file": "Sistemas Expertos/Terraform.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "39891ba360f1dfed",
+            "id": "c6fd58db715c0e2e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -159,10 +159,15 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "39891ba360f1dfed",
+  "active": "c6fd58db715c0e2e",
   "lastOpenFiles": [
-    "Sistemas Expertos/Azure.md",
+    "Pronts/Perfil Profesional.md",
     "Sistemas Expertos/Terraform.md",
+    "Pronts",
+    "Bases de Datos",
+    "Python/Python.md",
+    "Sistemas Expertos/Azure.md",
+    "Python",
     "Pasted image 20241003040806.png",
     "Sistemas Expertos/Portafolios que inspiran.md",
     "Git & Github/Git.md",
@@ -200,12 +205,8 @@
     "Linux/Sin título.md",
     "Linux",
     "Tailwind.md",
-    "img/portafolio",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
     "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 23 08.md",
-    "Ingles",
-    "Sin título.canvas",
-    "Git & Github"
+    "Sin título.canvas"
   ]
 }
