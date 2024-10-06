@@ -7,20 +7,26 @@ tags:
 ### Instalación
 https://developer.hashicorp.com/terraform/install?product_intent=terraform#windows
 
----
-Entrar session de [[Azure]]
+Entrar sesión de [[Azure]]
 ```bash
 az login
 ```
 
-Seleccionamos la seccion donde queremos comenzar
+Seleccionamos la sección donde queremos comenzar
 ![[Pasted image 20241002215933.png]]
+
+---
+### Creación de grupo de recursos
+
+
+
+
 
 ---
 ### Configuración
 
 main.tf
-```javascript
+```java
 provider "azurerm" { // Proveedor de Azure
   features {} // Configuraciones globales
   subscription_id = [ID] // ID de suscripción de Azure
@@ -42,14 +48,11 @@ resource "azurerm_resource_group" "rg" {
 }
 ```
 
----
-### Comandos 
+**terraform.tfvars** es para guardar variables de entorno
 
-Configura el entorno de trabajo de Terraform
-Posdata, tiene que estar ya programado el **main.tf** para que funcione el comando
-```shell
-terraform init 
-```
+
+
+
 
 En el control de versiones de [[Git]], en el archivo **.gitignore**, tenemos que ignorar estos archivos 
 ```git
@@ -60,18 +63,8 @@ En el control de versiones de [[Git]], en el archivo **.gitignore**, tenemos que
 .terraform.*
 ```
 
-Conectarnos en la plataforma de Azure 
-```Shell
-terraform plan
-```
 
-Se va a tardar un poco, pero nos tiene que devolver este resultado
-![[Pasted image 20241003040806.png]]
 
-Aplicamos los cambios 
-``` Shell
-terraform apply
-```
 
 ---
 ### VNets & Subnets
@@ -94,5 +87,23 @@ variable "location" {
 }
 ```
 
+![[Pasted image 20241005174208.png]]
+
 ---
 ### Configuración de la [[Bases de Datos]]
+
+**Private Endpoint** = es como si fuera una interfaz de red, ya que necesitamos conectar la base de datos 
+ ![[Pasted image 20241005175249.png]]
+ DNS Zone= 
+ ![[Pasted image 20241005183037.png]]
+
+
+
+
+
+
+
+
+---
+### Storage Account
+**storage.tf** 

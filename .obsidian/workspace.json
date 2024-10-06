@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c4dc4114b9ae2f2e",
+        "id": "a8541069ecb1fe94",
         "type": "tabs",
         "children": [
           {
-            "id": "04815e136f7baf82",
+            "id": "cef83e0aa4a1e2c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,19 +20,18 @@
             }
           },
           {
-            "id": "c6fd58db715c0e2e",
+            "id": "d22ea96951eb61b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemas Expertos/Terraform.md",
+                "file": "Sistemas Expertos/Terraform Comandos.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,36 +158,38 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "c6fd58db715c0e2e",
+  "active": "cef83e0aa4a1e2c6",
   "lastOpenFiles": [
-    "Pronts/Perfil Profesional.md",
+    "Sistemas Expertos/Terraform Comandos.md",
     "Sistemas Expertos/Terraform.md",
-    "Pronts",
-    "Bases de Datos",
-    "Python/Python.md",
-    "Sistemas Expertos/Azure.md",
-    "Python",
-    "Pasted image 20241003040806.png",
-    "Sistemas Expertos/Portafolios que inspiran.md",
-    "Git & Github/Git.md",
-    "Git & Github/Sin título.md",
     "Pasted image 20241002215933.png",
-    "Pasted image 20241002164325.png",
-    "Pasted image 20241002161243.png",
+    "Pasted image 20241005183037.png",
+    "Pasted image 20241005175249.png",
+    "Pasted image 20241005174208.png",
+    "Sistemas Expertos/Typscript.md",
     "Sistemas Expertos/Tailwind.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Docker.md",
     "Sistemas Expertos/Cloudfare.md",
+    "Sistemas Expertos/Azure.md",
     "Sistemas Expertos/AstroJS.md",
-    "img/portafolio/Pasted image 20240919022057.png",
+    "Plugins y comandos para Obsidian.md",
+    "Pasted image 20241003040806.png",
+    "Pasted image 20241002164325.png",
+    "Pasted image 20241002161243.png",
+    "img/portafolio/Pasted image 20240926040007.png",
+    "img/portafolio/Pasted image 20240926034856.png",
+    "img/portafolio/Pasted image 20240926033607.png",
+    "Pronts/Perfil Profesional.md",
+    "Pronts",
+    "Bases de Datos",
+    "Python/Python.md",
+    "Python",
+    "Git & Github/Git.md",
+    "Git & Github/Sin título.md",
     "Comandos en Visual Estudio Code.md",
-    "Sistemas Expertos/Typscript.md",
-    "Pasted image 20240926040007.png",
-    "Pasted image 20240926034856.png",
-    "Pasted image 20240926033607.png",
-    "Pasted image 20240924034756.png",
-    "Pasted image 20240924024535.png",
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
     "Ingles/Vocabulary.md",
     "Reflex",
@@ -204,9 +205,6 @@
     "Linux/Comandos.md",
     "Linux/Sin título.md",
     "Linux",
-    "Tailwind.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 33 48.md",
-    "smart-chats/UNTITLED CHAT 2024-09-19 03 33 35.md",
     "Sin título.canvas"
   ]
 }
