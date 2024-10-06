@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c8e0c4dbf6dc3c1c",
+        "id": "e5d7f7e91c523d55",
         "type": "tabs",
         "children": [
           {
-            "id": "fa59d54d0c2371e2",
+            "id": "27027e5faea12550",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sistemas Expertos/Terraform.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -96,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemas Expertos/Terraform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemas Expertos/Terraform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Sistemas Expertos/Terraform.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,16 +138,27 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9bffff4ecbdae91d",
+  "active": "27027e5faea12550",
   "lastOpenFiles": [
-    "Sistemas Expertos/Terraform Comandos.md",
-    "Bases de Datos.md",
+    "Bases de Datos/MySQL.md",
+    "Bases de Datos/MongoDB.md",
+    "Bases de Datos/SQL.md",
+    "Bases de Datos/Bases de Datos.md",
     "Sistemas Expertos/Terraform.md",
+    "Sistemas Expertos/Azure.md",
+    "Sistemas Expertos/Azure Data Studio.md",
+    "Pasted image 20241006052019.png",
+    "Pasted image 20241006051848.png",
+    "Pasted image 20241006051829.png",
+    "Pasted image 20241006051751.png",
+    "Pasted image 20241006040921.png",
+    "Pasted image 20241006040825.png",
+    "Pasted image 20241006040217.png",
+    "Pasted image 20241006034845.png",
+    "Pasted image 20241006034823.png",
+    "Pasted image 20241006032545.png",
+    "Sistemas Expertos/Terraform Comandos.md",
     "Pronts/Darle mas contexto.md",
-    "Pasted image 20241002215933.png",
-    "Pasted image 20241005183037.png",
-    "Pasted image 20241005175249.png",
-    "Pasted image 20241005174208.png",
     "Sistemas Expertos/Typscript.md",
     "Sistemas Expertos/Tailwind.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
@@ -163,15 +166,8 @@
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Docker.md",
     "Sistemas Expertos/Cloudfare.md",
-    "Sistemas Expertos/Azure.md",
     "Sistemas Expertos/AstroJS.md",
     "Plugins y comandos para Obsidian.md",
-    "Pasted image 20241003040806.png",
-    "Pasted image 20241002164325.png",
-    "Pasted image 20241002161243.png",
-    "img/portafolio/Pasted image 20240926040007.png",
-    "img/portafolio/Pasted image 20240926034856.png",
-    "img/portafolio/Pasted image 20240926033607.png",
     "Pronts/Perfil Profesional.md",
     "Pronts",
     "Bases de Datos",
@@ -185,14 +181,10 @@
     "Reflex",
     "Linux/Comandos-banar.md",
     "BMO/Profiles/BMO.md",
-    "copilot-conversations/Es_un_componente_especial,_```HTML_Layout_title=About_```@2024_09_20_21_06_02.md",
     "BMO/Profiles",
     "BMO",
-    "smart-chats/UNTITLED CHAT 2024-09-21 03 07 19.md",
     "smart-chats",
     "copilot-conversations",
-    "Seguridad  Informatica/Primer Parcial.md",
-    "Linux/Comandos.md",
     "Linux",
     "Sin título.canvas"
   ]

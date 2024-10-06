@@ -127,10 +127,91 @@ variable "location" {
 Otd.db = La base de datos del producto
  ![[Pasted image 20241005175249.png]]
 
+
 **DNS Zone**= Ya que no sabemos que direccion va ser praa comunicarne, vamos a usar el DNS Zone, para traducir el 10.0.1.25 a **Private-link-db.Windows.databse.net** ![[Pasted image 20241005183037.png]]
 
-**db.tf** = 
 
+**db.tf** = Vamos a configurar cada recurso de lo que tenemos planificado. 
+Posdata: el codigo de abajo seria el cuadro azul
+```java
+resource "azurerm_mssql_server" "sql_server" {
+    name                         = "sqlserver-${var.project}-${var.environment}"
+    resource_group_name          = azurerm_resource_group.rg.name
+    location                     = var.location
+    version                      = "12.0"
+    administrator_login          = "sqladmin"
+    administrator_login_password = "ComplexP@ssw0rd123!"
+
+    tags = var.tags
+}
+```
+
+
+Configuramos la base de datos como tal
+Posdata: Esto seria el cuadro naranja, otd.db, es el nombre de la base de datos
+```java
+resource "azurerm_mssql_database" "sql_db" {
+    name                = "otd.db"
+    server_id           = azurerm_mssql_server.sql_server.id
+    sku_name            = "S0"
+    
+    tags = var.tags
+}
+```
+![[Pasted image 20241006032545.png]]
+
+
+Recordatorio, se conecta al servidor no a la base de datos
+```java
+resource "azurerm_private_endpoint" "sql_private_endpoint" {
+    name                = "sql-private-endpoint-${var.project}-${var.environment}"
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = var.location
+    subnet_id           = azurerm_subnet.subnetdb.id
+    private_service_connection {
+        name                           = "sql-private-ec-${var.project}-${var.environment}"
+        private_connection_resource_id = azurerm_mssql_server.sql_server.id
+        subresource_names              = ["sqlServer"]
+        is_manual_connection           = false
+    }
+    tags = var.tags
+}
+```
+![[Pasted image 20241006040921.png]]
+
+
+```java
+//Define una zona DNS privada en Azure
+resource "azurerm_private_dns_zone" "sql_private_dns_zone" {
+    name                = "private.dbserver.database.windows.net"
+    # Nombre del grupo de recursos donde se creará la zona DNS privada
+    resource_group_name = azurerm_resource_group.rg.name
+    tags = var.tags
+}
+
+//Define un registro A en la zona DNS privada
+resource "azurerm_private_dns_a_record" "private_dns_a_record" {
+    name                = "sqlserver-record-${var.project}-${var.environment}"
+    zone_name           = azurerm_private_dns_zone.sql_private_dns_zone.name
+    resource_group_name = azurerm_resource_group.rg.name
+    ttl                 = 300
+    records             = [azurerm_private_endpoint.sql_private_endpoint.private_service_connection[0].private_ip_address]
+    tags = var.tags
+}
+```
+![[Pasted image 20241006040217.png]]
+
+
+```java
+resource "azurerm_private_dns_zone_virtual_network_link" "vnet_link" {
+    name                  = "vnet-link-${var.project}-${var.environment}"
+    resource_group_name   = azurerm_resource_group.rg.name
+    private_dns_zone_name = azurerm_private_dns_zone.sql_private_dns_zone.name
+    virtual_network_id    = azurerm_virtual_network.vnet.id
+    tags = var.tags
+}
+```
+![[Pasted image 20241006040825.png]]
 
 ---
 ### Storage Account
