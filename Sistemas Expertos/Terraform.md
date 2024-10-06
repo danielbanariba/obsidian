@@ -4,6 +4,9 @@ tags:
   - Terraform
 ---
 ---
+### Documentacion
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+----
 ### Instalación
 https://developer.hashicorp.com/terraform/install?product_intent=terraform#windows
 
@@ -18,13 +21,6 @@ Seleccionamos la sección donde queremos comenzar
 ---
 ### Creación de grupo de recursos
 
-
-
-
-
----
-### Configuración
-
 main.tf
 ```java
 provider "azurerm" { // Proveedor de Azure
@@ -32,6 +28,7 @@ provider "azurerm" { // Proveedor de Azure
   subscription_id = [ID] // ID de suscripción de Azure
 }
 ```
+
 
 "RG" es el nombre que le damos a la definición para usarlo después en la configuración de los otros recursos 
 ```java
@@ -48,11 +45,13 @@ resource "azurerm_resource_group" "rg" {
 }
 ```
 
+
+
+
+---
+### Configuración
+
 **terraform.tfvars** es para guardar variables de entorno
-
-
-
-
 
 En el control de versiones de [[Git]], en el archivo **.gitignore**, tenemos que ignorar estos archivos 
 ```git
@@ -68,6 +67,40 @@ En el control de versiones de [[Git]], en el archivo **.gitignore**, tenemos que
 
 ---
 ### VNets & Subnets
+
+Queremos hacer una subred que contenga una red para la base de datos y otra para la aplicación
+![[Pasted image 20241005174208.png]]
+
+Con este código ya tenemos configurado las dos subred
+
+**network.tf** = 
+``` java
+# Define una red virtual en Azure
+resource "azurerm_virtual_network" "vnet" {
+    name                = "vnet-${var.project}-${var.environment}"# Nombre de la red virtual, utilizando variables para el proyecto y el entorno
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = var.location
+    address_space       = ["10.0.0.0/16"]
+    
+    tags = var.tags
+}
+
+# Define una subred dentro de la red virtual para la base de datos
+resource "azurerm_subnet" "subnetdb" { # Subred para la base de datos
+    name                 = "subnet-db-${var.project}-${var.environment}"
+    resource_group_name  = azurerm_resource_group.rg.name
+    virtual_network_name = azurerm_virtual_network.vnet.name
+    address_prefixes     = ["10.0.1.0/24"]
+}
+
+# Define una subred dentro de la red virtual para la aplicación
+resource "azurerm_subnet" "subnetapp" { # Subred para la aplicación
+    name                 = "subnet-app-${var.project}-${var.environment}"
+    resource_group_name  = azurerm_resource_group.rg.name
+    virtual_network_name = azurerm_virtual_network.vnet.name
+    address_prefixes     = ["10.0.2.0/24"]
+}
+```
 
 **variables.tf**  Variables de entorno, donde se especifica las constantes y solo al poner . y ya tener el valor fijo de la variable, me recuerda bastante a los **enum** de [[Python]]
 ``` java
@@ -86,22 +119,17 @@ variable "location" {
     default     = "East US 2"
 }
 ```
-
-![[Pasted image 20241005174208.png]]
-
 ---
 ### Configuración de la [[Bases de Datos]]
 
 **Private Endpoint** = es como si fuera una interfaz de red, ya que necesitamos conectar la base de datos 
+
+Otd.db = La base de datos del producto
  ![[Pasted image 20241005175249.png]]
- DNS Zone= 
- ![[Pasted image 20241005183037.png]]
 
+**DNS Zone**= Ya que no sabemos que direccion va ser praa comunicarne, vamos a usar el DNS Zone, para traducir el 10.0.1.25 a **Private-link-db.Windows.databse.net** ![[Pasted image 20241005183037.png]]
 
-
-
-
-
+**db.tf** = 
 
 
 ---

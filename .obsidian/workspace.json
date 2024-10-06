@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a8541069ecb1fe94",
+        "id": "c8e0c4dbf6dc3c1c",
         "type": "tabs",
         "children": [
           {
-            "id": "cef83e0aa4a1e2c6",
+            "id": "fa59d54d0c2371e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Sistemas Expertos/Terraform.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d22ea96951eb61b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sistemas Expertos/Terraform Comandos.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,10 +146,12 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "cef83e0aa4a1e2c6",
+  "active": "9bffff4ecbdae91d",
   "lastOpenFiles": [
     "Sistemas Expertos/Terraform Comandos.md",
+    "Bases de Datos.md",
     "Sistemas Expertos/Terraform.md",
+    "Pronts/Darle mas contexto.md",
     "Pasted image 20241002215933.png",
     "Pasted image 20241005183037.png",
     "Pasted image 20241005175249.png",
@@ -203,7 +193,6 @@
     "copilot-conversations",
     "Seguridad  Informatica/Primer Parcial.md",
     "Linux/Comandos.md",
-    "Linux/Sin título.md",
     "Linux",
     "Sin título.canvas"
   ]
