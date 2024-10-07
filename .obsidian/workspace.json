@@ -4,15 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "e5d7f7e91c523d55",
+        "id": "51ab6919910044e3",
         "type": "tabs",
         "children": [
           {
-            "id": "27027e5faea12550",
+            "id": "6c1bf6095fe5cb43",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/Terraform.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06338a71f62aa360",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20241006223510.png"
+              }
             }
           }
         ]
@@ -92,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Sistemas Expertos/Terraform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Sistemas Expertos/Terraform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Sistemas Expertos/Terraform.md"
+              }
             }
           }
         ]
@@ -138,49 +156,49 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "27027e5faea12550",
+  "active": "6c1bf6095fe5cb43",
   "lastOpenFiles": [
-    "Bases de Datos/MySQL.md",
-    "Bases de Datos/MongoDB.md",
-    "Bases de Datos/SQL.md",
-    "Bases de Datos/Bases de Datos.md",
+    "Pasted image 20241007033735.png",
+    "Pasted image 20241007024651.png",
+    "Pasted image 20241007020348.png",
+    "Pasted image 20241007020033.png",
+    "Pasted image 20241006223510.png",
     "Sistemas Expertos/Terraform.md",
-    "Sistemas Expertos/Azure.md",
-    "Sistemas Expertos/Azure Data Studio.md",
-    "Pasted image 20241006052019.png",
-    "Pasted image 20241006051848.png",
-    "Pasted image 20241006051829.png",
-    "Pasted image 20241006051751.png",
-    "Pasted image 20241006040921.png",
-    "Pasted image 20241006040825.png",
-    "Pasted image 20241006040217.png",
-    "Pasted image 20241006034845.png",
-    "Pasted image 20241006034823.png",
-    "Pasted image 20241006032545.png",
     "Sistemas Expertos/Terraform Comandos.md",
-    "Pronts/Darle mas contexto.md",
     "Sistemas Expertos/Typscript.md",
+    "Comandos en Visual Estudio Code.md",
+    "Pasted image 20241006232002.png",
+    "ChahtGPT/Darle mas contexto.md",
+    "ChahtGPT/Perfil Profesional.md",
     "Sistemas Expertos/Tailwind.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Docker.md",
     "Sistemas Expertos/Cloudfare.md",
+    "Sistemas Expertos/Azure.md",
     "Sistemas Expertos/AstroJS.md",
+    "Sistemas Expertos/Azure Data Studio.md",
+    "Bases de Datos/MySQL.md",
+    "Bases de Datos/MongoDB.md",
+    "Bases de Datos/SQL.md",
+    "Bases de Datos/Bases de Datos.md",
+    "Pasted image 20241006052019.png",
+    "Pasted image 20241006051848.png",
+    "Pasted image 20241006051829.png",
+    "Pasted image 20241006051751.png",
+    "Pasted image 20241006040921.png",
     "Plugins y comandos para Obsidian.md",
-    "Pronts/Perfil Profesional.md",
-    "Pronts",
+    "ChahtGPT",
     "Bases de Datos",
     "Python/Python.md",
     "Python",
     "Git & Github/Git.md",
     "Git & Github/Sin título.md",
-    "Comandos en Visual Estudio Code.md",
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
     "Ingles/Vocabulary.md",
     "Reflex",
     "Linux/Comandos-banar.md",
-    "BMO/Profiles/BMO.md",
     "BMO/Profiles",
     "BMO",
     "smart-chats",

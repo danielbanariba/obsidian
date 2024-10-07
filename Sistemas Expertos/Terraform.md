@@ -128,7 +128,7 @@ Otd.db = La base de datos del producto
  ![[Pasted image 20241005175249.png]]
 
 
-**DNS Zone**= Ya que no sabemos que direccion va ser praa comunicarne, vamos a usar el DNS Zone, para traducir el 10.0.1.25 a **Private-link-db.Windows.databse.net** ![[Pasted image 20241005183037.png]]
+**DNS Zone**= Ya que no sabemos que dirección va a poder comunicarse, vamos a usar el DNS Zone, para traducir el 10.0.1.25 a **Private-link-db.Windows.databse.net** ![[Pasted image 20241005183037.png]]
 
 
 **db.tf** = Vamos a configurar cada recurso de lo que tenemos planificado. 
@@ -215,4 +215,97 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnet_link" {
 
 ---
 ### Storage Account
-**storage.tf** 
+![[Pasted image 20241006223510.png]]
+
+
+El **Queue Storage** es para poder guardar las peticiones o mensajes cuando ocupemos hacer las calibraciones de nuestras bases de datos vectoriales
+El **Blob Container** es para guardar archivos multimedias 
+
+El archivo con el código completo lo puedes encontrar en **storage.tf** 
+```java
+resource "azurerm_storage_account" "storage_account" {
+
+    name                     = "storage${var.project}${var.environment}3"
+    resource_group_name      = azurerm_resource_group.rg.name
+    location                 = var.location
+    account_tier             = "Standard"
+    account_replication_type = "LRS"
+
+    tags = var.tags
+}
+```
+
+```java
+resource "azurerm_storage_container" "blog_container" {
+    name                  = "blog"
+    storage_account_name  = azurerm_storage_account.storage_account.name
+    container_access_type = "private"
+}
+```
+
+![[Pasted image 20241006232002.png]]
+
+
+```java
+resource "azurerm_private_endpoint" "blob_private_endpoint" {
+
+    name                = "blob-private-endpoint-${var.project}-${var.environment}"
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = var.location
+    subnet_id           = azurerm_subnet.subnetapp.id
+
+    private_service_connection {
+        name                           = "storage-private-${var.project}-${var.environment}"
+        private_connection_resource_id = azurerm_storage_account.storage_account.id
+        subresource_names              = ["blob"]
+        is_manual_connection           = false
+    }
+
+    tags = var.tags
+}
+
+resource "azurerm_private_endpoint" "queue_private_endpoint" {
+    name                = "queue-private-endpoint-${var.project}-${var.environment}"
+    resource_group_name = azurerm_resource_group.rg.name
+    location            = var.location
+    subnet_id           = azurerm_subnet.subnetapp.id
+
+    private_service_connection {
+        name                           = "storage-private-${var.project}-${var.environment}"
+        private_connection_resource_id = azurerm_storage_account.storage_account.id
+        subresource_names              = ["queue"]
+        is_manual_connection           = false
+    }
+
+    tags = var.tags
+}
+```
+
+![[Pasted image 20241007020033.png]]
+
+
+```java
+resource "azurerm_private_dns_zone" "sa_private_dns_zone" {
+    name                = "privatelink.storage.core.windows.net"
+    resource_group_name = azurerm_resource_group.rg.name
+
+    tags = var.tags
+}
+```
+
+![[Pasted image 20241007020348.png]]
+
+
+
+---
+### IO Bound & ACR
+
+Outbound = entrada
+inbound = Salida
+
+![[Pasted image 20241007024651.png]]
+
+
+
+
+![[Pasted image 20241007033735.png]]
