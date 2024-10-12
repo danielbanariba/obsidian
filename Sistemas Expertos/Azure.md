@@ -31,3 +31,6 @@ Nos vamos a la calculadora de azure para saber cuanto es el costo: https://azure
 Link: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
 
 ---
+
+
+No se cuando va a tener relaciones [[Docker]] pero lo voy a guardar para cuando vea el [[Docker]] En la infraestructura de Azure

@@ -4,8 +4,11 @@ tags:
   - Terraform
 ---
 ---
-### Documentacion
+### Documentación
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+
+
+
 ----
 ### Instalación
 https://developer.hashicorp.com/terraform/install?product_intent=terraform#windows
@@ -17,6 +20,8 @@ az login
 
 Seleccionamos la sección donde queremos comenzar
 ![[Pasted image 20241002215933.png]]
+
+
 
 ---
 ### Creación de grupo de recursos
@@ -119,6 +124,9 @@ variable "location" {
     default     = "East US 2"
 }
 ```
+
+
+
 ---
 ### Configuración de la [[Bases de Datos]]
 
@@ -213,6 +221,8 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vnet_link" {
 ```
 ![[Pasted image 20241006040825.png]]
 
+
+
 ---
 ### Storage Account
 ![[Pasted image 20241006223510.png]]
@@ -303,9 +313,21 @@ resource "azurerm_private_dns_zone" "sa_private_dns_zone" {
 Outbound = entrada
 inbound = Salida
 
+
 ![[Pasted image 20241007024651.png]]
 
 
-
-
 ![[Pasted image 20241007033735.png]]
+
+
+![[Pasted image 20241007040653.png]]
+
+
+![[Pasted image 20241007043208.png]]
+
+
+
+---
+### App Service plan WebApps FunctionApps
+
+[[Docker]]
