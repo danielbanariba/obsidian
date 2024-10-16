@@ -64,7 +64,7 @@ tags:
 
 ---
 
-Cuando te pregunte "¿Por qué te interesa trabajar en {nombre de la empresa}?" tienes que condesar todo en menos de 1000 caracteres, que el recltador al leer eso, diga,  QUIERO QUE DANIEL ESTE EN MI EQUIPO!
+Cuando te pregunte "¿Por qué te interesa trabajar en {nombre de la empresa}?" tienes que condesar todo en menos de 1000 caracteres, que el reclutador al leer eso, diga,  QUIERO QUE DANIEL EN MI EQUIPO!
 
 ---
 

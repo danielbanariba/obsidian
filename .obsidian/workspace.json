@@ -11,8 +11,12 @@
             "id": "5e8834515ed63631",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ChahtGPT/Darle mas contexto.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ChahtGPT/Darle mas contexto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ChahtGPT/Darle mas contexto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ChahtGPT/Darle mas contexto.md"
+              }
             }
           }
         ]
@@ -140,19 +148,21 @@
   },
   "active": "5e8834515ed63631",
   "lastOpenFiles": [
+    "ChahtGPT/Perfil Profesional.md",
+    "Sistemas Expertos/Terraform.md",
     "Sistemas Expertos/Azure.md",
+    "Sistemas Expertos/Terraform Comandos.md",
+    "AWS/AWS.md",
+    "AWS",
     "ChahtGPT/Darle mas contexto.md",
     "Sistemas Expertos/Docker.md",
-    "Sistemas Expertos/Terraform.md",
     "Sistemas Expertos/Tailwind.md",
-    "Sistemas Expertos/Terraform Comandos.md",
     "Sistemas Expertos/Sin título.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Azure Data Studio.md",
     "Sistemas Expertos/Cloudfare.md",
     "Linux/Kali.md",
-    "ChahtGPT/Perfil Profesional.md",
     "Pasted image 20241006223510.png",
     "Pasted image 20241007043208.png",
     "Git & Github/Github Action.md",
@@ -179,13 +189,11 @@
     "Python",
     "Git & Github/Git.md",
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
-    "Ingles/Vocabulary.md",
     "Reflex",
     "BMO/Profiles",
     "BMO",
     "smart-chats",
     "copilot-conversations",
-    "Linux",
     "Sin título.canvas"
   ]
 }
