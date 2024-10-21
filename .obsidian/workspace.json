@@ -13,13 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ChahtGPT/Darle mas contexto.md",
+                "file": "Sistemas Expertos/NEXT.js.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "NEXT.js"
+            }
+          },
+          {
+            "id": "dc7c72b57dbfc041",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Comandos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Comandos"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -54,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
             }
           },
           {
@@ -62,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
             }
           }
         ]
@@ -87,7 +110,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
             }
           },
           {
@@ -96,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ChahtGPT/Darle mas contexto.md",
+                "file": "Linux/Comandos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +129,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Comandos"
             }
           },
           {
@@ -113,10 +140,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ChahtGPT/Darle mas contexto.md",
+                "file": "Linux/Comandos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Comandos"
             }
           },
           {
@@ -125,8 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ChahtGPT/Darle mas contexto.md"
-              }
+                "file": "Linux/Comandos.md"
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Comandos"
             }
           }
         ]
@@ -146,15 +177,19 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5e8834515ed63631",
+  "active": "dc7c72b57dbfc041",
   "lastOpenFiles": [
-    "ChahtGPT/Perfil Profesional.md",
+    "Linux/Kali.md",
+    "Linux/Comandos.md",
+    "Sistemas Expertos/Arquitecturas Web.md",
+    "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/Terraform.md",
+    "ChahtGPT/Darle mas contexto.md",
+    "ChahtGPT/Perfil Profesional.md",
     "Sistemas Expertos/Azure.md",
     "Sistemas Expertos/Terraform Comandos.md",
     "AWS/AWS.md",
     "AWS",
-    "ChahtGPT/Darle mas contexto.md",
     "Sistemas Expertos/Docker.md",
     "Sistemas Expertos/Tailwind.md",
     "Sistemas Expertos/Sin título.md",
@@ -162,7 +197,6 @@
     "Sistemas Expertos/FastAPI.md",
     "Sistemas Expertos/Azure Data Studio.md",
     "Sistemas Expertos/Cloudfare.md",
-    "Linux/Kali.md",
     "Pasted image 20241006223510.png",
     "Pasted image 20241007043208.png",
     "Git & Github/Github Action.md",
@@ -176,7 +210,6 @@
     "Pasted image 20241007020033.png",
     "Sistemas Expertos/Typscript.md",
     "Comandos en Visual Estudio Code.md",
-    "Sistemas Expertos/NEXT.js.md",
     "Sistemas Expertos/AstroJS.md",
     "Bases de Datos/MySQL.md",
     "Bases de Datos/MongoDB.md",
@@ -185,9 +218,7 @@
     "Plugins y comandos para Obsidian.md",
     "ChahtGPT",
     "Bases de Datos",
-    "Python/Python.md",
     "Python",
-    "Git & Github/Git.md",
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
     "Reflex",
     "BMO/Profiles",
