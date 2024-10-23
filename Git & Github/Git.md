@@ -7,7 +7,7 @@ tags:
   - Terminal
 ---
 ---
-## Comandos en Git
+## Los comandos mas usados en Git
 
 Hace el repositorio
 ```bash
@@ -29,6 +29,41 @@ Es el que manda los últimos cambios a la base de datos del control de versiones
 git commit -m “Version 1”
 ```
 
+Manda el repositorio a un servidor remoto
+```bash
+git push -u origin <<Nombre de la rama>>
+```
+
+Trae todos los archivos del servidor remoto a la maquina local
+```bash
+git pull origin <<Nombre de la rama>>
+```
+
+
+
+---
+## Ramas
+
+Crear una nueva rama
+```Shell
+git branch <<Nombre de la rama>>
+```
+
+Cambiar de rama 
+```shell
+git checkout <<Nombre de la rama>>
+```
+
+Unir ramas
+```Shell
+git merge 
+```
+
+
+
+---
+## Supervisar o analizar el repositorio
+
 Ver el estado de la base de datos
 ```bash
 git status
@@ -39,35 +74,25 @@ Miras todos los cambios históricos hechos en el repositorio
 git show
 ```
 
-Mira la historia entera de un archivo
+Mira detalles y modificaciones de un archivo
+```bash
+git show <<Nombre del archivo>>
+```
+
+Mira la historia entera de un archivo o mostrar todos los commits realizados
 ```bash
 git log <<Nombre del archivo>>
 ```
 
-Manda el repositorio a un servidor remoto
-```bash
-git push
+Ver todas las ramas del repositorio
+```Shell
+git branch
 ```
 
-Crear carpetas
-```bash
-mkdir <<Nombre de la carpeta>>
-```
 
-Crear archivo en blanco
-```bash
-touch <<Nombre del archivo con su extencion>>
-```
 
-Ver el contenido de un archivo
-```bash
-cat <<Nombre del archivo>>
-```
-
-Eliminar el archivo
-```bash
-rm<<Nombre del archivo>>
-```
+---
+## Configuración Global
 
 Agrega un nombre
 ```bash
@@ -75,20 +100,30 @@ git config –global user.name <<”Nombre de la persona”>>
 ```
 
 Agrega un correo
-
 ```bash
 git config –global user.email <<”La dirrecion de correo electronico”>>
 ```
 
-Mira el historial de un archivo
-```bash
-git log <<Nombre del archivo>>
+
+
+---
+## Si cometemos errores
+
+Revertir commit a uno anterior
+```Shell
+git revert <<commit_ID>>
 ```
 
-Mira detalles y modificaciones de un archivo
-```bash
-git show <<Nombre del archivo>>
-```
+
+
+---
+
+
+
+
+
+
+
 
 
 ### Curso de MoureDEV
