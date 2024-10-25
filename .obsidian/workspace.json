@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f5830e225081c5ca",
+        "id": "345205e2631fd320",
         "type": "tabs",
         "children": [
           {
-            "id": "9eb0e9da65912e91",
+            "id": "dd5c3c12586d045c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Javascript/NodeJS.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "NodeJS"
             }
           }
         ]
@@ -158,8 +162,21 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9bffff4ecbdae91d",
+  "active": "dd5c3c12586d045c",
   "lastOpenFiles": [
+    "Pasted image 20241024230854.png",
+    "Pasted image 20241024230559.png",
+    "Pasted image 20241024230205.png",
+    "Java/Java.md",
+    "Javascript/NodeJS.md",
+    "Java",
+    "Infraestructura/Docker.md",
+    "Infraestructura/Terraform.md",
+    "Javascript/Express.md",
+    "Javascript/Nestjs.md",
+    "img/que-es-javascript-descubre-sus-5-principales-usos.jpg",
+    "Git & Github/Git.md",
+    "Git & Github/Github Action.md",
     "img/Pasted image 20241023003957.png",
     "img/Pasted image 20241023000705.png",
     "Sistemas Expertos/Typscript.md",
@@ -173,11 +190,8 @@
     "Python/Reflex.md",
     "Seguridad  Informatica/Primer Parcial.md",
     "Linux/Comandos.md",
-    "Git & Github/Git.md",
-    "Javascript/Express.md",
     "Ingles/Possessive Abjectives and Possessive.md",
     "Ingles/Vocabulary.md",
-    "Infraestructura/Docker.md",
     "Sistemas Expertos/Sin título.md",
     "Infraestructura/Cloudfare.md",
     "Infraestructura/Terraform Comandos.md",
@@ -187,16 +201,8 @@
     "img/Pasted image 20241020235257.png",
     "img/Pasted image 20241020235245.png",
     "img/Pasted image 20241007043208.png",
-    "img/Pasted image 20241007042802.png",
-    "img/Pasted image 20241007042658.png",
-    "img/Pasted image 20241007042441.png",
-    "Javascript/NodeJS.md",
-    "Javascript/Nestjs.md",
     "Infraestructura/Azure Data Studio.md",
-    "Infraestructura/Azure.md",
     "Javascript",
-    "Linux/Kali.md",
-    "Infraestructura/Terraform.md",
     "AWS",
     "ChahtGPT",
     "Bases de Datos",
@@ -204,7 +210,6 @@
     "Sistemas Expertos/Portafolios_que_inspiran.docx",
     "Reflex",
     "BMO/Profiles",
-    "BMO",
     "Sin título.canvas"
   ]
 }

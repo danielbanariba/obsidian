@@ -146,15 +146,9 @@ git config –global alias.tree “log –graph –decorate –all –oneline”
 
 git tree
 
-  
 
-//Ignorar archivos que no queremos en nuestro repositorio
 
-.gitignore  //Dentro del archivo ponemos **/<<Dirección de archivo>>
 
-  
-  
-  
 
 Donde me quede para aprender git: 
 
