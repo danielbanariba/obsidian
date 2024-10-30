@@ -22,7 +22,7 @@ Es un entorno de ejecución (Runtime environment)
 ### CommonJS
 
 #### Exportando funciones
-Para exportar una función a otro archivo, así como se hace en [[Java]] o [[Python]], Lo que tenemos que hacer es poner **module.exports**, ejemplo
+Para exportar una función a otro archivo, Lo que tenemos que hacer es poner **module.exports**, ejemplo
 ```Javascript
 function sum(a,b){
 	return a + b
