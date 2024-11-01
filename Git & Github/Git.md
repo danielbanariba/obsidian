@@ -107,6 +107,16 @@ git config –global user.email <<”La dirrecion de correo electronico”>>
 
 
 ---
+## Configuración al Nivel de proyecto
+
+```shell
+git config user.name "Tu Nombre Personal"
+git config user.email "tu_email_empresarial@example.com"
+```
+
+
+
+---
 ## Si cometemos errores
 
 Revertir commit a uno anterior

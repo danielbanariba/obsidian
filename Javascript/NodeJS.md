@@ -16,6 +16,8 @@ Es un entorno de ejecución (Runtime environment)
 
 [[NodeJS]] esta basada en la arquitectura basada en eventos (everlook)
 
+Permite crear aplicaciones tanto de front-end como back-end usando [[Javascript]]
+
 
 
 ---
@@ -75,3 +77,33 @@ Consejo de un Senior es siempre utilizar Asíncrono, ya que no nos podemos dar e
 ---
 ### Promesas
 
+
+
+---
+## Comandos
+
+E
+```shell 
+npm init 
+```
+
+Si tenemos hueva de iniciar la vaina, podemos -y para poner todos los valores por defecto
+```shell
+npm init -y
+```
+
+Desinstalar los paquetes
+```shell
+npm uninstall [nombre-del-paquete]
+```
+
+Dependencias de desarrollo (lo que entendí es que hacemos eso ya que tenemos que separar las dependencias que tengamos instaladas del producción y el de desarrollo, ya que si subimos todo al servidor, ocuparan dependencias que no necesitamos y por eso consumirá recursos innecesarios.)
+```shell
+npm install standard -D
+```
+
+
+
+---
+## Testing
+Dice que se puede hacer [[Testing]] diablos xd

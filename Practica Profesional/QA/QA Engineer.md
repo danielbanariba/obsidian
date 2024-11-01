@@ -44,3 +44,65 @@ tags:
 
 
 ---
+## Gestión de Pruebas
+
+
+
+---
+## Gestión de Errores
+
+
+
+
+
+
+
+---
+## Casos de prueba
+
+
+Ejemplos:
+https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-los-casos-de-prueba/
+
+
+
+
+---
+## Plantilla de Reporte de Error
+![[Pasted image 20241031101245.png]]
+
+
+
+
+
+---
+## Ciclo de vida del Sotfware Testing
+![[Pasted image 20241031155043.png]]
+
+
+
+---
+## Modelo V
+
+#### ¿Que es el Modelo V?
+	Analisis                                Pruebas 
+	    Diseño                          Pruebas 
+	        Implementacion          Pruebas 
+	            Verificacion    Pruebas 
+	                Mantenimiento 
+
+
+
+---
+## Fases STLC
+
+1) Análisis de requisitos
+2) Planificación de pruebas
+3) Desarrollo de casos de prueba
+4) Configuración del entorno de prueba
+5) Ejecución de pruebas
+6) Cierre del ciclo de prueba
+
+
+
+---
