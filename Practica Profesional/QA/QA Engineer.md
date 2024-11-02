@@ -106,3 +106,16 @@ https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-
 
 
 ---
+## Automatización de pruebas
+
+Se puede usar la librería Selelium de [[Python]] 
+
+Selelium = Plataformas web
+Appium = Plataforma Andr oid e IOS
+JUnit = Para desarollo en Java
+Cucumber = Basado en componentes, es compatible con varios lenguajes de programacion
+
+
+
+---
+## Pruebas Unitarias

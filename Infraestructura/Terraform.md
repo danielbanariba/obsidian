@@ -107,7 +107,7 @@ resource "azurerm_subnet" "subnetapp" { # Subred para la aplicación
 }
 ```
 
-**variables.tf**  Variables de entorno, donde se especifica las constantes y solo al poner . y ya tener el valor fijo de la variable, me recuerda bastante a los **enum** de [[Python]]
+**variables.tf**  Variables de entorno, donde se especifica las constantes y solo al poner . y ya tener el valor fijo de la variable
 ``` java
 variable "project" {
     description = "the name project"

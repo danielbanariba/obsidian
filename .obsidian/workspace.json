@@ -4,11 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fd0288b3fbd927f2",
+        "id": "be50e77897eedb22",
         "type": "tabs",
         "children": [
           {
-            "id": "64a8458b9035cccd",
+            "id": "e7a00117c7e3aabe",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
+            }
+          },
+          {
+            "id": "62b4f8b4a2a05c30",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,8 +30,51 @@
               "icon": "lucide-file",
               "title": "QA Engineer"
             }
+          },
+          {
+            "id": "8f323d2cedb0cd26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "API"
+            }
+          },
+          {
+            "id": "cebf9c32191a0087",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Javascript/React.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "React"
+            }
+          },
+          {
+            "id": "6dd26a8ac9ea49d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practica Profesional/QA/Testing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Testing"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,53 +215,54 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "64a8458b9035cccd",
+  "active": "62b4f8b4a2a05c30",
   "lastOpenFiles": [
-    "img/Pasted image 20241031155043.png",
-    "Practica Profesional/QA/QA Engineer.md",
-    "Javascript/Nestjs.md",
-    "Javascript/nest-cheatsheet.pdf",
-    "img/Pasted image 20241031101245.png",
+    "Sistemas Expertos/API.md",
+    "Javascript/React.md",
+    "Practica Profesional/QA/Testing.md",
+    "Javascript/Javascript.md",
     "Comandos en Visual Estudio Code.md",
     "Plugins y comandos para Obsidian.md",
-    "Sin título.canvas",
-    "Javascript/Fastify.md",
-    "Javascript/Express.md",
-    "Bases de Datos/NoSQL/NoSQL.md",
-    "Bases de Datos/NoSQL/DynamoDB.md",
-    "Bases de Datos/NoSQL/MongoDB.md",
-    "Javascript/React.md",
-    "Javascript/NodeJS.md",
-    "Python/Reflex.md",
-    "Python/FastAPI.md",
-    "Javascript/Javascript.md",
+    "img/Pasted image 20241101161102.png",
+    "HTML.md",
+    "img/Pasted image 20241101161048.png",
+    "JOINS_PARTE1.md",
+    "CSS.md",
+    "FUNCIONES_UNA_FILA_PARTE2.md",
+    "Infraestructura/Terraform.md",
+    "Practica Profesional/QA/Zephyr.md",
+    "Frontend",
     "Git & Github/Git.md",
     "Git & Github/Github Action.md",
-    "Practica Profesional/QA/Zephyr.md",
-    "Practica Profesional/QA/Testing.md",
-    "Practica Profesional/QA/Jira.md",
-    "Practica Profesional/QA/Sin título.md",
+    "Infraestructura/Terraform Comandos.md",
+    "Infraestructura/Kubernetes-banar.md",
+    "Infraestructura/Kubernetes.md",
+    "Infraestructura/Docker.md",
+    "Infraestructura/Cloudfare.md",
+    "Infraestructura/Azure Data Studio.md",
+    "Infraestructura/Azure.md",
+    "Java/Java.md",
+    "Javascript/Redux.md",
+    "Javascript/NodeJS.md",
+    "Javascript/Nestjs.md",
+    "Javascript/nest-cheatsheet.pdf",
+    "Javascript/Fastify.md",
+    "img/Pasted image 20241031155043.png",
+    "img/Pasted image 20241031101245.png",
+    "Sin título.canvas",
     "img/Pasted image 20241024230205.png",
     "img/Pasted image 20241024230559.png",
-    "Bases de Datos/SQL.md",
-    "Bases de Datos/Bases de Datos.md",
     "Bases de Datos/NoSQL",
     "Bases de Datos/SQL",
-    "Javascript/Redux.md",
-    "Seguridad  Informatica/Primer Parcial.md",
     "img/Pasted image 20241030105617.png",
     "img/Pasted image 20241030104657.png",
-    "Practica Profesional/Marco Agil.md",
     "img/Pasted image 20241030103819.png",
     "img/Pasted image 20241030103447.png",
-    "img/Pasted image 20241030092131.jpg",
-    "img/Pasted image 20241030092116.png",
     "Practica Profesional/QA",
     "Programacion",
     "Practica Profesional",
     "Java",
     "Infraestructura",
-    "Javascript",
-    "AWS"
+    "Javascript"
   ]
 }

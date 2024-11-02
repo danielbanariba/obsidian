@@ -5,10 +5,16 @@ tags:
   - API
 ---
 ---
-Aprender como se disenna los endpoints
+Aprender como se diseña los endpoints
 
 
 
 > [!IMPORTANT ] 
 > Aprenderse los Handing Error, ya que viene en e examen
 
+
+
+
+
+---
+[[FastAPI]]
