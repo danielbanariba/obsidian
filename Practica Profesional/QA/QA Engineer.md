@@ -53,17 +53,10 @@ tags:
 
 
 
-
-
-
-
 ---
 ## Casos de prueba
-
-
 Ejemplos:
 https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-los-casos-de-prueba/
-
 
 
 
@@ -76,7 +69,7 @@ https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-
 
 
 ---
-## Ciclo de vida del Sotfware Testing
+## Ciclo de vida del Software [[Testing]]
 ![[Pasted image 20241031155043.png]]
 
 
@@ -111,11 +104,66 @@ https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-
 Se puede usar la librería Selelium de [[Python]] 
 
 Selelium = Plataformas web
-Appium = Plataforma Andr oid e IOS
-JUnit = Para desarollo en Java
-Cucumber = Basado en componentes, es compatible con varios lenguajes de programacion
+Appium = Plataforma Android e IOS
+JUnit = Para desarrollo en [[Java]]
+Cucumber = Basado en componentes, es compatible con varios lenguajes de programación
+Pytest = Desarrollo en [[Python]]
+Unit = [[.NET]]
 
 
 
 ---
 ## Pruebas Unitarias
+
+
+
+---
+## Pruebas de integración
+Hacer pruebas reponsibe (lo que yo siempre hago xd) para mejor la experiencia usar la aplicación 
+**ResponsivelyApp** 
+
+
+---
+## Pruebas de Sistema
+Probar la app en diferentes navegadores, en diferentes sistemas operativos, si es móvil, probarlo en IOS y Android.
+
+Posdata: Nota personal, supongo que al intentar probarlo en diferentes plataformas o en este caso sistemas, el trabajo va ser muy repetitivo, entonces hay si podre automatizarlo con [[Python]]
+
+
+
+---
+## SvS
+Smoke vs Sanity Testing
+
+
+La pruebas Smoke son las pruebas superficiales que solo verifican las funciones básicas, en cambio las Sanity son las pruebas mas profundas.
+
+
+
+---
+## Pruebas de Regresión
+
+- Asegurar que los cambios recientes en el código no hayan roto nada. 
+
+1) Identificar las Funcionalidades a Probar
+2) Crear un Conjunto de Casos de Prueba
+3) Automatizar Casos de Prueba
+4) Ejecutar las Pruebas Automatizadas
+5) Análisis de Resultados
+6) Repetir el Proceso
+
+Consejos Adicionales:
+- Mantén una Suite de Pruebas Robusta
+- Automatización Eficiente
+- Versionamiento
+
+
+
+---
+## Pruebas No Funcionales
+
+
+
+
+---
+## Documentación
