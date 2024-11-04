@@ -22,6 +22,8 @@ Levantar la aplicacion
 npm start
 ```
 
+
+
 ---
 ## Componentes
 
@@ -54,8 +56,6 @@ Para empezar a usar estados necesitamos importar useState
 import React, {useState} from 'react'
 ```
 
-
-
 Hook
 
 Event Listener
@@ -69,6 +69,18 @@ Atajo de teclado para recrear un componente rápido: **rfc**
 
 
 
+---
+## Stylesheets
+Aqui es donde agregaremos los estilos [[CSS]]
+
+
+
+---
+## Props
+
+
+
+---
 
 
 
@@ -81,7 +93,12 @@ Atajo de teclado para recrear un componente rápido: **rfc**
 
 
 
-La sintaxis de react se parece como si estuvieramos combinando [[Javascript]] con [[HTML]]
 
 
+
+La sintaxis de react se parece como si estuvieramos combinando [[JavaScript]] con [[HTML]]
+
+
+---
+## React Testing Library
 En el proyecto de [[React]] Siempre vamos a tener un archivo que se llama **App.test.js** este archivo nos va a permitir hacer diferentes [[Testing]]

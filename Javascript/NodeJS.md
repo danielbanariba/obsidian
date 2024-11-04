@@ -16,7 +16,7 @@ Es un entorno de ejecución (Runtime environment)
 
 [[NodeJS]] esta basada en la arquitectura basada en eventos (everlook)
 
-Permite crear aplicaciones tanto de front-end como back-end usando [[Javascript]]
+Permite crear aplicaciones tanto de front-end como back-end usando [[JavaScript]]
 
 
 

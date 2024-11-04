@@ -6,6 +6,8 @@ tags:
   - FullStack
 ---
 ---
+## Comandos
+
 Para ejecutar codigo javascript en la consola seria con
 ```shell
 node index.js

@@ -284,6 +284,26 @@ json
 
 
 
+---
+## Testing Aplicaciones Mobiles
+
+##### Pruebas De Interrupción:
+- Recibir una llamada mientras se usa la aplicación
+- Recibir Mensajes
+- Modo Avión
+- Desconectar el wifi y los datos
+- Notificaciones
+- Ir al Home y volver a la aplicación (Segundo Plano)
+- Rota el teléfono
+- Subir y bajar el volumen
+- Bloquear y desbloquear el teléfono
+- Alarmas
+- Apagar el teléfono y volverlo a encender
+
+
+En mi caso voy a utilizar el emulador Android Studio, Genymotion o Firebase para poder hacer pruebas en diferentes dispositivos mobiles.
+
+Video explicativo de como instalar y usar Genymotion - https://youtu.be/vc5xnEDGHys?si=VZC4oHcxUtIswdt3
 
 
 

@@ -58,6 +58,41 @@ tags:
 Ejemplos:
 https://platzi.com/tutoriales/1421-pruebas-software/9574-maneras-de-representar-los-casos-de-prueba/
 
+#### Template 
+Título del Caso de Prueba:
+Verificación del Inicio de Sesión en la Aplicación
+
+Objetivo:
+Probar el proceso de inicio de sesión en la aplicación.
+
+Descripción: 
+El propósito de esta prueba es verificar que el inicio de sesión de la aplicación estén funcionando correctamente en los navegadores Chrome, Firefox, etc.
+
+Precondiciones:
+- La aplicación está instalada en el dispositivo.
+- El usuario tiene credenciales válidas.
+
+Pasos:
+1. Abrir la aplicación de la pantalla de inicio.
+2. Hacer clic en el botón "Iniciar Sesión".
+3. Ingresar el nombre de usuario y la contraseña en los campos correspondientes.
+4. Hacer clic en el botón "Iniciar Sesión".
+
+Resultado Esperado:
+El usuario debe ser redirigido a la página de inicio después de iniciar sesión correctamente.
+
+Criterios de Éxito:
+Después de hacer clic en "Iniciar Sesión", el usuario es redirigido a la página de inicio.
+No hay mensajes de error mostrados durante el proceso de inicio de sesión.
+
+#### Ejemplo
+Escenario: Inicio de sesión en una aplicación de redes sociales
+Descripción: Verificar el proceso de inicio de sesión en una aplicación de RS. 
+
+Caso de prueba 1. Verificar las credenciales correctas
+Caso de prueba 2. Verificar el login con credenciales incorrectas. 
+Caso de prueba 3. Verificar multiples intentos de login con credenciales incorrectas.
+
 
 
 ---
@@ -167,3 +202,35 @@ Consejos Adicionales:
 
 ---
 ## Documentación
+
+
+
+---
+## Escenario de Prueba
+Título del Escenario: [Describe brevemente qué se está probando]
+Objetivo: [Propósito de la prueba, qué se quiere lograr]
+Precondiciones: [Condiciones necesarias para ejecutar la prueba, por ejemplo, datos preexistentes, configuraciones específicas]
+Pasos de Ejecución: [Pasos específicos para ejecutar la prueba, acciones que el probador debe realizar]
+Criterios de Éxito: [Cómo se determinará si la prueba es exitosa]
+Postcondiciones: [Estado esperado del sistema después de completar la prueba]
+
+
+
+---
+## Generacion de datos
+
+##### ¿Qué es la Generación de Datos de Prueba?
+La generación de datos de prueba se refiere al proceso de crear conjuntos de datos sintéticos que imitan las características y estructuras de los datos reales
+
+##### Herramientas para Generación de Datos de Prueba:
+1. Mockaroo: 
+2. Faker (en [[Python]]): 
+3. [[SQL]] Data Generator: 
+4. DataFactory (en [[Azure]]): 
+5. Postman:
+
+
+
+
+
+
