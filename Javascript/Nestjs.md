@@ -8,16 +8,18 @@ tags:
 
 [Documentacion](https://docs.nestjs.com/)
 
+[Github](https://gist.github.com/Klerith/f2b2a3bd20e3d8481c1cf34eafea87d7)
+
 
 
 --- 
-## Teoria
+## Teoría
 Nest esta basado en [[Express]], pero si no quieres trabajar con Express, con una sola linea te puedes cambiar a [[Fastify]].
 
 
 
 ---
-## Comandos
+## [[Comandos]]
 
 Tenemos que instalarlo de manera global 
 ```shell
@@ -65,3 +67,19 @@ npm rum build
 
 ---
 ## [[Testing]]
+
+
+
+---
+## Autenticación y encriptado
+```shell
+npm install --save @nestja/jwt passport-jwt
+```
+```shell
+npm install --save-dev @types/passport-jwt
+```
+```shell
+npm install --save bcrypt
+```
+
+

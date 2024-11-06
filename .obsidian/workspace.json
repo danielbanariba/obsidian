@@ -8,45 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c4afa1e75d3d612d",
+            "id": "5dd060b514c1ea14",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript/TypeScript.md",
+                "file": "Practica Profesional/QA/QA Engineer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TypeScript"
-            }
-          },
-          {
-            "id": "6f2cba830db0cf27",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
-            }
-          },
-          {
-            "id": "afb2734c65046409",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Practica Profesional/QA/Testing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Testing"
+              "title": "QA Engineer"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -77,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dell",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,50 +162,50 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "9bffff4ecbdae91d",
+  "active": "5dd060b514c1ea14",
   "lastOpenFiles": [
-    "Javascript/Nestjs.md",
-    "Javascript/TypeScript.md",
-    "Javascript/JavaScript.md",
-    "Python/Python.md",
+    "Javascript/NodeJS.md",
     "Practica Profesional/QA/QA Engineer.md",
+    "Javascript/Jest.md",
+    "CSS.md",
+    "Javascript/NEXT.js.md",
+    "HTML.md",
+    "Comandos en Visual Estudio Code.md",
+    "img/Pasted image 20241105155858.png",
     "Javascript/React.md",
+    "img/Pasted image 20241105155836.png",
+    "Plugins y comandos para Obsidian.md",
+    "Javascript/TypeScript.md",
+    "Javascript/Nestjs.md",
     "Javascript/nest-cheatsheet.pdf",
+    "Javascript/JavaScript.md",
+    "Javascript/Fastify.md",
+    "Javascript/ES6.md",
+    "Javascript/Express.md",
     "Practica Profesional/QA/Testing.md",
-    "Pasted image 20241104102208.png",
-    "Pasted image 20241104102140.png",
+    "Practica Profesional/QA/Jira.md",
+    "Javascript/Redux.md",
+    "Python/Python.md",
+    "img/Pasted image 20241104102208.png",
+    "img/Pasted image 20241104102140.png",
     "Bases de Datos/SQL.md",
     "Infraestructura/Azure.md",
     "Javascript/React-DEV-DELL5330.md",
     "Practica Profesional/QA/QA Engineer-DEV-DELL5330.md",
-    "HTML.md",
-    "CSS.md",
     "img/Pasted image 20241101161102.png",
     "img/Pasted image 20241101161048.png",
     "C#/Sin título.md",
     "C#",
-    "Javascript/NodeJS.md",
     "Python/FastAPI.md",
     "Python/Reflex.md",
     "Frontend",
     "img/Pasted image 20241031155043.png",
     "img/Pasted image 20241031101245.png",
-    "Comandos en Visual Estudio Code.md",
-    "Plugins y comandos para Obsidian.md",
     "Sin título.canvas",
-    "Javascript/Fastify.md",
-    "Javascript/Express.md",
-    "Bases de Datos/NoSQL/NoSQL.md",
-    "Bases de Datos/NoSQL/DynamoDB.md",
-    "Bases de Datos/NoSQL/MongoDB.md",
-    "Git & Github/Git.md",
-    "Git & Github/Github Action.md",
     "img/Pasted image 20241024230205.png",
     "img/Pasted image 20241024230559.png",
     "Bases de Datos/NoSQL",
     "Bases de Datos/SQL",
-    "img/Pasted image 20241030105617.png",
-    "img/Pasted image 20241030104657.png",
     "Practica Profesional/QA",
     "Programacion",
     "Practica Profesional",

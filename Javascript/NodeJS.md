@@ -80,7 +80,7 @@ Consejo de un Senior es siempre utilizar Asíncrono, ya que no nos podemos dar e
 
 
 ---
-## Comandos
+## [[Comandos]]
 
 E
 ```shell 
@@ -105,5 +105,5 @@ npm install standard -D
 
 
 ---
-## Testing
+## [[Testing]]
 Dice que se puede hacer [[Testing]] diablos xd
