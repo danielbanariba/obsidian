@@ -10,7 +10,7 @@ tags:
 
 
 ---
-### Instalación
+## Instalación
 
 Instalar el compilador de typescript
 ```bash
@@ -25,7 +25,7 @@ tsc
 
 
 ---
-### Configuración
+## Configuración
 
 Cambiar la configuración de typescript
 ```bash
@@ -61,7 +61,7 @@ Por defecto viene el **true**, pero tenemos que ponerlo el false, ya que si no h
 
 
 ---
-### Sintaxis
+## Sintaxis
 
 Tipar una variable sea de un dato especifico, tenemos que poner **: 'El tipo de de dato'** en este caso como queremos que la variable **mensaje** sea de tipo String, entonces ponemos **: string**
 ```Typescript
@@ -71,7 +71,7 @@ let mensaje: string = 'Hola Mundo';
 
 
 ---
-### Palabras reservadas
+## Palabras reservadas
 
 Es un forech en typescript, recorre los arrays
 ```typescript
@@ -105,5 +105,75 @@ const enum LoadingState { Idle,
 						 Error }
 
 const stado = LoadingState.Success
+```
+
+
+
+---
+## Decoradores
+Los decoradores son una envoltura, que envuelva la función original para poder darles mas poder, mas métodos u obtener mas información, 
+
+como por ejemplo el siguiente codigo, que tenemos un decorador que nos hace medir el tiempo que tarda en obetener los datos del arreglo
+```typescript
+// Creamos un decorador para medir el tiempo
+function medirTiempo(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    // Guardamos la función original
+    const metodoOriginal = descriptor.value;
+
+    // Creamos una nueva función que envuelve a la original
+    descriptor.value = function(...args: any[]) {
+        const inicio = performance.now();
+        
+        // Ejecutamos el método original
+        const resultado = metodoOriginal.apply(this, args);
+        
+        const fin = performance.now();
+        console.log(`El método ${propertyKey} tardó ${fin - inicio}ms`);
+        
+        return resultado;
+    }
+}
+
+// Ahora usamos el decorador
+class Usuarios {
+    @medirTiempo
+    obtenerUsuarios() {
+        return ['Juan', 'María', 'Pedro'];
+    }
+}
+```
+
+
+Los decoradores son mas utlizados para:
+
+- Validacion de datos
+```Typescript
+class Formulario {
+    @validarEmail  // Verifica que sea un email válido
+    email: string;
+
+    @validarLongitud(8)  // Verifica que tenga al menos 8 caracteres
+    password: string;
+}
+```
+
+- Control de Acceso
+```Typescript
+class Admin {
+    @soloAdmin  // Solo permite ejecutar si el usuario es administrador
+    borrarUsuario(id: number) {
+        // Código para borrar usuario
+    }
+}
+```
+
+- Logging Automatico
+```Typescript
+class Banco {
+    @registrarOperacion  // Registra cada operación realizada
+    transferir(monto: number, destino: string) {
+        // Código para transferir dinero
+    }
+}
 ```
 

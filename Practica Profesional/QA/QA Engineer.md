@@ -217,7 +217,7 @@ Postcondiciones: [Estado esperado del sistema después de completar la prueba]
 
 
 ---
-## Generacion de datos
+## Generación de datos
 
 ##### ¿Qué es la Generación de Datos de Prueba?
 La generación de datos de prueba se refiere al proceso de crear conjuntos de datos sintéticos que imitan las características y estructuras de los datos reales
@@ -232,6 +232,112 @@ La generación de datos de prueba se refiere al proceso de crear conjuntos de da
 
 
 ---
+## Tecnicas de prueba
+
+
+
+---
+## Plan de Prueba
+
+
+
+---
+## Agile Testing
+
+
+
+
+
+
+
+https://www.danysoft.com/testrail/
+
+
+
+
+---
+## Segurity Testing
+
+En teoria tambien tenemos que hacer pruebas de seguridad, no es nuestro fuerte, pero se tiene que hacer y tenemos que usar [[Kali]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

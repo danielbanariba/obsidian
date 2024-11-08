@@ -304,9 +304,3 @@ json
 En mi caso voy a utilizar el emulador Android Studio, Genymotion o Firebase para poder hacer pruebas en diferentes dispositivos mobiles.
 
 Video explicativo de como instalar y usar Genymotion - https://youtu.be/vc5xnEDGHys?si=VZC4oHcxUtIswdt3
-
-
-
-
-
-Tesing con [[Python]], [[React]]

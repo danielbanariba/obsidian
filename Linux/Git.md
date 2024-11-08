@@ -39,6 +39,11 @@ Trae todos los archivos del servidor remoto a la maquina local
 git pull origin <<Nombre de la rama>>
 ```
 
+Guardar los cambios de forma temporal, esto es para poder hacer un **git pull** sin problemas
+```shell
+git stash
+```
+
 
 
 ---
@@ -109,9 +114,22 @@ git config –global user.email <<”La dirrecion de correo electronico”>>
 ---
 ## Configuración al Nivel de proyecto
 
+Consultar que nombre se encuentra en el proyecto actual
+``` shell
+git config user.name
+```
+
+``` shell
+git config user.email
+```
+
+
 ```shell
-git config user.name "Tu Nombre Personal"
-git config user.email "tu_email_empresarial@example.com"
+git config user.name "Daniel Barrientos"
+```
+
+```shell
+git config user.email "dbarrientos@guababit.com"
 ```
 
 

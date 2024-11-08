@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "fd0288b3fbd927f2",
+        "id": "82bd43a5c14741a4",
         "type": "tabs",
         "children": [
           {
-            "id": "5dd060b514c1ea14",
+            "id": "684292fd38b880c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Practica Profesional/QA/QA Engineer.md",
+                "file": "Javascript/Cypress.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QA Engineer"
+              "title": "Cypress"
+            }
+          },
+          {
+            "id": "5fd199ae300c9fc2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practica Profesional/QA/Testing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Testing"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,48 +177,47 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5dd060b514c1ea14",
+  "active": "5fd199ae300c9fc2",
   "lastOpenFiles": [
-    "Javascript/NodeJS.md",
-    "Practica Profesional/QA/QA Engineer.md",
-    "Javascript/Jest.md",
-    "CSS.md",
-    "Javascript/NEXT.js.md",
-    "HTML.md",
-    "Comandos en Visual Estudio Code.md",
-    "img/Pasted image 20241105155858.png",
-    "Javascript/React.md",
-    "img/Pasted image 20241105155836.png",
-    "Plugins y comandos para Obsidian.md",
+    "Javascript/Cypress.md",
+    "Pasted image 20241107181512.png",
     "Javascript/TypeScript.md",
-    "Javascript/Nestjs.md",
-    "Javascript/nest-cheatsheet.pdf",
+    "AWS/AWS.md",
+    "Pasted image 20241107154724.png",
+    "Linux/Visual Estudio Code.md",
+    "Practica Profesional/QA/Zephyr.md",
+    "Practica Profesional/QA/Jira.md",
+    "Javascript/Serverless.md",
+    "img/Pasted image 20241107141632.png",
+    "img/Pasted image 20241107141507.png",
+    "img/Pasted image 20241107141453.png",
+    "Linux/Git.md",
+    "Javascript/NodeJS.md",
+    "Linux/VIM.md",
+    "img/Pasted image 20241106152322.png",
+    "C#/Sin título.md",
+    "Javascript/Express.md",
     "Javascript/JavaScript.md",
+    "Javascript/Jest.md",
+    "Practica Profesional/QA/QA Engineer.md",
+    "Linux/Github Action.md",
+    "img/tailwind-css.svg",
+    "Infraestructura/Kubernetes-banar.md",
+    "Linux/Comandos.md",
     "Javascript/Fastify.md",
     "Javascript/ES6.md",
-    "Javascript/Express.md",
-    "Practica Profesional/QA/Testing.md",
-    "Practica Profesional/QA/Jira.md",
-    "Javascript/Redux.md",
-    "Python/Python.md",
-    "img/Pasted image 20241104102208.png",
-    "img/Pasted image 20241104102140.png",
-    "Bases de Datos/SQL.md",
-    "Infraestructura/Azure.md",
-    "Javascript/React-DEV-DELL5330.md",
-    "Practica Profesional/QA/QA Engineer-DEV-DELL5330.md",
-    "img/Pasted image 20241101161102.png",
-    "img/Pasted image 20241101161048.png",
-    "C#/Sin título.md",
+    "Bases de Datos/NoSQL/DynamoDB.md",
+    "Practica Profesional/QA/Selenium.md",
+    "img/Pasted image 20241106100041.png",
+    "Frontend/CSS.md",
+    "Javascript/NEXT.js.md",
+    "Frontend/HTML.md",
+    "img/Pasted image 20241105155858.png",
+    "img/Pasted image 20241105155836.png",
+    "Javascript/nest-cheatsheet.pdf",
     "C#",
-    "Python/FastAPI.md",
-    "Python/Reflex.md",
     "Frontend",
-    "img/Pasted image 20241031155043.png",
-    "img/Pasted image 20241031101245.png",
     "Sin título.canvas",
-    "img/Pasted image 20241024230205.png",
-    "img/Pasted image 20241024230559.png",
     "Bases de Datos/NoSQL",
     "Bases de Datos/SQL",
     "Practica Profesional/QA",
