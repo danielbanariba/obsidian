@@ -20,11 +20,6 @@ Hasta donde voy entendiendo esto sirva para no tener un servidor, pero estara co
 
 ---
 ## [[Comandos]]
-
-```shell
-serverless deploy --stage cooper --region us-east-1 --verbose
-```
-
 Instalar una versión en especifico
 ```shell
 npm install -g serverless@3.30.1
@@ -42,4 +37,3 @@ serverless deploy --stage cooper --region us-east-1 --verbose
 
 
 
----

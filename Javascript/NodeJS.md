@@ -107,3 +107,33 @@ npm install standard -D
 ---
 ## [[Testing]]
 Dice que se puede hacer [[Testing]] diablos xd
+
+
+
+---
+## Node Version Manager (NVM)
+
+##### [Documentacion](https://github.com/nvm-sh/nvm)
+
+[[Comandos]]
+
+Instalar una version especifica
+```shell
+nvm install 22.5.1
+```
+
+Usar la version especifica para el proyecto
+```shell
+nvm use 22.5.2
+```
+
+Listar las versiones que tenemos instaladas de Node
+```Shell
+nvm list
+```
+
+Muestra la version que estamos usando en ese momento
+```shell
+nvm current
+```
+
