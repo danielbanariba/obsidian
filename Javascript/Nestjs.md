@@ -19,7 +19,7 @@ Nest esta basado en [[Express]], pero si no quieres trabajar con Express, con un
 
 
 ---
-## [[Comandos]]
+## Comandos
 
 Tenemos que instalarlo de manera global 
 ```shell

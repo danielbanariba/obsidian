@@ -80,7 +80,7 @@ Consejo de un Senior es siempre utilizar Asíncrono, ya que no nos podemos dar e
 
 
 ---
-## [[Comandos]]
+## Comandos
 
 E
 ```shell 
@@ -101,6 +101,13 @@ Dependencias de desarrollo (lo que entendí es que hacemos eso ya que tenemos qu
 ```shell
 npm install standard -D
 ```
+
+OJO! utilizar en el **gitbash**
+Eliminar toda la carpeta de Node Modules
+```shell
+rm -rf ./node_modules
+```
+
 
 
 

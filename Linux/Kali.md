@@ -9,30 +9,35 @@ tags:
   - Shell
 ---
 ---
-```shell
-nmap [direccion]
+## Comandos
+
+Para poder darles permisos a los bash programas en [[Kali]]
+```bash
+chmod +x [Nombre del archivo] 
 ```
 
-```shell
-nmap 
+Crear un archivo
+```bash
+touch <<Nombre del archivo>>
 ```
 
-```shell
-nmap 
+Crear carpetas
+```bash
+mkdir <<Nombre de la carpeta>>
 ```
 
-```shell
-nmap 
+Crear archivo en blanco
+```bash
+touch <<Nombre del archivo con su extencion>>
 ```
 
-```shell
-nmap 
+Ver el contenido de un archivo
+```bash
+cat <<Nombre del archivo>>
 ```
 
-```shell
-nmap 
+Eliminar el archivo
+```bash
+rm <<Nombre del archivo>>
 ```
 
-```shell
-nmap 
-```

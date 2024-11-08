@@ -15,7 +15,7 @@ Docker Hush = https://hub.docker.com/
 
 
 ---
-### [[Comandos]]
+### Comandos
 
 Nos permite ver cuantas imágenes tenemos instalado en nuestro Docker
 ``` bash

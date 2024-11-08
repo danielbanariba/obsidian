@@ -10,9 +10,9 @@ tags:
 Doc: https://legacy.reactjs.org/docs/state-and-lifecycle.html
 
 ---
-## [[Comandos]]
+## Comandos
 
-Para poder empezar a usar REACT, necesitaremos tener instalado [[NodeJS]] y en la consola de [[Comandos]] escribimos lo siguiente para crear un proyecto en react.
+Para poder empezar a usar REACT, necesitaremos tener instalado [[NodeJS]] y en la consola de Comandos escribimos lo siguiente para crear un proyecto en react.
 ```shell
 npx create-react-app <<"Nombre de la aplicacion">>
 ```
@@ -153,3 +153,9 @@ const mockedUser = {
 	email" 'danielbanariba@protonmail.com'
 }
 ```
+
+
+
+---
+## [[Testing]]
+Para hacer las pruebas vamos a usar la libreria de [Testing Libray](https://testing-library.com/docs/)

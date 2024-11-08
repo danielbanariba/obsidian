@@ -19,7 +19,7 @@ Hasta donde voy entendiendo esto sirva para no tener un servidor, pero estara co
 
 
 ---
-## [[Comandos]]
+## Comandos
 Instalar una versión en especifico
 ```shell
 npm install -g serverless@3.30.1

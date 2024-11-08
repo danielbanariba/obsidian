@@ -9,7 +9,7 @@ Jest es una libreria para poder hacer [[Testing]] aplicaciones [[React]], [[Nest
 
 
 ---
-## [[Comandos]]
+## Comandos
 
 Instalación
 ```shell

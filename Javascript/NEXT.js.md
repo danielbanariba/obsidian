@@ -12,7 +12,7 @@ Nest utiliza [[TypeScript]] y si tienes conocimientos en [[React]] va ser mucho 
 
 
 ---
-## [[Comandos]]
+## Comandos
 
 ```shell
 npx create-next-app <<Nombre del proyecto>>

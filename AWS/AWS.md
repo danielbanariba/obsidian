@@ -9,7 +9,7 @@ tags:
 
 
 ---
-## [[Comandos]]
+## Comandos
 
 Aqui tenemos que ingresar las credenciales para poder desplegar aws
 ```Shell
@@ -39,3 +39,8 @@ provider "aws" {
 	region = "us-east-1"
 }
 ```
+
+
+
+---
+## API GATEWAY
