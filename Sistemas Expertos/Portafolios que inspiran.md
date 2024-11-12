@@ -280,7 +280,7 @@ Tener un solo estilo en cada pagina
 
 Se me ocurre hacer que este sistema solar, roten todos los tools que se manejar, que el mas cercano sea el que mas domino y el mas lejano es que me cuesta un poco o tengo muy poca experiencia
 
-En pocas palabras lo que son circulos va hacer los logos de los tools (Git, Github, Visual Studio Code, ect,) [[TypeScript]]
+En pocas palabras lo que son circulos va hacer los logos de los tools (Git, Github, Visual Studio Code, ect,)
 
 Link: https://uiverse.io/VashonG/hard-sheep-18
 

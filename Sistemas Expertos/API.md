@@ -4,17 +4,22 @@ tags:
   - FastAPI
   - API
 ---
+![[Pasted image 20241111152153.png]]
+
 ---
-Aprender como se diseña los endpoints
-
-
-
-> [!IMPORTANT ] 
-> Aprenderse los Handing Error, ya que viene en e examen
-
-
+## Endpoints
 
 
 
 ---
-[[FastAPI]]
+## Handing Error
+
+
+
+---
+## REST API
+Los rest (Representational State Transfer) 
+
+
+
+---

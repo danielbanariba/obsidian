@@ -4,49 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "6e5ff8253bbb0daf",
+        "id": "3834bcc406de29c9",
         "type": "tabs",
         "children": [
           {
-            "id": "d1759c08c7ba0e4e",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
-            }
-          },
-          {
-            "id": "6d4821cee954ed2a",
+            "id": "5b51029c167f760c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript/Expo.md",
+                "file": "Practica Profesional/Choyce/Bugs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Expo"
+              "title": "Bugs"
             }
           },
           {
-            "id": "b099c81aebfaaa2a",
+            "id": "1a0aeb0d825734b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/VIM.md",
+                "file": "AWS/AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VIM"
+              "title": "AWS"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Mobile",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,53 +177,54 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b099c81aebfaaa2a",
+  "active": "1a0aeb0d825734b1",
   "lastOpenFiles": [
-    "Javascript/React Native.md",
-    "Pasted image 20241109185222.png",
-    "Pasted image 20241109185215.png",
-    "Javascript/Expo.md",
-    "Pasted image 20241109185052.png",
-    "Sistemas Expertos/AstroJS.md",
     "AWS/API Gateway.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
+    "Sistemas Expertos/AstroJS.md",
+    "Sistemas Expertos/Arquitecturas Web.md",
+    "Sistemas Expertos/API.md",
+    "Windows/Comandos.md",
+    "Linux/Git.md",
+    "Practica Profesional/Choyce/Bugs.md",
+    "Pasted image 20241112113523.png",
+    "Pasted image 20241112113445.png",
+    "Pasted image 20241112113335.png",
+    "Pasted image 20241112113310.png",
+    "Pasted image 20241112113255.png",
+    "Pasted image 20241112113233.png",
+    "Pasted image 20241112113029.png",
+    "Pasted image 20241112112814.png",
+    "Practica Profesional/Luqa/Carateristicas.md",
+    "Practica Profesional/Choyce/Sin nombre",
+    "Practica Profesional/Choyce",
+    "Practica Profesional/Luqa/Links.md",
+    "Backend/Postman.md",
+    "Pasted image 20241111152153.png",
+    "Pasted image 20241111151529.png",
     "AWS/AWS.md",
+    "Backend",
+    "Practica Profesional/QA/QA Engineer.md",
+    "Practica Profesional/QA/Jira.md",
+    "Practica Profesional/Luqa",
+    "Windows/Powershell.md",
+    "Javascript/Expo.md",
+    "ChahtGPT/Perfil Profesional.md",
+    "Linux/VIM.md",
+    "Javascript/React Native.md",
     "Javascript/NodeJS.md",
     "Bases de Datos/NoSQL/DynamoDB.md",
     "Practica Profesional/QA/Testing.md",
     "Practica Profesional/QA/Zephyr.md",
     "Practica Profesional/QA/Selenium.md",
-    "Practica Profesional/QA/QA Engineer.md",
-    "Practica Profesional/QA/Jira.md",
     "Javascript/Cypress.md",
     "Ingles/Possessive Abjectives and Possessive.md",
-    "Ingles/Vocabulary.md",
-    "Frontend/HTML.md",
-    "Frontend/CSS.md",
-    "Bases de Datos/Bases de Datos.md",
-    "Bases de Datos/NoSQL/NoSQL.md",
-    "Bases de Datos/NoSQL/MongoDB.md",
-    "AWS/Lambda.md",
-    "AWS/AWS Cognito.md",
-    "Linux/Kali.md",
-    "Linux/VIM.md",
-    "Infraestructura/Docker.md",
-    "Pasted image 20241107154724.png",
     "Windows",
-    "Pasted image 20241107192220.png",
-    "Pasted image 20241107181512.png",
-    "img/Pasted image 20241107141632.png",
-    "img/Pasted image 20241107141507.png",
-    "img/Pasted image 20241107141453.png",
-    "img/Pasted image 20241106152322.png",
     "Javascript/nest-cheatsheet.pdf",
     "C#",
     "Frontend",
     "Sin título.canvas",
     "Bases de Datos/NoSQL",
-    "Bases de Datos/SQL",
-    "Practica Profesional/QA",
-    "Programacion",
-    "Practica Profesional",
-    "Java"
+    "Bases de Datos/SQL"
   ]
 }
