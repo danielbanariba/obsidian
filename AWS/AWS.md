@@ -38,13 +38,6 @@ aws dynamodb list-tables --region us-east-1
 
 
 ---
-En el archivo main.tf y usando [[Terraform]] ponemos
-```Java
-provider "aws" {
-	region = "us-east-1"
-}
-```
-
 Desplegar (este comando solo sirve en gitbash)
 ```shell
 sls deploy --stage cooper --region us-east-1

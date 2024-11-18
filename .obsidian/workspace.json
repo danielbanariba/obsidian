@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/AWS.md",
+                "file": "Practica Profesional/Luqa/Template para QA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AWS"
+              "title": "Template para QA"
+            }
+          },
+          {
+            "id": "686f274352d280e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/Chocalatey.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chocalatey"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -67,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "deploy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,8 +191,22 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "1a0aeb0d825734b1",
+  "active": "686f274352d280e7",
   "lastOpenFiles": [
+    "Pasted image 20241117205750.png",
+    "ChahtGPT/Darle mas contexto.md",
+    "Sistemas Expertos/Chocalatey.md",
+    "Practica Profesional/Choyce/Links.md",
+    "Practica Profesional/Choyce/Bugs.md",
+    "ChahtGPT/test-case-prompt.md",
+    "Practica Profesional/Luqa/Template para QA.md",
+    "Practica Profesional/Luqa/Links.md",
+    "Practica Profesional/Luqa/Carateristicas.md",
+    "ChahtGPT/Perfil Profesional.md",
+    "AWS/AWS.md",
+    "Practica Profesional/QA/Jira.md",
+    "Pasted image 20241113114211.png",
+    "Javascript/Serverless.md",
     "AWS/API Gateway.md",
     "Sistemas Expertos/Portafolios que inspiran.md",
     "Sistemas Expertos/AstroJS.md",
@@ -186,7 +214,6 @@
     "Sistemas Expertos/API.md",
     "Windows/Comandos.md",
     "Linux/Git.md",
-    "Practica Profesional/Choyce/Bugs.md",
     "Pasted image 20241112113523.png",
     "Pasted image 20241112113445.png",
     "Pasted image 20241112113335.png",
@@ -195,30 +222,17 @@
     "Pasted image 20241112113233.png",
     "Pasted image 20241112113029.png",
     "Pasted image 20241112112814.png",
-    "Practica Profesional/Luqa/Carateristicas.md",
     "Practica Profesional/Choyce/Sin nombre",
     "Practica Profesional/Choyce",
-    "Practica Profesional/Luqa/Links.md",
     "Backend/Postman.md",
     "Pasted image 20241111152153.png",
-    "Pasted image 20241111151529.png",
-    "AWS/AWS.md",
     "Backend",
     "Practica Profesional/QA/QA Engineer.md",
-    "Practica Profesional/QA/Jira.md",
     "Practica Profesional/Luqa",
     "Windows/Powershell.md",
     "Javascript/Expo.md",
-    "ChahtGPT/Perfil Profesional.md",
     "Linux/VIM.md",
     "Javascript/React Native.md",
-    "Javascript/NodeJS.md",
-    "Bases de Datos/NoSQL/DynamoDB.md",
-    "Practica Profesional/QA/Testing.md",
-    "Practica Profesional/QA/Zephyr.md",
-    "Practica Profesional/QA/Selenium.md",
-    "Javascript/Cypress.md",
-    "Ingles/Possessive Abjectives and Possessive.md",
     "Windows",
     "Javascript/nest-cheatsheet.pdf",
     "C#",
