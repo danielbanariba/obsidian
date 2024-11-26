@@ -83,3 +83,5 @@ npm install --save bcrypt
 ```
 
 
+---
+En el archivo controller es donde se van a crear siempre los archivos de los endpoints
