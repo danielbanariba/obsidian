@@ -43,7 +43,21 @@ Desplegar (este comando solo sirve en gitbash)
 sls deploy --stage cooper --region us-east-1
 ```
 
+Saber mi ID Account
+```shell
+aws sts get-caller-identity
+```
+Y me va a devolver un arreglo asi 
+```json
+{
+    "UserId": "AIDA3L446LVM755R4HJ5C",
+    "Account": "781476322649",
+    "Arn": "arn:aws:iam::781476322649:user/luqa-dev-cooper"
+}
+```
 
+
+IGNORAR CUALQUIER COMANDO QUE DIGA EN SU COMANDO 'delete' ES PELIGRO! ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ 
 
 ---
 ## API GATEWAY

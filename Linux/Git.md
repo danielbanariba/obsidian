@@ -7,7 +7,122 @@ tags:
   - Terminal
 ---
 ---
-## Los comandos mas usados en Git
+### Los comandos mas usados en Git
+
+Guardar los cambios de forma temporal (esto es para poder hacer un **git pull** sin problemas)
+```shell
+git stash
+```
+
+Forzar los cambios del repositorio remoto al local
+```shell
+git reset --hard origin/feature/LQ-427
+```
+
+
+
+---
+### Ramas
+
+Crear una nueva rama
+```Shell
+git branch <<Nombre de la rama>>
+```
+
+Cambiar de rama 
+```shell
+git checkout <<Nombre de la rama>>
+```
+
+Unir ramas
+```Shell
+git merge 
+```
+
+Ver todas las ramas del repositorio
+```Shell
+git branch
+```
+
+
+
+---
+### Supervisar o analizar el repositorio
+
+Ver el estado de la base de datos
+```bash
+git status
+```
+
+Miras todos los cambios históricos hechos en el repositorio
+```bash
+git show
+```
+
+Mira detalles y modificaciones de un archivo
+```bash
+git show <<Nombre del archivo>>
+```
+
+Mira la historia entera de un archivo o mostrar todos los commits realizados
+```bash
+git log <<Nombre del archivo>>
+```
+
+
+---
+### Configuración Global
+
+Agrega un nombre
+```bash
+git config –global user.name <<”Nombre de la persona”>>
+```
+
+Agrega un correo
+```bash
+git config –global user.email <<”La dirrecion de correo electronico”>>
+```
+
+
+
+---
+### Configuración al Nivel de proyecto
+
+Consultar que nombre se encuentra en el proyecto actual
+``` shell
+git config user.name
+```
+
+``` shell
+git config user.email
+```
+
+
+```shell
+git config user.name "Daniel Barrientos"
+```
+
+```shell
+git config user.email "dbarrientos@guababit.com"
+```
+
+
+
+---
+### Si cometemos errores
+
+Revertir commit a uno anterior
+```Shell
+git revert <<commit_ID>>
+```
+
+
+
+
+
+
+---
+### Comando que ya me se de memoria
 
 Hace el repositorio
 ```bash
@@ -39,120 +154,9 @@ Trae todos los archivos del servidor remoto a la maquina local
 git pull origin <<Nombre de la rama>>
 ```
 
-Guardar los cambios de forma temporal, esto es para poder hacer un **git pull** sin problemas
-```shell
-git stash
-```
-
 
 
 ---
-## Ramas
-
-Crear una nueva rama
-```Shell
-git branch <<Nombre de la rama>>
-```
-
-Cambiar de rama 
-```shell
-git checkout <<Nombre de la rama>>
-```
-
-Unir ramas
-```Shell
-git merge 
-```
-
-
-
----
-## Supervisar o analizar el repositorio
-
-Ver el estado de la base de datos
-```bash
-git status
-```
-
-Miras todos los cambios históricos hechos en el repositorio
-```bash
-git show
-```
-
-Mira detalles y modificaciones de un archivo
-```bash
-git show <<Nombre del archivo>>
-```
-
-Mira la historia entera de un archivo o mostrar todos los commits realizados
-```bash
-git log <<Nombre del archivo>>
-```
-
-Ver todas las ramas del repositorio
-```Shell
-git branch
-```
-
-
-
----
-## Configuración Global
-
-Agrega un nombre
-```bash
-git config –global user.name <<”Nombre de la persona”>>
-```
-
-Agrega un correo
-```bash
-git config –global user.email <<”La dirrecion de correo electronico”>>
-```
-
-
-
----
-## Configuración al Nivel de proyecto
-
-Consultar que nombre se encuentra en el proyecto actual
-``` shell
-git config user.name
-```
-
-``` shell
-git config user.email
-```
-
-
-```shell
-git config user.name "Daniel Barrientos"
-```
-
-```shell
-git config user.email "dbarrientos@guababit.com"
-```
-
-
-
----
-## Si cometemos errores
-
-Revertir commit a uno anterior
-```Shell
-git revert <<commit_ID>>
-```
-
-
-
----
-
-
-
-
-
-
-
-
 
 ### Curso de MoureDEV
 
@@ -192,3 +196,7 @@ Donde me quede para aprender git: 
   
 
 **Investigar sobre el Merge (Esta potente), pero lo que entendi es que lo que hace es unir diferentes ramas**
+
+
+
+

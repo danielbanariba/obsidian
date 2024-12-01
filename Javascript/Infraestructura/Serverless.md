@@ -35,5 +35,9 @@ Desplegar serverless
 serverless deploy --stage cooper --region us-east-1 --verbose
 ```
 
+Desplegar de forma local 
+```shell
+serverless offline --stage <<Nombre del Ambiente>> --region us-east-1
+```
 
 
