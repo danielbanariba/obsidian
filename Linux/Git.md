@@ -9,9 +9,14 @@ tags:
 ---
 ### Los comandos mas usados en Git
 
-Guardar los cambios de forma temporal (esto es para poder hacer un **git pull** sin problemas)
+Guardar los cambios de forma temporal (esto es para poder cambiar de rama)
 ```shell
 git stash
+```
+
+Seguir trabajando con los cambios que teniamos
+```shell
+git stash pop
 ```
 
 Forzar los cambios del repositorio remoto al local
@@ -44,7 +49,10 @@ Ver todas las ramas del repositorio
 git branch
 ```
 
-
+Eliminar una rama
+```shell
+git branch -D <<Nombre de la rama>> 
+```
 
 ---
 ### Supervisar o analizar el repositorio

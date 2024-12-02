@@ -27,7 +27,7 @@ npm install -g serverless@3.30.1
 
 Desinstalar
 ```Shell
- npm uninstall -g serverless
+npm uninstall -g serverless
 ```
 
 Desplegar serverless

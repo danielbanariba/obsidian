@@ -16,7 +16,7 @@ tenemos que utilizar [[Docker]] y ejecutar el siguiente comando
 docker run -p 8000:8000 amazon/dynamodb-local
 ```
 
-2) para que los endpoints funcionen correctamente desde local tenemos que poner este codigo, en mi casi es en el service que lo tengo que colocar
+2) para que los endpoints funcionen correctamente desde local tenemos que poner este codigo, en mi casi es en el **service** que lo tengo que colocar
 ```js
 dynamoose.aws.ddb.local('http://localhost:8000');
 ```
@@ -31,6 +31,8 @@ import { PermissionsGuard } from '../../guards/permissions.guard';
 { provide: APP_GUARD, useClass: PermissionsGuard }
 import { PermissionsGuard } from '../../guards/permissions.guard';
 import { APP_GUARD } from '@nestjs/core';
+@Inject(REQUEST) private readonly request: OurHouseRequest,
+
 ```
 
 4) y para tener aun menos conflictos, hacemos una exclusion del router, esto se encuentran en el **app.module.ts** y tenemos que agregar nuestro enpoint aqui 
@@ -38,6 +40,20 @@ import { APP_GUARD } from '@nestjs/core';
 const excludedRoutes = [
 	// announcements
 	{ path: 'tenant/:tenantId/announcement', method: RequestMethod.GET },
+	{ path: 'tenant/:tenantId/announcement', method: RequestMethod.POST },
 ];
 ```
 
+5) Crear tablas 
+```shell
+aws dynamodb create-table \
+    --table-name cooper-Announcement \
+    --attribute-definitions \
+        AttributeName=TenantId,AttributeType=S \
+        AttributeName=AnnouncementId,AttributeType=S \
+    --key-schema \
+        AttributeName=TenantId,KeyType=HASH \
+        AttributeName=AnnouncementId,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 \
+    --endpoint-url http://localhost:8000
+```
