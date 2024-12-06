@@ -57,3 +57,33 @@ aws dynamodb create-table \
     --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 \
     --endpoint-url http://localhost:8000
 ```
+
+
+
+---
+## Insertar datos desde un Json
+
+Datos ficitios de la tabla Visitas
+```json
+{
+  "TenantId": { "S": "C4PER" },
+  "Id": { "S": "visit-001" },
+  "IdUser": { "S": "34987428-a051-703a-c80b-5e44d09c1a9d" },
+  "CreatedAt": { "N": "1733353090000" },
+  "Type": { "S": "OneTime" },
+  "Status": { "S": "P" },
+  "Name": { "S": "Visita de Prueba" },
+  "ExpiresAt": { "N": "1733439490000" },
+  "HasExpired": { "BOOL": false },
+  "History": { 
+    "L": [
+      { 
+        "M": {
+          "Type": { "S": "In" },
+          "CreatedAt": { "N": "1733353090000" }
+        }
+      }
+    ]
+  }
+}
+```
