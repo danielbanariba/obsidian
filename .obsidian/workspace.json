@@ -8,77 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a35084a0927dd0be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ChahtGPT/test-case-prompt.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "test-case-prompt"
-            }
-          },
-          {
-            "id": "73536cf9c8689d5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Comandos.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Comandos"
-            }
-          },
-          {
             "id": "e56d23534b43a00f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/Git.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git"
-            }
-          },
-          {
-            "id": "791fd9d7563a1285",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Practica Profesional/Estandares de la empresa.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Estandares de la empresa"
-            }
-          },
-          {
-            "id": "41325fe9a90c1a39",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/Infraestructura/Serverless.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Serverless"
-            }
-          },
-          {
-            "id": "d0c62ba6cdb761f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,7 +22,7 @@
             }
           },
           {
-            "id": "3e3e9708bc4abb37",
+            "id": "ec232712340b0005",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -106,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -248,34 +178,35 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "e56d23534b43a00f",
+  "active": "ec232712340b0005",
   "lastOpenFiles": [
-    "Practica Profesional/Luqa/Codigo.md",
-    "Bases de Datos/NoSQL/DynamoDB.md",
+    "Bases de Datos/NoSQL/MongoDB.md",
+    "Practica Profesional/Choyce/Links.md",
     "ChahtGPT/test-case-prompt.md",
+    "Practica Profesional/Luqa/Codigo.md",
+    "Linux/Git.md",
+    "Practica Profesional/Luqa/Template para QA.md",
+    "Practica Profesional/QA/Testing.md",
+    "Practica Profesional/QA/Selenium.md",
+    "Practica Profesional/QA/Zephyr.md",
+    "Practica Profesional/QA/Links.md",
+    "Practica Profesional/QA/QA Engineer.md",
+    "Bases de Datos/NoSQL/DynamoDB.md",
+    "Bases de Datos/NoSQL/NoSQL.md",
+    "Bases de Datos/Bases de Datos.md",
+    "Bases de Datos/SQL.md",
     "ChahtGPT/Perfil Profesional.md",
     "ChahtGPT/Darle mas contexto.md",
-    "Linux/Git.md",
+    "Practica Profesional/Luqa/Carateristicas.md",
+    "Practica Profesional/Luqa/Links.md",
+    "Javascript/Infraestructura/Serverless.md",
+    "Practica Profesional/Estandares de la empresa.md",
     "Windows/Comandos.md",
+    "AWS/AWS.md",
     "img/Pasted image 20241125154851.png",
     "Javascript/Freenworks/Backend/Nestjs.md",
-    "Practica Profesional/Estandares de la empresa.md",
-    "Javascript/Infraestructura/Serverless.md",
-    "Bases de Datos/NoSQL/MongoDB.md",
     "Backend/Postman.md",
-    "Practica Profesional/Luqa/Links.md",
-    "AWS/AWS.md",
-    "Practica Profesional/Luqa/Carateristicas.md",
     "AWS/Lambda.md",
-    "AWS/AWS Cognito.md",
-    "AWS/API Gateway.md",
-    "Practica Profesional/Luqa/Template para QA.md",
-    "Practica Profesional/Manual Tecnico.md",
-    "Practica Profesional/Choyce/Bugs.md",
-    "Javascript/NodeJS.md",
-    "Javascript/React Native.md",
-    "Javascript/Dynamoosejs.md",
-    "Javascript/Expo.md",
     "Javascript/Librerias",
     "Javascript/Freenworks/Backend/nest-cheatsheet.pdf",
     "Javascript/Infraestructura",
