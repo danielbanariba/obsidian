@@ -1,7 +1,6 @@
 ---
 tags: []
 ---
----
 Necesito crear un user story en Jira. Por favor ayúdame a estructurarlo usando la siguiente información:
 
 Contexto: [DESCRIBE AQUÍ EL PROBLEMA O NECESIDAD]

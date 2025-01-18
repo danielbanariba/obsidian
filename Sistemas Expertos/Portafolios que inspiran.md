@@ -63,7 +63,7 @@ Como divide la experiencia laboral, como si fuera una linea de tiempo del viejo 
 JODER! Se me ocurre que esa linea vaya esa linea como raya, osea esta https://www.aceternity.com/components/moving-line
 ![[Pasted image 20240919005751.png]]
 
-La parte de los testimonios, se ve bien y le da una cierta credibilidad
+La parte de los testimonios, se ve bien y le da una cierta credibilidad y cuando tenga muchos testimonios hacer este scroll https://ui.aceternity.com/components/infinite-moving-cards 
 ![[Pasted image 20240919010014.png]]
 
 y por ultimo esto mundo que se puede interactuar y que se mira super hermoso las estrellas y todo
