@@ -4,67 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "49ba8d39f296a19e",
+        "id": "ea261bef6726fd7f",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf6e71d950adb67",
+            "id": "6806e865db32ed53",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/technical-manual (2).md",
+                "file": "Fundamuvi/01. Inspiración.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "technical-manual (2)"
+              "title": "01. Inspiración"
             }
           },
           {
-            "id": "0da819a95e78b982",
+            "id": "f04af42503638d68",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/technical-manual (1).md",
+                "file": "Practica Profesional/QA/Playwright.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "technical-manual (1)"
+              "title": "Playwright"
             }
           },
           {
-            "id": "280b1febf3595d40",
+            "id": "596c4b602232bd43",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ChahtGPT/API Testing.md",
+                "file": "Practica Profesional/Luqa/Template para QA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API Testing"
-            }
-          },
-          {
-            "id": "f45cfc4dd32ac9a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS/luqa-payments-technical-doc-updated (2).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "luqa-payments-technical-doc-updated (2)"
+              "title": "Template para QA"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -83,8 +69,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -183,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ChahtGPT/API Testing 2.md"
+                "file": "Linux/Git.md"
               },
               "icon": "lucide-list",
-              "title": "Esquema de API Testing 2"
+              "title": "Esquema de Git"
             }
           }
         ],
@@ -207,44 +192,45 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f45cfc4dd32ac9a9",
+  "active": "596c4b602232bd43",
   "lastOpenFiles": [
-    "AWS/luqa-payments-technical-doc-updated (1).md",
-    "Sistemas Expertos/Portafolios que inspiran.md",
-    "AWS/luqa-payments-technical-doc-updated (2).md",
-    "AWS/luqa-payments-technical-doc-updated.md",
-    "ChahtGPT/API Testing ApiDOG.md",
-    "ChahtGPT/API Testing ApiDOG 1.md",
-    "ChahtGPT/BUG.md",
-    "ChahtGPT/API Testing 2.md",
+    "img/Amy/Pasted image 20250108205222.png",
+    "img/Amy/Pasted image 20250108205056.png",
+    "img/Amy/Pasted image 20250108175754.png",
+    "img/Amy/Pasted image 20250108175618.png",
+    "img/Amy/Pasted image 20250108173305.png",
+    "img/Amy/Pasted image 20250108000957.png",
+    "img/Amy/Pasted image 20250108000815.png",
+    "img/Amy/Pasted image 20250107235618.png",
+    "img/Amy/Pasted image 20250107234350.png",
+    "img/Amy/Pasted image 20250107234858.png",
+    "img/Amy/Pasted image 20250107234015.png",
+    "img/Amy",
+    "Practica Profesional/Luqa/Links.md",
     "ChahtGPT/API Testing 1.md",
     "ChahtGPT/API Testing.md",
-    "AWS/technical-manual (3).md",
-    "AWS/technical-manual (1).md",
-    "AWS/technical-manual (2).md",
-    "AWS/technical-manual.md",
-    "Practica Profesional/Luqa/Codigo.md",
-    "AWS/payments-tech-doc.md",
-    "ChahtGPT/user-story.md",
-    "ChahtGPT/Documentar API.md",
-    "ChahtGPT/Darle mas contexto.md",
-    "Practica Profesional/Luqa/Template para QA.md",
     "ChahtGPT/Documentacion Tecnica.md",
+    "ChahtGPT/Darle mas contexto.md",
+    "ChahtGPT/BUG.md",
+    "ChahtGPT/test-case-prompt.md",
+    "ChahtGPT/Perfil Profesional.md",
+    "ChahtGPT/Documentar API.md",
+    "Practica Profesional/QA/Playwright.md",
+    "Fundamuvi/01. Inspiración.md",
+    "Practica Profesional/Luqa/Codigo.md",
+    "Fundamuvi/02. Informacion a resaltar.md",
+    "Fundamuvi/03. Estructura y diseño.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
+    "Fundamuvi/Contenido.md",
+    "Practica Profesional/Marco Agil.md",
+    "ChahtGPT/user-story.md",
     "Linux/Git.md",
-    "Practica Profesional/Choyce/Playwright.md",
-    "Backend/Postman.md",
-    "Practica Profesional/Choyce/Links.md",
     "Practica Profesional/Choyce/Bugs.md",
-    "Pasted image 20250120093250.png",
-    "Pasted image 20250108205222.png",
-    "Pasted image 20250108205056.png",
-    "Pasted image 20250108190433.png",
-    "Pasted image 20250108190001.png",
-    "Pasted image 20250108184902.png",
-    "Pasted image 20250108184515.png",
-    "Pasted image 20250108184419.png",
-    "Pasted image 20250108184219.png",
-    "Pasted image 20250108180750.png",
+    "Practica Profesional/Manual Tecnico.md",
+    "Practica Profesional/Estandares de la empresa.md",
+    "Practica Profesional/QA/Zephyr.md",
+    "Practica Profesional/QA/Testing.md",
+    "Practica Profesional/QA/Selenium.md",
     "Fundamuvi",
     "Proyecto de Manuelito",
     "Javascript/Librerias",
@@ -254,7 +240,6 @@
     "Javascript/Freenworks/Frontend",
     "Javascript/Freenworks/Backend",
     "Javascript/Freenworks",
-    "Javascript/Testing",
     "Sin título.canvas"
   ]
 }

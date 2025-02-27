@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "49ba8d39f296a19e",
+        "id": "ea261bef6726fd7f",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf6e71d950adb67",
+            "id": "6806e865db32ed53",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWS/technical-manual (2).md",
+                "file": "Practica Profesional/Choyce/Playwright.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "technical-manual (2)"
-            }
-          },
-          {
-            "id": "0da819a95e78b982",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS/technical-manual (1).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "technical-manual (1)"
-            }
-          },
-          {
-            "id": "280b1febf3595d40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ChahtGPT/API Testing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "API Testing"
-            }
-          },
-          {
-            "id": "f45cfc4dd32ac9a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS/luqa-payments-technical-doc-updated (2).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "luqa-payments-technical-doc-updated (2)"
+              "title": "Playwright"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,8 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -183,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ChahtGPT/API Testing 2.md"
+                "file": "Linux/Git.md"
               },
               "icon": "lucide-list",
-              "title": "Esquema de API Testing 2"
+              "title": "Esquema de Git"
             }
           }
         ],
@@ -207,35 +163,35 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "f45cfc4dd32ac9a9",
+  "active": "6806e865db32ed53",
   "lastOpenFiles": [
-    "AWS/luqa-payments-technical-doc-updated (1).md",
-    "Sistemas Expertos/Portafolios que inspiran.md",
-    "AWS/luqa-payments-technical-doc-updated (2).md",
-    "AWS/luqa-payments-technical-doc-updated.md",
-    "ChahtGPT/API Testing ApiDOG.md",
-    "ChahtGPT/API Testing ApiDOG 1.md",
     "ChahtGPT/BUG.md",
-    "ChahtGPT/API Testing 2.md",
-    "ChahtGPT/API Testing 1.md",
-    "ChahtGPT/API Testing.md",
-    "AWS/technical-manual (3).md",
-    "AWS/technical-manual (1).md",
-    "AWS/technical-manual (2).md",
-    "AWS/technical-manual.md",
-    "Practica Profesional/Luqa/Codigo.md",
-    "AWS/payments-tech-doc.md",
-    "ChahtGPT/user-story.md",
-    "ChahtGPT/Documentar API.md",
-    "ChahtGPT/Darle mas contexto.md",
-    "Practica Profesional/Luqa/Template para QA.md",
-    "ChahtGPT/Documentacion Tecnica.md",
-    "Linux/Git.md",
-    "Practica Profesional/Choyce/Playwright.md",
     "Backend/Postman.md",
+    "Practica Profesional/Choyce/Playwright.md",
     "Practica Profesional/Choyce/Links.md",
     "Practica Profesional/Choyce/Bugs.md",
+    "Fundamuvi/01. Inspiración.md",
+    "ChahtGPT/Documentacion Tecnica.md",
+    "ChahtGPT/test-case-prompt.md",
+    "ChahtGPT/Perfil Profesional.md",
+    "ChahtGPT/Documentar API.md",
+    "ChahtGPT/Darle mas contexto.md",
+    "ChahtGPT/API Testing 1.md",
+    "ChahtGPT/API Testing.md",
+    "Practica Profesional/Luqa/Codigo.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
+    "Practica Profesional/Luqa/Template para QA.md",
+    "Practica Profesional/Luqa/Links.md",
     "Pasted image 20250120093250.png",
+    "Fundamuvi/02. Informacion a resaltar.md",
+    "Fundamuvi/03. Estructura y diseño.md",
+    "Fundamuvi/Contenido.md",
+    "Practica Profesional/Marco Agil.md",
+    "ChahtGPT/user-story.md",
+    "Linux/Git.md",
+    "Practica Profesional/Manual Tecnico.md",
+    "Practica Profesional/Estandares de la empresa.md",
+    "Practica Profesional/QA/Zephyr.md",
     "Pasted image 20250108205222.png",
     "Pasted image 20250108205056.png",
     "Pasted image 20250108190433.png",
