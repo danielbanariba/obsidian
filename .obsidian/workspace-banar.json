@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "4d652406f4aed295",
+        "id": "49ba8d39f296a19e",
         "type": "tabs",
         "children": [
           {
-            "id": "ebf25ec97de027b5",
+            "id": "aa713e185b05a89f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend/Postman.md",
+                "file": "Analiza/Express.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Postman"
+              "title": "Express"
+            }
+          },
+          {
+            "id": "3bfe8164db5012ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practica Profesional/Estandares de la empresa.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Estandares de la empresa"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 300
   },
   "right": {
     "id": "1d557ebc4901ae80",
@@ -164,45 +179,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9bffff4ecbdae91d",
+  "active": "3bfe8164db5012ff",
   "lastOpenFiles": [
-    "Infraestructura/Docker.md",
-    "Java/Java.md",
-    "Infraestructura/Kubernetes.md",
-    "Infraestructura/Terraform Comandos.md",
-    "Infraestructura/Terraform.md",
-    "Infraestructura/Azure/Azure Data Studio.md",
-    "Infraestructura/Azure/Azure.md",
-    "Frontend/HTML.md",
-    "Infraestructura/Untitled/desktop.ini",
-    "Infraestructura/Azure",
-    "Frontend/CSS.md",
-    "ChahtGPT/user-story.md",
-    "ChahtGPT/Documentacion Tecnica.md",
-    "ChahtGPT/Darle mas contexto.md",
-    "ChahtGPT/BUG.md",
-    "ChahtGPT/API Testing ApiDOG 1.md",
+    "Practica Profesional/QA/Zephyr.md",
+    "Practica Profesional/QA/Testing.md",
+    "Practica Profesional/QA/Selenium.md",
+    "Practica Profesional/QA/QA Engineer.md",
+    "Practica Profesional/QA/Links.md",
+    "Practica Profesional/QA/Jira.md",
+    "Practica Profesional/Luqa/Template para QA.md",
+    "Practica Profesional/Luqa/Carateristicas.md",
+    "Practica Profesional/Luqa/Links.md",
+    "Practica Profesional/Luqa/Codigo.md",
+    "Practica Profesional/Choyce/Playwright.md",
+    "Practica Profesional/Choyce/Links.md",
+    "Analiza/Angular.md",
+    "Analiza/SQl.md",
+    "Analiza/Express.md",
+    "Sin título.md",
+    "Pasted image 20250306170738.png",
     "ChahtGPT/API Testing ApiDOG.md",
-    "ChahtGPT/API Testing 2.md",
-    "ChahtGPT/API Testing 1.md",
-    "ChahtGPT/API Testing.md",
-    "Bases de Datos/NoSQL/NoSQL.md",
-    "Bases de Datos/NoSQL/MongoDB.md",
-    "Bases de Datos/NoSQL/DynamoDB.md",
-    "Bases de Datos/SQL.md",
-    "Bases de Datos/SQL/MySQL.md",
-    "Bases de Datos/Bases de Datos.md",
-    "Infraestructura/AWS/AWS.md",
-    "AWS/AWS Cognito.md",
-    "Analiza/Backend",
-    "Analiza/Frontend",
-    "img/Pasted image 20250306170934.png",
-    "img/Pasted image 20250306170832.png",
-    "img/Pasted image 20250306170738.png",
-    "img/Pasted image 20250306171727.png",
+    "technical/community-payments-technical-document.md",
     "Analiza",
-    "img/Pasted image 20250306172116.png",
-    "img/Pasted image 20250306171955.png",
+    "Pasted image 20250306170832.png",
+    "ChahtGPT/API Testing ApiDOG 1.md",
+    "ChahtGPT/API Testing.md",
+    "technical/enhanced-user-stories (1).md",
+    "technical/enhanced-user-stories.md",
+    "Fundamuvi/03. Estructura y diseño.md",
+    "Pasted image 20250306172116.png",
+    "Pasted image 20250306171955.png",
+    "Pasted image 20250306171727.png",
+    "Pasted image 20250306170934.png",
+    "Fundamuvi/02. Informacion a resaltar.md",
+    "Fundamuvi/01. Inspiración.md",
+    "Sistemas Expertos/Tailwind.md",
     "technical",
     "Pasted image 20250120093250.png",
     "Pasted image 20250108205222.png",
@@ -212,6 +223,10 @@
     "Proyecto de Manuelito",
     "Javascript/Librerias",
     "Javascript/Freenworks/Backend/nest-cheatsheet.pdf",
+    "Javascript/Infraestructura",
+    "Javascript/Freenworks/Frontend/desktop.ini",
+    "Javascript/Freenworks/Frontend",
+    "Javascript/Freenworks/Backend",
     "Sin título.canvas"
   ]
 }

@@ -225,7 +225,7 @@ La generación de datos de prueba se refiere al proceso de crear conjuntos de da
 ##### Herramientas para Generación de Datos de Prueba:
 1. Mockaroo: 
 2. Faker (en [[Python]]): 
-3. [[SQL]] Data Generator: 
+3. [[Bases de Datos/SQL]] Data Generator: 
 4. DataFactory (en [[Azure]]): 
 5. Postman:
 

@@ -105,7 +105,6 @@ git config user.name
 git config user.email
 ```
 
-
 ```shell
 git config user.name "Daniel Barrientos"
 ```
