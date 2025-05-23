@@ -79,35 +79,6 @@ Consejo de un Senior es siempre utilizar Asíncrono, ya que no nos podemos dar e
 
 
 
----
-## Comandos
-
-E
-```shell 
-npm init 
-```
-
-Si tenemos hueva de iniciar la vaina, podemos -y para poner todos los valores por defecto
-```shell
-npm init -y
-```
-
-Desinstalar los paquetes
-```shell
-npm uninstall [nombre-del-paquete]
-```
-
-Dependencias de desarrollo (lo que entendí es que hacemos eso ya que tenemos que separar las dependencias que tengamos instaladas del producción y el de desarrollo, ya que si subimos todo al servidor, ocuparan dependencias que no necesitamos y por eso consumirá recursos innecesarios.)
-```shell
-npm install standard -D
-```
-
-OJO! utilizar en el **gitbash**
-Eliminar toda la carpeta de Node Modules
-```shell
-rm -rf ./node_modules
-```
-
 
 
 
@@ -118,29 +89,3 @@ Dice que se puede hacer [[Testing]] diablos xd
 
 
 ---
-## Node Version Manager (NVM)
-
-##### [Documentacion](https://github.com/nvm-sh/nvm)
-
-[[Comandos]]
-
-Instalar una version especifica
-```shell
-nvm install 22.5.1
-```
-
-Usar la version especifica para el proyecto
-```shell
-nvm use 22.5.2
-```
-
-Listar las versiones que tenemos instaladas de Node
-```Shell
-nvm list
-```
-
-Muestra la version que estamos usando en ese momento
-```shell
-nvm current
-```
-

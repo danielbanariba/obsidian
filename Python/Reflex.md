@@ -17,3 +17,5 @@ tags:
 
 ---
 Reflex es una libreria de [[Python]], como dato curioso para que funcione el backend debajo utilizan [[FastAPI]]
+
+

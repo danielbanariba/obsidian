@@ -14,3 +14,9 @@ tags:
 
 
 ---
+## Funcion del sistema
+
+Es para saber el tipo de dato que es en "X" variable
+```python
+type()
+```
