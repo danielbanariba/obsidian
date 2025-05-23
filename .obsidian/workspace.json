@@ -4,35 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1b2092c851613c0d",
+        "id": "e476dd27af098cc4",
         "type": "tabs",
         "children": [
           {
-            "id": "a1b09cf264c09ff7",
+            "id": "b11d4a6d7a58d130",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/NodeJS/Librerias.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Librerias"
-            }
-          },
-          {
-            "id": "6a490c590b9f5cae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/NodeJS/NodeJS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NodeJS"
+              "title": "New tab"
             }
           }
         ]
@@ -108,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Javascript/NodeJS/Librerias.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Librerias"
+              "title": "Backlinks"
             }
           },
           {
@@ -127,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Javascript/NodeJS/Librerias.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Librerias"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Javascript/NodeJS/Librerias.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Librerias"
+              "title": "Outline"
             }
           }
         ]
@@ -182,15 +161,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a1b09cf264c09ff7",
+  "active": "b11d4a6d7a58d130",
   "lastOpenFiles": [
-    "Javascript/NodeJS/Comandos.md",
-    "Javascript/NodeJS/Librerias.md",
-    "Javascript/NodeJS/NodeJS.md",
+    "Infraestructura/Terraform/Terraform Comandos.md",
+    "Infraestructura/Terraform/Terraform.md",
     "Javascript/NodeJS/NVM.md",
+    "Javascript/NodeJS/NodeJS.md",
+    "Javascript/NodeJS/Librerias.md",
+    "Javascript/NodeJS/Comandos.md",
+    "Javascript/Librerias/Redux.md",
+    "Ingles/Vocabulary.md",
+    "Infraestructura/Kubernetes.md",
+    "Infraestructura/Terraform",
+    "Infraestructura/Docker.md",
+    "Infraestructura/Cloudfare.md",
+    "Infraestructura/Azure/Azure Data Studio.md",
+    "Infraestructura/Azure/Azure.md",
+    "Infraestructura/AWS/AWS.md",
+    "Fundamuvi/Ideas.md",
+    "Fundamuvi/Experiencia.md",
+    "Fundamuvi/Contenido.md",
+    "Fundamuvi/03. Estructura y diseño.md",
+    "Fundamuvi/02. Informacion a resaltar.md",
+    "Fundamuvi/01. Inspiración.md",
+    "Backend/Postman.md",
+    "Backend/ApiDog.md",
+    "Bases de Datos/NoSQL/MongoDB.md",
+    "Bases de Datos/NoSQL/NoSQL.md",
+    "Bases de Datos/NoSQL/DynamoDB.md",
+    "Bases de Datos/SQL/PostgreSQl.md",
+    "Bases de Datos/SQL",
+    "Testing",
+    "Javascript/Freenworks/Backend/nest-cheatsheet.pdf",
     "Javascript/NodeJS",
-    "Javascript/Freenworks/Backend/ExpressJS.md",
-    "Python/Python.md",
     "Platzi"
   ]
 }

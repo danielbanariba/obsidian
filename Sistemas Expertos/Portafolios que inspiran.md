@@ -254,7 +254,7 @@ https://astro-moon-landing.netlify.app/
 
 • Organizar todos los archivos y recursos en carpetas estructuradas.
 
-• Familiarizarte con las herramientas y tecnologías que utilizarás (e.g., [[Tailwind]],  [[AstroJS]]).
+• Familiarizarte con las herramientas y tecnologías que utilizarás (e.g., [[TailwindCSS]],  [[AstroJS]]).
 
 • Planificar un cronograma para la fase de desarrollo.
 

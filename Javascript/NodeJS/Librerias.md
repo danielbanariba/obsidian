@@ -4,7 +4,7 @@ tags:
 ---
 ## Comandos
 
-Para poder escuchar variables de entorno
+Para poder escuchar las variables de entorno
 ```shell
 npm install dotenv
 ```

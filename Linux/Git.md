@@ -54,6 +54,8 @@ Eliminar una rama
 git branch -D <<Nombre de la rama>> 
 ```
 
+
+
 ---
 ### Supervisar o analizar el repositorio
 
@@ -76,6 +78,7 @@ Mira la historia entera de un archivo o mostrar todos los commits realizados
 ```bash
 git log <<Nombre del archivo>>
 ```
+
 
 
 ---
@@ -122,9 +125,6 @@ Revertir commit a uno anterior
 ```Shell
 git revert <<commit_ID>>
 ```
-
-
-
 
 
 

@@ -7,7 +7,7 @@ aliases:
 Documentacion: https://nextjs.org/docs
 
 
-Nest utiliza [[TypeScript]] y si tienes conocimientos en [[React]] va ser mucho mejor, utiliza [[Tailwind]]
+Nest utiliza [[TypeScript]] y si tienes conocimientos en [[React]] va ser mucho mejor, utiliza [[TailwindCSS]]
 
 
 
