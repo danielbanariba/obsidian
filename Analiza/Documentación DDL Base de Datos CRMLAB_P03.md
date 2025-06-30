@@ -1,19 +1,12 @@
-## 📋 Información General
-- **Base de Datos:** CRMLAB_P03
-- **Usuario:** dbarrientos
-- **Total de Tablas:** 97
-- **Fecha de Documentación:** 2025-01-15
-
----
 ## Estructura de Tablas
 
 ### Módulo de Bacteriología (6 tablas)
 
 #### 1. bacteria_catalogo_antibioticos
-**Propósito:** Catálogo maestro de antibióticos utilizados en las pruebas de sensibilidad bacteriana.
+Catálogo maestro de antibióticos utilizados en las pruebas de sensibilidad bacteriana.
 
 ```sql
--- Script DDL: Crear tabla de catálogo de antibióticos
+-- Crear tabla de catálogo de antibióticos
 CREATE TABLE bacteria_catalogo_antibioticos (
     id INTEGER NOT NULL PRIMARY KEY,
     antibiotico_nombre VARCHAR(100) NOT NULL,
@@ -23,22 +16,17 @@ CREATE TABLE bacteria_catalogo_antibioticos (
 ```
 
 ```sql
--- Índices para optimización
-CREATE INDEX idx_bacteria_antibioticos_activo ON bacteria_catalogo_antibioticos(activo);
-CREATE INDEX idx_bacteria_antibioticos_loinc ON bacteria_catalogo_antibioticos(codigo_loinc);
-```
-
-```sql
 -- Comentarios de tabla
 COMMENT ON TABLE bacteria_catalogo_antibioticos IS 'Catálogo de antibióticos para pruebas de sensibilidad bacteriana';
 COMMENT ON COLUMN bacteria_catalogo_antibioticos.codigo_loinc IS 'Código LOINC estándar internacional';
 ```
 
+
 #### 2. bacteria_catalogo_bacterias
-**Propósito:** Catálogo de bacterias identificables en el laboratorio.
+Catálogo de bacterias identificables en el laboratorio
 
 ```sql
--- Script DDL: Crear tabla de catálogo de bacterias
+-- Crear tabla de catálogo de bacterias
 CREATE TABLE bacteria_catalogo_bacterias (
     id INTEGER NOT NULL PRIMARY KEY,
     bacteria_nombre VARCHAR(100) NOT NULL,
@@ -48,23 +36,39 @@ CREATE TABLE bacteria_catalogo_bacterias (
 ```
 
 ```sql
--- Índices
-CREATE INDEX idx_bacteria_bacterias_activo ON bacteria_catalogo_bacterias(activo);
-CREATE UNIQUE INDEX idx_bacteria_bacterias_nombre ON bacteria_catalogo_bacterias(bacteria_nombre);
+-- Índice ÚNICO: Previene duplicados y mejora búsquedas por nombre
+CREATE UNIQUE INDEX idx_bacteria_bacterias_nombre 
+ON bacteria_catalogo_bacterias(bacteria_nombre);
 ```
 
 ```sql
--- Restricciones adicionales
+-- Índice para código LOINC si se busca frecuentemente
+CREATE INDEX idx_bacteria_bacterias_loinc 
+ON bacteria_catalogo_bacterias(codigo_loinc);
+```
+
+```sql
+-- Validación: El nombre no puede estar vacío o ser solo espacios
 ALTER TABLE bacteria_catalogo_bacterias 
 ADD CONSTRAINT chk_bacteria_nombre_no_vacio 
 CHECK (LENGTH(TRIM(bacteria_nombre)) > 0);
 ```
 
+```sql
+-- Documentación
+COMMENT ON TABLE bacteria_catalogo_bacterias 
+IS 'Catálogo maestro de bacterias identificables en cultivos';
+
+COMMENT ON COLUMN bacteria_catalogo_bacterias.bacteria_nombre 
+IS 'Nombre científico de la bacteria (debe ser único)';
+```
+
+
 #### 3. bacteria_resultado_encabezado
-**Propósito:** Almacena los resultados principales de cultivos bacteriológicos.
+Almacena los resultados principales de cultivos bacteriológicos.
 
 ```sql
--- Script DDL: Crear tabla de resultados bacteriológicos
+-- Tabla principal
 CREATE TABLE bacteria_resultado_encabezado (
     id INTEGER NOT NULL DEFAULT nextval('bacteria_resultado_encabezado_id_seq'::regclass),
     orden_numero TEXT,
@@ -92,7 +96,7 @@ CREATE TABLE bacteria_resultado_encabezado (
 ```
 
 ```sql
--- Secuencia para ID automático
+-- Secuencia (CACHE 1 para datos médicos críticos)
 CREATE SEQUENCE bacteria_resultado_encabezado_id_seq
     START WITH 1
     INCREMENT BY 1
@@ -102,32 +106,53 @@ CREATE SEQUENCE bacteria_resultado_encabezado_id_seq
 ```
 
 ```sql
--- Índices para búsquedas frecuentes
+-- Índices SOLO los necesarios
 CREATE INDEX idx_bacteria_resultado_orden ON bacteria_resultado_encabezado(orden_numero);
 CREATE INDEX idx_bacteria_resultado_fecha ON bacteria_resultado_encabezado(fecha_recepcion);
-CREATE INDEX idx_bacteria_resultado_validado ON bacteria_resultado_encabezado(resultado_validado);
 ```
 
 ```sql
--- Foreign Keys
+-- Índice parcial para resultados pendientes
+CREATE INDEX idx_bacteria_pendientes ON bacteria_resultado_encabezado(id, fecha_recepcion) 
+WHERE resultado_validado = false;
+```
+
+```sql
+-- Foreign Keys con comportamiento definido
 ALTER TABLE bacteria_resultado_encabezado
 ADD CONSTRAINT fk_bacteria_resultado_organismo 
 FOREIGN KEY (organismo_seleccionado_id) 
-REFERENCES bacteria_catalogo_bacterias(id);
+REFERENCES bacteria_catalogo_bacterias(id)
+ON DELETE RESTRICT;
 
 ALTER TABLE bacteria_resultado_encabezado
 ADD CONSTRAINT fk_bacteria_resultado_muestra 
 FOREIGN KEY (origin_muestra_id) 
-REFERENCES bacteria_catalogo_tipo_muestra(id);
+REFERENCES bacteria_catalogo_tipo_muestra(id)
+ON DELETE RESTRICT;
 ```
 
+```sql
+-- Documentación
+COMMENT ON TABLE bacteria_resultado_encabezado 
+IS 'Resultados de cultivos bacteriológicos y antibiogramas';
+
+COMMENT ON COLUMN bacteria_resultado_encabezado.blee 
+IS 'Beta-lactamasas de espectro extendido detectadas';
+
+COMMENT ON COLUMN bacteria_resultado_encabezado.carbapenemasas 
+IS 'Enzimas carbapenemasas detectadas (resistencia antibiótica)';
+```
+
+
+---
 ### Módulo Core del Sistema
 
 #### 4. core_clientelaboratorio
 **Propósito:** Tabla principal de clientes/pacientes del laboratorio.
 
 ```sql
--- Script DDL: Crear tabla de clientes
+-- Tabla principal
 CREATE TABLE core_clientelaboratorio (
     NumeroCliente INTEGER NOT NULL DEFAULT nextval('core_clienteslaboratorio_Numero_de_Cliente_seq'::regclass),
     ClienteTipoId VARCHAR(1),
@@ -137,7 +162,7 @@ CREATE TABLE core_clientelaboratorio (
     ClientePrimerApellido VARCHAR(60) NOT NULL,
     ClienteSegundoApellido VARCHAR(60),
     ClienteFechaNace DATE,
-    ClienteGenero VARCHAR(1) CHECK (ClienteGenero IN ('M', 'F', 'O')),
+    ClienteGenero VARCHAR(1),
     ClienteTipoSangre VARCHAR(3),
     ClienteDireccion VARCHAR(200),
     ClienteNRC VARCHAR(30),
@@ -173,9 +198,12 @@ CREATE TABLE core_clientelaboratorio (
     cliente_actividad_economica TEXT,
     fecha_ultima_actualiza DATE,
     cliente_retiente BOOLEAN,
-    CONSTRAINT pk_clientelaboratorio PRIMARY KEY (NumeroCliente)
+    CONSTRAINT pk_clientelaboratorio PRIMARY KEY (NumeroCliente),
+    CONSTRAINT chk_cliente_genero CHECK (ClienteGenero IN ('M', 'F', 'O'))
 );
+```
 
+```sql
 -- Secuencia
 CREATE SEQUENCE core_clienteslaboratorio_Numero_de_Cliente_seq
     START WITH 1
@@ -183,15 +211,26 @@ CREATE SEQUENCE core_clienteslaboratorio_Numero_de_Cliente_seq
     NO MINVALUE
     NO MAXVALUE
     CACHE 1;
+```
 
--- Índices críticos para rendimiento
+```sql
+-- SOLO índices realmente necesarios
 CREATE INDEX idx_cliente_email ON core_clientelaboratorio(ClienteEmail);
-CREATE INDEX idx_cliente_dui ON core_clientelaboratorio(ClienteId);
-CREATE INDEX idx_cliente_activo ON core_clientelaboratorio(ClienteActivo);
-CREATE INDEX idx_cliente_fecha_nace ON core_clientelaboratorio(ClienteFechaNace);
-CREATE INDEX idx_cliente_lab ON core_clientelaboratorio(LabId);
+CREATE INDEX idx_cliente_documento ON core_clientelaboratorio(ClienteId);
+CREATE INDEX idx_cliente_lab ON core_clientelaboratorio(LabId) WHERE LabId IS NOT NULL;
+```
 
--- Trigger para actualizar fecha de última actualización
+```sql
+-- Índice compuesto para búsquedas comunes
+CREATE INDEX idx_cliente_nombres ON core_clientelaboratorio(
+    ClientePrimerApellido, 
+    ClienteSegundoApellido, 
+    ClientePrimerNombre
+);
+```
+
+```sql
+-- Trigger de auditoría
 CREATE OR REPLACE FUNCTION update_fecha_ultima_actualiza()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -206,11 +245,21 @@ FOR EACH ROW
 EXECUTE FUNCTION update_fecha_ultima_actualiza();
 ```
 
+```sql
+-- Documentación
+COMMENT ON TABLE core_clientelaboratorio IS 'Tabla maestra de pacientes del laboratorio';
+COMMENT ON COLUMN core_clientelaboratorio.ClienteId IS 'DUI o documento de identidad del paciente';
+COMMENT ON COLUMN core_clientelaboratorio.fecha_ultima_actualiza IS 'Actualizada automáticamente por trigger';
+```
+
+
+
+---
 #### 5. core_ordenesexamenes
 **Propósito:** Tabla principal de órdenes de exámenes del laboratorio.
 
 ```sql
--- Script DDL: Crear tabla de órdenes de exámenes
+--Crear tabla de órdenes de exámenes
 CREATE TABLE core_ordenesexamenes (
     OrdenId VARCHAR(14) NOT NULL,
     OrdenClientePeso DOUBLE PRECISION,
@@ -273,143 +322,80 @@ CREATE TABLE core_ordenesexamenes (
     impuesto_retenido NUMERIC DEFAULT 0,
     CONSTRAINT pk_ordenesexamenes PRIMARY KEY (OrdenId)
 );
+```
 
--- Índices para consultas frecuentes
-CREATE INDEX idx_orden_fecha ON core_ordenesexamenes(OrdenFecha);
+```sql
+-- Índices simples esenciales
+CREATE INDEX idx_orden_fecha ON core_ordenesexamenes(OrdenFecha DESC);
 CREATE INDEX idx_orden_cliente ON core_ordenesexamenes(ClienteNumero);
-CREATE INDEX idx_orden_estatus ON core_ordenesexamenes(OrdenEstatus);
-CREATE INDEX idx_orden_centro ON core_ordenesexamenes(CentroId);
-CREATE INDEX idx_orden_fecha_resultado ON core_ordenesexamenes(OrdenFechaResultado);
+CREATE INDEX idx_orden_fecha_resultado ON core_ordenesexamenes(OrdenFechaResultado) 
+WHERE OrdenFechaResultado IS NOT NULL;
+```
 
--- Constraint para validar estatus
+```sql
+-- Índice compuesto para búsquedas comunes
+CREATE INDEX idx_orden_fecha_centro_estatus 
+ON core_ordenesexamenes(OrdenFecha DESC, CentroId, OrdenEstatus);
+```
+
+```sql
+-- Índices parciales para casos específicos
+CREATE INDEX idx_ordenes_activas 
+ON core_ordenesexamenes(OrdenFecha DESC, OrdenId) 
+WHERE OrdenEstatus IN ('REG', 'PRO');
+
+CREATE INDEX idx_ordenes_credito_pendiente 
+ON core_ordenesexamenes(ClienteNumero, OrdenFecha) 
+WHERE OrdenEsCredito = true AND OrdenEstatusCobro = 'P';
+```
+
+```sql
+-- Validación de estados
 ALTER TABLE core_ordenesexamenes
 ADD CONSTRAINT chk_orden_estatus 
 CHECK (OrdenEstatus IN ('REG', 'PRO', 'ENT', 'CAN', 'VAL'));
 
--- Foreign Keys
+-- Validación de cobro
+ALTER TABLE core_ordenesexamenes
+ADD CONSTRAINT chk_orden_estatus_cobro 
+CHECK (OrdenEstatusCobro IN ('P', 'C', 'A')); -- Pendiente, Cobrado, Anulado
+
+-- Validación de montos
+ALTER TABLE core_ordenesexamenes
+ADD CONSTRAINT chk_orden_montos 
+CHECK (
+    OrdenDescuento >= 0 AND 
+    OrdenImpuesto >= 0 AND 
+    OrdenSubTotal >= 0
+);
+```
+
+```sql
+-- FOREIGN KEYS con comportamiento específico
 ALTER TABLE core_ordenesexamenes
 ADD CONSTRAINT fk_orden_cliente 
 FOREIGN KEY (ClienteNumero) 
-REFERENCES core_clientelaboratorio(NumeroCliente);
+REFERENCES core_clientelaboratorio(NumeroCliente)
+ON DELETE RESTRICT; -- No permitir borrar cliente con órdenes
 
 ALTER TABLE core_ordenesexamenes
 ADD CONSTRAINT fk_orden_centro 
 FOREIGN KEY (CentroId) 
-REFERENCES core_centroservicio(CentroId);
-```
+REFERENCES core_centroservicio(CentroId)
+ON DELETE RESTRICT;
 
-
-
----
-## Scripts para Producción
-
-### 1. Script de Migración Segura
-
-```sql
--- Script: Migración segura con validaciones
-BEGIN;
-
--- Verificar que no existan las tablas
-DO $$
+-- Trigger para calcular total automáticamente
+CREATE OR REPLACE FUNCTION calculate_orden_total()
+RETURNS TRIGGER AS $$
 BEGIN
-    IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = 'bacteria_catalogo_antibioticos') THEN
-        RAISE EXCEPTION 'La tabla bacteria_catalogo_antibioticos ya existe';
-    END IF;
-END $$;
+    NEW.orden_total = NEW.OrdenSubTotal - NEW.OrdenDescuento + NEW.OrdenImpuesto - NEW.impuesto_retenido;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
 
--- Crear tablas aquí...
-
--- Validar integridad
-DO $$
-DECLARE
-    v_count INTEGER;
-BEGIN
-    SELECT COUNT(*) INTO v_count 
-    FROM information_schema.tables 
-    WHERE table_schema = 'public' 
-    AND table_name LIKE 'bacteria_%';
-    
-    IF v_count != 6 THEN
-        RAISE EXCEPTION 'No se crearon todas las tablas de bacteriología';
-    END IF;
-END $$;
-
-COMMIT;
-```
-
-### 2. Script de Respaldo Antes de Cambios
-
-```sql
--- Script: Crear respaldo de tablas antes de modificaciones
-CREATE SCHEMA IF NOT EXISTS backup_20250115;
-
--- Respaldar tabla antes de modificación
-CREATE TABLE backup_20250115.core_clientelaboratorio AS 
-SELECT * FROM core_clientelaboratorio;
-
--- Agregar timestamp al respaldo
-ALTER TABLE backup_20250115.core_clientelaboratorio 
-ADD COLUMN backup_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-```
-
-### 3. Script de Rollback
-
-```sql
--- Script: Rollback en caso de error
-BEGIN;
-
--- Restaurar desde backup
-TRUNCATE TABLE core_clientelaboratorio;
-INSERT INTO core_clientelaboratorio 
-SELECT * FROM backup_20250115.core_clientelaboratorio;
-
--- Verificar integridad
-DO $$
-DECLARE
-    v_count_original INTEGER;
-    v_count_restored INTEGER;
-BEGIN
-    SELECT COUNT(*) INTO v_count_original 
-    FROM backup_20250115.core_clientelaboratorio;
-    
-    SELECT COUNT(*) INTO v_count_restored 
-    FROM core_clientelaboratorio;
-    
-    IF v_count_original != v_count_restored THEN
-        RAISE EXCEPTION 'Error en restauración: cantidad de registros no coincide';
-    END IF;
-END $$;
-
-COMMIT;
-```
-
-
-
----
-## Scripts de Mantenimiento
-
-### Análisis de Tablas
-```sql
--- Actualizar estadísticas
-ANALYZE bacteria_catalogo_antibioticos;
-ANALYZE bacteria_catalogo_bacterias;
-ANALYZE bacteria_resultado_encabezado;
-
--- Reindexar tablas críticas
-REINDEX TABLE core_clientelaboratorio;
-REINDEX TABLE core_ordenesexamenes;
-```
-
-
-### Monitoreo de Espacio
-```sql
--- Ver tamaño de tablas
-SELECT 
-    schemaname,
-    tablename,
-    pg_size_pretty(pg_total_relation_size(schemaname||'.'||tablename)) AS size
-FROM pg_tables
-WHERE schemaname = 'public'
-ORDER BY pg_total_relation_size(schemaname||'.'||tablename) DESC
-LIMIT 20;
+CREATE TRIGGER trg_calculate_total
+BEFORE INSERT OR UPDATE OF OrdenSubTotal, OrdenDescuento, OrdenImpuesto, impuesto_retenido
+ON core_ordenesexamenes
+FOR EACH ROW
+EXECUTE FUNCTION calculate_orden_total();
 ```

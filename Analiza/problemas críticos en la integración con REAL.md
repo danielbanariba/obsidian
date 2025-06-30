@@ -1,19 +1,6 @@
 ## PROBLEMAS CRÍTICOS IDENTIFICADOS
 
-### 1. **INCOMPATIBILIDAD DE TIPOS DE DATOS**
-
-El JSON envía:
-```json
-"tubebarcode": "000103263997201" // String de 15 caracteres
-```
-
-Pero la tabla `bacteria_resultado_encabezado` tiene:
-```sql
-tubo_id: bigint //NO PUEDE almacenar el código completo
-```
-Aunque el código existe en `core_ordentubos.TuboCodigoBarra`, necesitas almacenar la referencia completa en la tabla de resultados para mantener trazabilidad.
-
-### 2. **DISEÑO DEFICIENTE DEL CIM**
+### 2. **DISEÑO DEFICIENTE DEL CIM (Punto mejora)** 
 
 Actualmente guardas todo concatenado:
 ```sql
@@ -33,13 +20,6 @@ El JSON ya viene estructurado correctamente:
 cmi_valor: DECIMAL(10,4) -- Para queries analíticos
 cmi_unidad: VARCHAR(10)  -- Para la unidad
 ```
-
-### 3. **INCONSISTENCIAS EN NOMENCLATURA**
-
-- JSON envía: `"BLA": true`
-- Tabla tiene: `blee: text`
-
-¿Son lo mismo? ¿Por qué uno es boolean y otro text? **Esto es confuso y propenso a errores**.
 
 ## Recomendaciones
 
@@ -66,3 +46,6 @@ RENAME COLUMN blee TO bla;
 |receptiondatetime|bacteria_resultado_encabezado|fecha_recepcion|TIMESTAMP||
 |microorganismid|bacteria_resultado_encabezado|organismo_seleccionado_id|INTEGER||
 |BLA|bacteria_resultado_encabezado|bla|BOOLEAN|Cambiar de TEXT|
+
+
+ordene tubo y ordenes pruebas
