@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analiza/Mapeo HL7.md",
+                "file": "Infraestructura/AWS/AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mapeo HL7"
+              "title": "AWS"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Analiza/Mapeo HL7.md",
+                "file": "Infraestructura/AWS/AWS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Mapeo HL7"
+              "title": "Enlaces entrantes de AWS"
             }
           },
           {
