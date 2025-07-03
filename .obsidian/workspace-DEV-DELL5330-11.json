@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ef7ee1008204b279",
+        "id": "a1245543efc8e4dc",
         "type": "tabs",
         "children": [
           {
-            "id": "791e3ebd1e63c04f",
+            "id": "6c8a3b84e6b38240",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analiza/Base de datos/Validación de Tablas BD.md",
+                "file": "Infraestructura/AWS/AWS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Validación de Tablas BD"
+              "title": "AWS"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Infraestructura/AWS/AWS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Enlaces entrantes de AWS"
             }
           },
           {
@@ -141,17 +142,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analiza/Base de datos/Validación de Tablas BD.md",
+                "file": "Linux/Comandos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Validación de Tablas BD"
+              "title": "Outline of Comandos"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -167,45 +167,44 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "791e3ebd1e63c04f",
+  "active": "6c8a3b84e6b38240",
   "lastOpenFiles": [
-    "Analiza/Base de datos/Mapeo HL7.md",
-    "Analiza/Base de datos/Validación de Tablas BD.md",
-    "Analiza/Base de datos",
-    "Analiza/API Cultivos/Contexto del proyecto.md",
-    "ChahtGPT/user-story.md",
-    "ChahtGPT/GuabaBIT/user-story.md",
-    "ChahtGPT/GuabaBIT/test-case-prompt.md",
-    "ChahtGPT/GuabaBIT/Documentar API.md",
-    "ChahtGPT/GuabaBIT/Documentacion Tecnica.md",
-    "ChahtGPT/GuabaBIT/BUG.md",
-    "ChahtGPT/GuabaBIT/API Testing.md",
-    "ChahtGPT/GuabaBIT/API Testing ApiDOG.md",
-    "ChahtGPT/GuabaBIT/API Testing ApiDOG 1.md",
-    "ChahtGPT/GuabaBIT/API Testing 2.md",
-    "ChahtGPT/GuabaBIT/API Testing 1.md",
-    "ChahtGPT/test-case-prompt.md",
-    "ChahtGPT/Daniel Banariba/Perfil Profesional.md",
-    "ChahtGPT/Documentar API.md",
-    "ChahtGPT/Documentacion Tecnica.md",
-    "ChahtGPT/Daniel Banariba/cv-adapter-prompt.md",
-    "ChahtGPT/Darle mas contexto.md",
-    "ChahtGPT/Daniel Banariba",
-    "ChahtGPT/BUG.md",
-    "ChahtGPT/API Testing ApiDOG 1.md",
-    "ChahtGPT/API Testing ApiDOG.md",
-    "ChahtGPT/API Testing 2.md",
-    "ChahtGPT/API Testing 1.md",
-    "ChahtGPT/API Testing.md",
-    "ChahtGPT/Analiza",
-    "ChahtGPT/GuabaBIT",
+    "Analiza/Mapeo HL7.md",
+    "Flutter/Flutter.md",
+    "Analiza/Documentación DDL Base de Datos CRMLAB_P03.md",
+    "Analiza/problemas críticos en la integración con REAL.md",
+    "Analiza/Documentacion.md",
+    "Sistemas Expertos/Portafolios que inspiran.md",
     "Sin nombre",
+    "Javascript/Librerias/Dynamoosejs.md",
     "Analiza",
+    "Flutter/Dart.md",
+    "Java.md",
+    "Python/FastAPI.md",
+    "Python/Python.md",
+    "Python/Reflex.md",
     "Pasted image 20250609093110.png",
     "Pasted image 20250609092717.png",
     "Flutter",
+    "Linux/Comandos.md",
+    "Linux/Visual Estudio Code.md",
+    "Linux/VIM.md",
+    "Linux/Kali.md",
+    "Linux/Github Action.md",
+    "Linux/Git.md",
+    "Infraestructura/Terraform/Terraform Comandos.md",
+    "Infraestructura/Terraform/Terraform.md",
+    "Javascript/NodeJS/NVM.md",
+    "Javascript/NodeJS/NodeJS.md",
+    "Javascript/NodeJS/Librerias.md",
+    "Javascript/NodeJS/Comandos.md",
+    "Javascript/Librerias/Redux.md",
+    "Ingles/Vocabulary.md",
     "Infraestructura/Terraform",
     "Bases de Datos/SQL",
-    "Testing"
+    "Testing",
+    "Javascript/Freenworks/Backend/nest-cheatsheet.pdf",
+    "Javascript/NodeJS",
+    "Platzi"
   ]
 }

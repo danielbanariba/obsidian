@@ -13,13 +13,14 @@ tags:
 
 ---
 ## Como funciona?
-Hasta donde voy entendiendo esto sirva para no tener un servidor, pero estara conectado con [[AWS]] y como gestor de bases de datos con [[DynamoDB]] y obvio como todo es de [[NodeJS]]
+Hasta donde voy entendiendo esto sirva para no tener un servidor, pero estara conectado con [[DevOps/AWS/AWS]] y como gestor de bases de datos con [[DynamoDB]]
 ![[Pasted image 20241107141632.png]]
 
 
 
 ---
 ## Comandos
+
 Instalar una versión en especifico
 ```shell
 npm install -g serverless@3.30.1

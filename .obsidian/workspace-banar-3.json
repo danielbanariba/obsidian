@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ef7ee1008204b279",
+        "id": "19d6203d9a28f438",
         "type": "tabs",
         "children": [
           {
-            "id": "791e3ebd1e63c04f",
+            "id": "4c59e7fb7a4b36be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analiza/Base de datos/Validación de Tablas BD.md",
+                "file": "Analiza/Scripts Cultivos Bacteriológicos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Validación de Tablas BD"
+              "title": "Scripts Cultivos Bacteriológicos"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorador de archivos"
+              "title": "Files"
             }
           },
           {
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Buscar"
+              "title": "Search"
             }
           },
           {
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Analiza/Scripts Cultivos Bacteriológicos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Scripts Cultivos Bacteriológicos"
             }
           },
           {
@@ -141,17 +142,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analiza/Base de datos/Validación de Tablas BD.md",
+                "file": "Linux/Comandos.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de Validación de Tablas BD"
+              "title": "Outline of Comandos"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -159,53 +159,61 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "791e3ebd1e63c04f",
+  "active": "b198ad2ee0534190",
   "lastOpenFiles": [
-    "Analiza/Base de datos/Mapeo HL7.md",
-    "Analiza/Base de datos/Validación de Tablas BD.md",
-    "Analiza/Base de datos",
-    "Analiza/API Cultivos/Contexto del proyecto.md",
-    "ChahtGPT/user-story.md",
-    "ChahtGPT/GuabaBIT/user-story.md",
-    "ChahtGPT/GuabaBIT/test-case-prompt.md",
-    "ChahtGPT/GuabaBIT/Documentar API.md",
-    "ChahtGPT/GuabaBIT/Documentacion Tecnica.md",
-    "ChahtGPT/GuabaBIT/BUG.md",
-    "ChahtGPT/GuabaBIT/API Testing.md",
-    "ChahtGPT/GuabaBIT/API Testing ApiDOG.md",
-    "ChahtGPT/GuabaBIT/API Testing ApiDOG 1.md",
-    "ChahtGPT/GuabaBIT/API Testing 2.md",
-    "ChahtGPT/GuabaBIT/API Testing 1.md",
-    "ChahtGPT/test-case-prompt.md",
-    "ChahtGPT/Daniel Banariba/Perfil Profesional.md",
-    "ChahtGPT/Documentar API.md",
-    "ChahtGPT/Documentacion Tecnica.md",
-    "ChahtGPT/Daniel Banariba/cv-adapter-prompt.md",
-    "ChahtGPT/Darle mas contexto.md",
-    "ChahtGPT/Daniel Banariba",
-    "ChahtGPT/BUG.md",
-    "ChahtGPT/API Testing ApiDOG 1.md",
-    "ChahtGPT/API Testing ApiDOG.md",
-    "ChahtGPT/API Testing 2.md",
-    "ChahtGPT/API Testing 1.md",
-    "ChahtGPT/API Testing.md",
-    "ChahtGPT/Analiza",
-    "ChahtGPT/GuabaBIT",
-    "Sin nombre",
+    "Analiza/API Cultivos",
+    "Comandos.md",
+    "Analiza/Scripts Cultivos Bacteriológicos.md",
     "Analiza",
-    "Pasted image 20250609093110.png",
-    "Pasted image 20250609092717.png",
+    "Windows/Powershell.md",
+    "Python/FastAPI.md",
+    "Python/Flask.md",
+    "DevOps/AWS/Services/CloudWatch.md",
+    "DevOps/AWS/Services/S3.md",
+    "DevOps/AWS/Services/Cognito.md",
+    "Flutter/Dark.md",
+    "img/Pasted image 20250528102931.png",
+    "img/Pasted image 20250528102903.png",
+    "img/Pasted image 20250528092043.png",
+    "img/Pasted image 20250528091958.png",
+    "img/Pasted image 20250528091943.png",
+    "img/Pasted image 20250528081306.png",
+    "img/Pasted image 20250528081239.png",
+    "img/Pasted image 20250527144949.png",
+    "img/Pasted image 20250526113322.png",
+    "img/icons-flask-x500w.png",
+    "Flutter/Comandos.md",
     "Flutter",
-    "Infraestructura/Terraform",
+    "DevOps/AWS/Services/IAM.md",
+    "DevOps/AWS/AWS.md",
+    "DevOps/Serverless.md",
+    "DevOps/AWS/Services.md",
+    "DevOps/Fundamentos.md",
+    "ChahtGPT/cv-adapter-prompt.md",
+    "DevOps/AWS/Alertas de facturacion.md",
+    "DevOps/AWS/Services",
+    "DevOps/AWS/Conceptos de AWS.md",
+    "DevOps/Azure/Azure Data Studio.md",
+    "DevOps/Kubernetes.md",
+    "DevOps/Docker.md",
+    "Bases de Datos/SQL/PostgreSQl.md",
+    "DevOps",
+    "Python/Django.md",
+    "Linux/Comandos.md",
+    "Linux/Visual Estudio Code.md",
+    "DevOps/Terraform",
     "Bases de Datos/SQL",
-    "Testing"
+    "Testing",
+    "Javascript/Freenworks/Backend/nest-cheatsheet.pdf",
+    "Javascript/NodeJS",
+    "Platzi"
   ]
 }
