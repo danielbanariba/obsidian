@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analiza/problemas críticos en la integración con REAL.md",
+                "file": "Analiza/Base de datos/Mapeo HL7.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "problemas críticos en la integración con REAL"
+              "title": "Mapeo HL7"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analiza/problemas críticos en la integración con REAL.md",
+                "file": "Analiza/Base de datos/Mapeo HL7.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de problemas críticos en la integración con REAL"
+              "title": "Esquema de Mapeo HL7"
             }
           }
         ],
@@ -169,20 +169,13 @@
   },
   "active": "791e3ebd1e63c04f",
   "lastOpenFiles": [
-    "Analiza/Documentación DDL Base de Datos CRMLAB_P03.md",
-    "Flutter/Flutter.md",
-    "Flutter/Dark.md",
-    "Flutter/Dart.md",
-    "Flutter/Comandos.md",
-    "Analiza/Base de datos/Validacion de estados en tablas.md",
-    "Analiza/API Cultivos/Requerimentos.md",
-    "Analiza/Base de datos/Mapeo HL7.md",
-    "Analiza/API Cultivos/Sin título.md",
-    "Sin nombre",
     "Analiza/Base de datos/Revision y validacion de APIs.md",
     "Analiza/API Cultivos/Contexto del proyecto.md",
+    "Analiza/Base de datos/Mapeo HL7.md",
+    "Analiza/Documentación DDL Base de Datos CRMLAB_P03.md",
     "Analiza/problemas críticos en la integración con REAL.md",
     "Analiza/Scripts Cultivos Bacteriológicos.md",
+    "Analiza/API Cultivos/Requerimentos.md",
     "Analiza/Base de datos/Validación de Tablas BD.md",
     "Analiza/Base de datos",
     "ChahtGPT/user-story.md",
@@ -197,9 +190,16 @@
     "ChahtGPT/GuabaBIT/API Testing 2.md",
     "ChahtGPT/GuabaBIT/API Testing 1.md",
     "ChahtGPT/test-case-prompt.md",
+    "ChahtGPT/Daniel Banariba/Perfil Profesional.md",
+    "ChahtGPT/Documentar API.md",
+    "ChahtGPT/Documentacion Tecnica.md",
+    "ChahtGPT/Daniel Banariba/cv-adapter-prompt.md",
+    "ChahtGPT/Darle mas contexto.md",
     "ChahtGPT/Daniel Banariba",
+    "ChahtGPT/BUG.md",
     "ChahtGPT/Analiza",
     "ChahtGPT/GuabaBIT",
+    "Sin nombre",
     "Analiza",
     "Pasted image 20250609093110.png",
     "Pasted image 20250609092717.png",

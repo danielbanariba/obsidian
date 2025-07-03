@@ -1,401 +1,488 @@
-## Estructura de Tablas
+# Scripts DDL - Integración REAL Bacteriología
 
-### Módulo de Bacteriología (6 tablas)
+## Orden de Ejecución
 
-#### 1. bacteria_catalogo_antibioticos
-Catálogo maestro de antibióticos utilizados en las pruebas de sensibilidad bacteriana.
-
-```sql
--- Crear tabla de catálogo de antibióticos
-CREATE TABLE bacteria_catalogo_antibioticos (
-    id INTEGER NOT NULL PRIMARY KEY,
-    antibiotico_nombre VARCHAR(100) NOT NULL,
-    codigo_loinc VARCHAR(10) NOT NULL,
-    activo BOOLEAN NOT NULL DEFAULT true
-);
-```
-
-```sql
--- Comentarios de tabla
-COMMENT ON TABLE bacteria_catalogo_antibioticos IS 'Catálogo de antibióticos para pruebas de sensibilidad bacteriana';
-COMMENT ON COLUMN bacteria_catalogo_antibioticos.codigo_loinc IS 'Código LOINC estándar internacional';
-```
-
-
-#### 2. bacteria_catalogo_bacterias
-Catálogo de bacterias identificables en el laboratorio
-
-```sql
--- Crear tabla de catálogo de bacterias
-CREATE TABLE bacteria_catalogo_bacterias (
-    id INTEGER NOT NULL PRIMARY KEY,
-    bacteria_nombre VARCHAR(100) NOT NULL,
-    codigo_loinc VARCHAR(10) NOT NULL,
-    activo BOOLEAN NOT NULL DEFAULT true
-);
-```
-
-```sql
--- Índice ÚNICO: Previene duplicados y mejora búsquedas por nombre
-CREATE UNIQUE INDEX idx_bacteria_bacterias_nombre 
-ON bacteria_catalogo_bacterias(bacteria_nombre);
-```
-
-```sql
--- Índice para código LOINC si se busca frecuentemente
-CREATE INDEX idx_bacteria_bacterias_loinc 
-ON bacteria_catalogo_bacterias(codigo_loinc);
-```
-
-```sql
--- Validación: El nombre no puede estar vacío o ser solo espacios
-ALTER TABLE bacteria_catalogo_bacterias 
-ADD CONSTRAINT chk_bacteria_nombre_no_vacio 
-CHECK (LENGTH(TRIM(bacteria_nombre)) > 0);
-```
-
-```sql
--- Documentación
-COMMENT ON TABLE bacteria_catalogo_bacterias 
-IS 'Catálogo maestro de bacterias identificables en cultivos';
-
-COMMENT ON COLUMN bacteria_catalogo_bacterias.bacteria_nombre 
-IS 'Nombre científico de la bacteria (debe ser único)';
-```
-
-
-#### 3. bacteria_resultado_encabezado
-Almacena los resultados principales de cultivos bacteriológicos.
-
-```sql
--- Tabla principal
-CREATE TABLE bacteria_resultado_encabezado (
-    id INTEGER NOT NULL DEFAULT nextval('bacteria_resultado_encabezado_id_seq'::regclass),
-    orden_numero TEXT,
-    examen_id TEXT,
-    tubo_id BIGINT,
-    prueba_id BIGINT,
-    fecha_recepcion TIMESTAMP WITHOUT TIME ZONE,
-    fecha_registro_resultado TIMESTAMP WITHOUT TIME ZONE,
-    fecha_entrega TIMESTAMP WITHOUT TIME ZONE,
-    organismo_seleccionado_id INTEGER,
-    origin_muestra_id INTEGER,
-    probabilidad_seleccion DOUBLE PRECISION,
-    bionumero TEXT,
-    horas_tiempo_analisis_identificacion DOUBLE PRECISION,
-    horas_tiempo_analisis_sensibilidad DOUBLE PRECISION,
-    conclusion TEXT,
-    usuario_registro TEXT,
-    usuario_validacion TEXT,
-    resultado_validado BOOLEAN DEFAULT false,
-    blee TEXT,
-    carbapenemasas TEXT,
-    enviado_telemedicina BOOLEAN DEFAULT false,
-    CONSTRAINT pk_bacteria_resultado_encabezado PRIMARY KEY (id)
-);
-```
-
-```sql
--- Secuencia (CACHE 1 para datos médicos críticos)
-CREATE SEQUENCE bacteria_resultado_encabezado_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-```
-
-```sql
--- Índices SOLO los necesarios
-CREATE INDEX idx_bacteria_resultado_orden ON bacteria_resultado_encabezado(orden_numero);
-CREATE INDEX idx_bacteria_resultado_fecha ON bacteria_resultado_encabezado(fecha_recepcion);
-```
-
-```sql
--- Índice parcial para resultados pendientes
-CREATE INDEX idx_bacteria_pendientes ON bacteria_resultado_encabezado(id, fecha_recepcion) 
-WHERE resultado_validado = false;
-```
-
-```sql
--- Foreign Keys con comportamiento definido
-ALTER TABLE bacteria_resultado_encabezado
-ADD CONSTRAINT fk_bacteria_resultado_organismo 
-FOREIGN KEY (organismo_seleccionado_id) 
-REFERENCES bacteria_catalogo_bacterias(id)
-ON DELETE RESTRICT;
-
-ALTER TABLE bacteria_resultado_encabezado
-ADD CONSTRAINT fk_bacteria_resultado_muestra 
-FOREIGN KEY (origin_muestra_id) 
-REFERENCES bacteria_catalogo_tipo_muestra(id)
-ON DELETE RESTRICT;
-```
-
-```sql
--- Documentación
-COMMENT ON TABLE bacteria_resultado_encabezado 
-IS 'Resultados de cultivos bacteriológicos y antibiogramas';
-
-COMMENT ON COLUMN bacteria_resultado_encabezado.blee 
-IS 'Beta-lactamasas de espectro extendido detectadas';
-
-COMMENT ON COLUMN bacteria_resultado_encabezado.carbapenemasas 
-IS 'Enzimas carbapenemasas detectadas (resistencia antibiótica)';
-```
-
+1. `01_crear_tabla_aux_examenes_real.sql`
+2. `02_modificar_bacteria_resultado_encabezado.sql`
+3. `03_crear_tabla_bacteria_resultado_organismos.sql`
+4. `04_crear_tabla_bacteria_mensajes_real.sql`
+5. `05_crear_indices_optimizacion.sql`
+6. `06_insertar_datos_iniciales.sql`
+7. `07_validaciones_finales.sql`
 
 ---
-### Módulo Core del Sistema
 
-#### 4. core_clientelaboratorio
-**Propósito:** Tabla principal de clientes/pacientes del laboratorio.
+## Script 01: aux_examenes_real
 
 ```sql
--- Tabla principal
-CREATE TABLE core_clientelaboratorio (
-    NumeroCliente INTEGER NOT NULL DEFAULT nextval('core_clienteslaboratorio_Numero_de_Cliente_seq'::regclass),
-    ClienteTipoId VARCHAR(1),
-    ClienteId VARCHAR(40),
-    ClientePrimerNombre VARCHAR(60) NOT NULL,
-    ClienteSegundoNombre VARCHAR(60),
-    ClientePrimerApellido VARCHAR(60) NOT NULL,
-    ClienteSegundoApellido VARCHAR(60),
-    ClienteFechaNace DATE,
-    ClienteGenero VARCHAR(1),
-    ClienteTipoSangre VARCHAR(3),
-    ClienteDireccion VARCHAR(200),
-    ClienteNRC VARCHAR(30),
-    ClienteNIT VARCHAR(100),
-    ClienteExento BOOLEAN NOT NULL DEFAULT false,
-    ClienteEmail VARCHAR(100),
-    ClienteClave VARCHAR(120),
-    ClienteCelular VARCHAR(30) NOT NULL,
-    ClienteTelFijo VARCHAR(30),
-    ClienteFechaUltimoAnalsis DATE,
-    ClienteActivo BOOLEAN NOT NULL DEFAULT true,
-    ClienteFechaVinculacion DATE NOT NULL DEFAULT CURRENT_DATE,
-    ClienteVinculadoDoctor BOOLEAN NOT NULL DEFAULT false,
-    ClienteDoctorVincula VARCHAR(20) NOT NULL DEFAULT '',
-    UsuarioCrea VARCHAR(30) NOT NULL,
-    ClienteEmailCreaEnviado BOOLEAN NOT NULL DEFAULT false,
-    LabId INTEGER,
-    ClienteDepto_id INTEGER,
-    ClienteMuni_id INTEGER,
-    PaisId INTEGER,
-    ClienteTutor_id INTEGER,
-    ClientePrimerIngreso BOOLEAN NOT NULL DEFAULT true,
-    ClienteDUIAtras TEXT,
-    ClienteDUIFrente TEXT,
-    cliente_email_validado BOOLEAN DEFAULT false,
-    cliente_exento_autorizacion VARCHAR(100),
-    cliente_exento_vencimiento DATE,
-    cliente_exento_observacion TEXT,
-    empleado_empresa BOOLEAN DEFAULT false,
-    empresa_id INTEGER,
-    cliente_departamento_codigo TEXT,
-    cliente_municipio_codigo TEXT,
-    cliente_actividad_economica TEXT,
-    fecha_ultima_actualiza DATE,
-    cliente_retiente BOOLEAN,
-    CONSTRAINT pk_clientelaboratorio PRIMARY KEY (NumeroCliente),
-    CONSTRAINT chk_cliente_genero CHECK (ClienteGenero IN ('M', 'F', 'O'))
+CREATE TABLE aux_examenes_real (
+    id SERIAL PRIMARY KEY,
+    examen_analiza_id VARCHAR(20) NOT NULL,
+    examen_real_codigo VARCHAR(50) NOT NULL,
+    examen_real_nombre VARCHAR(200) NOT NULL,
+    tipo_muestra_real INTEGER NOT NULL,
+    activo BOOLEAN DEFAULT TRUE,
+    fecha_mapeo TIMESTAMP DEFAULT NOW(),
+    usuario_mapeo VARCHAR(100) DEFAULT 'SISTEMA',
+    fecha_ultima_actualiza TIMESTAMP DEFAULT NOW(),
+    observaciones TEXT,
+    
+    CONSTRAINT fk_aux_examenes_analiza 
+        FOREIGN KEY (examen_analiza_id) 
+        REFERENCES core_examenes(ExamenId)
+        ON DELETE RESTRICT,
+    CONSTRAINT fk_aux_tipo_muestra 
+        FOREIGN KEY (tipo_muestra_real) 
+        REFERENCES bacteria_catalogo_tipo_muestra(id)
+        ON DELETE RESTRICT,
+    CONSTRAINT uk_aux_examenes_mapeo 
+        UNIQUE (examen_analiza_id, examen_real_codigo),
+    CONSTRAINT chk_examen_real_codigo_valido 
+        CHECK (LENGTH(TRIM(examen_real_codigo)) > 0),
+    CONSTRAINT chk_examen_real_nombre_valido 
+        CHECK (LENGTH(TRIM(examen_real_nombre)) > 0),
+    CONSTRAINT chk_tipo_muestra_valido 
+        CHECK (tipo_muestra_real BETWEEN 1 AND 4)
 );
 ```
 
 ```sql
--- Secuencia
-CREATE SEQUENCE core_clienteslaboratorio_Numero_de_Cliente_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+CREATE INDEX idx_aux_examenes_analiza_id ON aux_examenes_real(examen_analiza_id);
+CREATE INDEX idx_aux_examenes_real_codigo ON aux_examenes_real(examen_real_codigo);
+CREATE INDEX idx_aux_examenes_activo ON aux_examenes_real(activo) WHERE activo = TRUE;
 ```
 
 ```sql
--- SOLO índices realmente necesarios
-CREATE INDEX idx_cliente_email ON core_clientelaboratorio(ClienteEmail);
-CREATE INDEX idx_cliente_documento ON core_clientelaboratorio(ClienteId);
-CREATE INDEX idx_cliente_lab ON core_clientelaboratorio(LabId) WHERE LabId IS NOT NULL;
-```
-
-```sql
--- Índice compuesto para búsquedas comunes
-CREATE INDEX idx_cliente_nombres ON core_clientelaboratorio(
-    ClientePrimerApellido, 
-    ClienteSegundoApellido, 
-    ClientePrimerNombre
-);
-```
-
-```sql
--- Trigger de auditoría
-CREATE OR REPLACE FUNCTION update_fecha_ultima_actualiza()
+CREATE OR REPLACE FUNCTION update_aux_examenes_timestamp()
 RETURNS TRIGGER AS $$
 BEGIN
-    NEW.fecha_ultima_actualiza = CURRENT_DATE;
+    NEW.fecha_ultima_actualiza = NOW();
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_update_fecha_actualiza
-BEFORE UPDATE ON core_clientelaboratorio
-FOR EACH ROW
-EXECUTE FUNCTION update_fecha_ultima_actualiza();
+CREATE TRIGGER trg_aux_examenes_update_timestamp
+    BEFORE UPDATE ON aux_examenes_real
+    FOR EACH ROW
+    EXECUTE FUNCTION update_aux_examenes_timestamp();
 ```
 
 ```sql
--- Documentación
-COMMENT ON TABLE core_clientelaboratorio IS 'Tabla maestra de pacientes del laboratorio';
-COMMENT ON COLUMN core_clientelaboratorio.ClienteId IS 'DUI o documento de identidad del paciente';
-COMMENT ON COLUMN core_clientelaboratorio.fecha_ultima_actualiza IS 'Actualizada automáticamente por trigger';
+COMMENT ON TABLE aux_examenes_real IS 'Mapeo entre exámenes Analiza y códigos sistema REAL';
+COMMENT ON COLUMN aux_examenes_real.examen_analiza_id IS 'ID del examen en sistema Analiza';
+COMMENT ON COLUMN aux_examenes_real.examen_real_codigo IS 'Código del examen en sistema REAL';
+COMMENT ON COLUMN aux_examenes_real.tipo_muestra_real IS 'Tipo de muestra requerida por REAL (1-4)';
 ```
-
-
 
 ---
-#### 5. core_ordenesexamenes
-**Propósito:** Tabla principal de órdenes de exámenes del laboratorio.
+
+## Script 02: bacteria_resultado_encabezado
 
 ```sql
---Crear tabla de órdenes de exámenes
-CREATE TABLE core_ordenesexamenes (
-    OrdenId VARCHAR(14) NOT NULL,
-    OrdenClientePeso DOUBLE PRECISION,
-    OrdenClienteAltura DOUBLE PRECISION,
-    OrdenClientePresionSis DOUBLE PRECISION,
-    OrdenClientePresionDis DOUBLE PRECISION,
-    OrdenFecha DATE NOT NULL,
-    OrdenHora TIME WITHOUT TIME ZONE NOT NULL,
-    OrdenConvenio BOOLEAN NOT NULL DEFAULT false,
-    OrdenUsuarioCustodio VARCHAR(100) NOT NULL,
-    OrdenMoneda VARCHAR(4),
-    OrdenEstatus VARCHAR(3) NOT NULL DEFAULT 'REG',
-    OrdenImpresa BOOLEAN NOT NULL DEFAULT false,
-    OrdenEpocketMonto DOUBLE PRECISION NOT NULL DEFAULT 0,
-    OrdenEpocketPagada BOOLEAN NOT NULL DEFAULT false,
-    CentroId INTEGER,
-    ClienteNumero INTEGER,
-    DoctorId INTEGER,
-    OrdenDescuento DOUBLE PRECISION DEFAULT 0,
-    OrdenImpuesto DOUBLE PRECISION DEFAULT 0,
-    OrdenSubTotal DOUBLE PRECISION DEFAULT 0,
-    OrdenEnvioMail BOOLEAN NOT NULL DEFAULT false,
-    OrdenExternoTipoPago VARCHAR(1),
-    RecolectorID VARCHAR(20),
-    OrdenEnviaMail BOOLEAN NOT NULL DEFAULT true,
-    OrdenEnviaWhatsapp BOOLEAN NOT NULL DEFAULT true,
-    OrdenWhatsappEnviado BOOLEAN NOT NULL DEFAULT false,
-    OrdenCultivoMarcada BOOLEAN NOT NULL DEFAULT false,
-    OrdenPlataformaExterna BOOLEAN NOT NULL DEFAULT false,
-    DescuentoId INTEGER,
-    OrdenHoraRecibeAnalisis TIMESTAMP WITH TIME ZONE,
-    OrdenGPSLat DOUBLE PRECISION,
-    OrdenGPSLong DOUBLE PRECISION,
-    OrdenEnviaMailDoctor BOOLEAN NOT NULL DEFAULT false,
-    OrdenGenPlataformaExterna BOOLEAN NOT NULL DEFAULT false,
-    OrdenEsCredito BOOLEAN NOT NULL DEFAULT false,
-    OrdenGastoInsumo DOUBLE PRECISION DEFAULT 0,
-    OrdenGastoReactivo DOUBLE PRECISION DEFAULT 0,
-    OrdenRazonCancela TEXT,
-    OrdenEstatusCobro VARCHAR(1) NOT NULL DEFAULT 'P',
-    OrdenNumDocumento VARCHAR(20),
-    OrdenLugar VARCHAR(1),
-    OrdenAseguradora_id INTEGER,
-    OrdenConvenioEmp_id INTEGER,
-    OrdenPoliza_id INTEGER,
-    OrdenSecretaria_id INTEGER,
-    OrdenMuestraHistorial BOOLEAN NOT NULL DEFAULT false,
-    OrdenFechaResultado TIMESTAMP WITH TIME ZONE,
-    OrdenTipoDocumento VARCHAR(3),
-    orden_total NUMERIC,
-    orden_crm2 BOOLEAN,
-    resultado_ingles BOOLEAN DEFAULT false,
-    vlink TEXT,
-    vlink_creado TIMESTAMP WITHOUT TIME ZONE,
-    es_boleta_medica_analiza BOOLEAN DEFAULT false,
-    es_orden_contable BOOLEAN DEFAULT false,
-    es_orden_gobierno BOOLEAN DEFAULT false,
-    num_orden_telemedicina TEXT,
-    reenvios_telemedicina INTEGER DEFAULT 0,
-    impuesto_retenido NUMERIC DEFAULT 0,
-    CONSTRAINT pk_ordenesexamenes PRIMARY KEY (OrdenId)
-);
+ALTER TABLE bacteria_resultado_encabezado 
+ADD COLUMN IF NOT EXISTS equipo_vitek_id VARCHAR(50),
+ADD COLUMN IF NOT EXISTS real_session_id VARCHAR(100),
+ADD COLUMN IF NOT EXISTS astm_message_id VARCHAR(100),
+ADD COLUMN IF NOT EXISTS hl7_message_id VARCHAR(100),
+ADD COLUMN IF NOT EXISTS codigo_barra_muestra VARCHAR(15),
+ADD COLUMN IF NOT EXISTS metodo_identificacion VARCHAR(100),
+ADD COLUMN IF NOT EXISTS multiple_organismos BOOLEAN DEFAULT FALSE,
+ADD COLUMN IF NOT EXISTS organismo_principal_id INTEGER,
+ADD COLUMN IF NOT EXISTS organismos_secundarios JSONB,
+ADD COLUMN IF NOT EXISTS real_raw_data JSONB,
+ADD COLUMN IF NOT EXISTS estado_sincronizacion VARCHAR(20) DEFAULT 'PENDIENTE',
+ADD COLUMN IF NOT EXISTS fecha_envio_real TIMESTAMP,
+ADD COLUMN IF NOT EXISTS fecha_respuesta_real TIMESTAMP,
+ADD COLUMN IF NOT EXISTS error_real TEXT,
+ADD COLUMN IF NOT EXISTS version_real VARCHAR(20),
+ADD COLUMN IF NOT EXISTS operador_equipo VARCHAR(100),
+ADD COLUMN IF NOT EXISTS numero_corrida VARCHAR(50),
+ADD COLUMN IF NOT EXISTS control_calidad JSONB,
+ADD COLUMN IF NOT EXISTS comentarios_tecnicos TEXT,
+ADD COLUMN IF NOT EXISTS requiere_confirmacion BOOLEAN DEFAULT FALSE,
+ADD COLUMN IF NOT EXISTS confirmado_por VARCHAR(100),
+ADD COLUMN IF NOT EXISTS fecha_confirmacion TIMESTAMP,
+ADD COLUMN IF NOT EXISTS fecha_ultima_actualiza TIMESTAMP DEFAULT NOW(),
+ADD COLUMN IF NOT EXISTS telemedicina_enviado BOOLEAN DEFAULT FALSE,
+ADD COLUMN IF NOT EXISTS telemedicina_fecha_envio TIMESTAMP,
+ADD COLUMN IF NOT EXISTS telemedicina_response JSONB,
+ADD COLUMN IF NOT EXISTS telemedicina_error TEXT,
+ADD COLUMN IF NOT EXISTS telemedicina_reintentos INTEGER DEFAULT 0;
 ```
 
 ```sql
--- Índices simples esenciales
-CREATE INDEX idx_orden_fecha ON core_ordenesexamenes(OrdenFecha DESC);
-CREATE INDEX idx_orden_cliente ON core_ordenesexamenes(ClienteNumero);
-CREATE INDEX idx_orden_fecha_resultado ON core_ordenesexamenes(OrdenFechaResultado) 
-WHERE OrdenFechaResultado IS NOT NULL;
+ALTER TABLE bacteria_resultado_encabezado 
+ADD CONSTRAINT chk_estado_sincronizacion 
+    CHECK (estado_sincronizacion IN ('PENDIENTE', 'ENVIADO', 'CONFIRMADO', 'ERROR')),
+ADD CONSTRAINT chk_probabilidad_valida 
+    CHECK (probabilidad_seleccion >= 0 AND probabilidad_seleccion <= 100),
+ADD CONSTRAINT chk_codigo_barra_formato 
+    CHECK (LENGTH(codigo_barra_muestra) <= 15),
+ADD CONSTRAINT chk_blee_valores 
+    CHECK (blee IN ('POSITIVO', 'NEGATIVO') OR blee IS NULL),
+ADD CONSTRAINT chk_carbapenemasa_valores 
+    CHECK (carbapenemasas IN ('POSITIVO', 'NEGATIVO') OR carbapenemasas IS NULL);
 ```
 
 ```sql
--- Índice compuesto para búsquedas comunes
-CREATE INDEX idx_orden_fecha_centro_estatus 
-ON core_ordenesexamenes(OrdenFecha DESC, CentroId, OrdenEstatus);
+CREATE INDEX idx_bacteria_resultado_codigo_barra ON bacteria_resultado_encabezado(codigo_barra_muestra);
+CREATE INDEX idx_bacteria_resultado_estado_sync ON bacteria_resultado_encabezado(estado_sincronizacion);
+CREATE INDEX idx_bacteria_resultado_real_session ON bacteria_resultado_encabezado(real_session_id);
+CREATE INDEX idx_bacteria_resultado_equipo_vitek ON bacteria_resultado_encabezado(equipo_vitek_id);
 ```
 
 ```sql
--- Índices parciales para casos específicos
-CREATE INDEX idx_ordenes_activas 
-ON core_ordenesexamenes(OrdenFecha DESC, OrdenId) 
-WHERE OrdenEstatus IN ('REG', 'PRO');
-
-CREATE INDEX idx_ordenes_credito_pendiente 
-ON core_ordenesexamenes(ClienteNumero, OrdenFecha) 
-WHERE OrdenEsCredito = true AND OrdenEstatusCobro = 'P';
-```
-
-```sql
--- Validación de estados
-ALTER TABLE core_ordenesexamenes
-ADD CONSTRAINT chk_orden_estatus 
-CHECK (OrdenEstatus IN ('REG', 'PRO', 'ENT', 'CAN', 'VAL'));
-
--- Validación de cobro
-ALTER TABLE core_ordenesexamenes
-ADD CONSTRAINT chk_orden_estatus_cobro 
-CHECK (OrdenEstatusCobro IN ('P', 'C', 'A')); -- Pendiente, Cobrado, Anulado
-
--- Validación de montos
-ALTER TABLE core_ordenesexamenes
-ADD CONSTRAINT chk_orden_montos 
-CHECK (
-    OrdenDescuento >= 0 AND 
-    OrdenImpuesto >= 0 AND 
-    OrdenSubTotal >= 0
-);
-```
-
-```sql
--- FOREIGN KEYS con comportamiento específico
-ALTER TABLE core_ordenesexamenes
-ADD CONSTRAINT fk_orden_cliente 
-FOREIGN KEY (ClienteNumero) 
-REFERENCES core_clientelaboratorio(NumeroCliente)
-ON DELETE RESTRICT; -- No permitir borrar cliente con órdenes
-
-ALTER TABLE core_ordenesexamenes
-ADD CONSTRAINT fk_orden_centro 
-FOREIGN KEY (CentroId) 
-REFERENCES core_centroservicio(CentroId)
-ON DELETE RESTRICT;
-
--- Trigger para calcular total automáticamente
-CREATE OR REPLACE FUNCTION calculate_orden_total()
+CREATE OR REPLACE FUNCTION update_bacteria_resultado_timestamp()
 RETURNS TRIGGER AS $$
 BEGIN
-    NEW.orden_total = NEW.OrdenSubTotal - NEW.OrdenDescuento + NEW.OrdenImpuesto - NEW.impuesto_retenido;
+    NEW.fecha_ultima_actualiza = NOW();
+    
+    IF NEW.resultado_validado = TRUE AND OLD.resultado_validado = FALSE THEN
+        NEW.fecha_confirmacion = NOW();
+        NEW.confirmado_por = COALESCE(NEW.usuario_validacion, NEW.usuario_registro);
+    END IF;
+    
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_calculate_total
-BEFORE INSERT OR UPDATE OF OrdenSubTotal, OrdenDescuento, OrdenImpuesto, impuesto_retenido
-ON core_ordenesexamenes
-FOR EACH ROW
-EXECUTE FUNCTION calculate_orden_total();
+CREATE TRIGGER trg_bacteria_resultado_update
+    BEFORE UPDATE ON bacteria_resultado_encabezado
+    FOR EACH ROW
+    EXECUTE FUNCTION update_bacteria_resultado_timestamp();
+```
+
+```sql
+CREATE OR REPLACE FUNCTION update_tubo_prueba_finalizada()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.resultado_validado = TRUE AND NEW.tubo_id IS NOT NULL AND NEW.prueba_id IS NOT NULL THEN
+        UPDATE core_tuboprueba 
+        SET PruebaFinalizada = TRUE,
+            PruebaFechaHoraEnviaDato = NOW()
+        WHERE TuboId = NEW.tubo_id 
+        AND PruebaId = NEW.prueba_id;
+    END IF;
+    
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_actualizar_tubo_prueba
+    AFTER UPDATE OF resultado_validado ON bacteria_resultado_encabezado
+    FOR EACH ROW
+    WHEN (NEW.resultado_validado = TRUE)
+    EXECUTE FUNCTION update_tubo_prueba_finalizada();
+```
+
+```sql
+COMMENT ON COLUMN bacteria_resultado_encabezado.equipo_vitek_id IS 'ID del equipo VITEK que procesó la muestra';
+COMMENT ON COLUMN bacteria_resultado_encabezado.real_session_id IS 'ID de sesión en sistema REAL';
+COMMENT ON COLUMN bacteria_resultado_encabezado.codigo_barra_muestra IS 'Código de barras de la muestra (15 caracteres)';
+COMMENT ON COLUMN bacteria_resultado_encabezado.estado_sincronizacion IS 'Estado de sincronización con REAL';
+```
+
+---
+
+## Script 03: bacteria_resultado_organismos
+
+```sql
+CREATE TABLE bacteria_resultado_organismos (
+    id SERIAL PRIMARY KEY,
+    encabezado_id INTEGER NOT NULL,
+    organismo_id INTEGER NOT NULL,
+    probabilidad_identificacion DOUBLE PRECISION,
+    es_organismo_principal BOOLEAN DEFAULT FALSE,
+    bionumero VARCHAR(50),
+    metodo_identificacion VARCHAR(100),
+    tiempo_identificacion_horas DOUBLE PRECISION,
+    comentarios_identificacion TEXT,
+    fecha_identificacion TIMESTAMP DEFAULT NOW(),
+    activo BOOLEAN DEFAULT TRUE,
+    
+    CONSTRAINT fk_bacteria_organismos_encabezado 
+        FOREIGN KEY (encabezado_id) 
+        REFERENCES bacteria_resultado_encabezado(id) 
+        ON DELETE CASCADE,
+    CONSTRAINT fk_bacteria_organismos_bacteria 
+        FOREIGN KEY (organismo_id) 
+        REFERENCES bacteria_catalogo_bacterias(id)
+        ON DELETE RESTRICT,
+    CONSTRAINT chk_probabilidad_rango 
+        CHECK (probabilidad_identificacion >= 0 AND probabilidad_identificacion <= 100)
+);
+```
+
+```sql
+CREATE INDEX idx_bacteria_organismos_encabezado ON bacteria_resultado_organismos(encabezado_id);
+CREATE INDEX idx_bacteria_organismos_bacteria ON bacteria_resultado_organismos(organismo_id);
+CREATE INDEX idx_bacteria_organismos_principal ON bacteria_resultado_organismos(es_organismo_principal);
+CREATE INDEX idx_bacteria_organismos_activo ON bacteria_resultado_organismos(activo);
+
+CREATE UNIQUE INDEX uk_bacteria_organismos_unico 
+    ON bacteria_resultado_organismos(encabezado_id, organismo_id) 
+    WHERE activo = TRUE;
+```
+
+```sql
+COMMENT ON TABLE bacteria_resultado_organismos IS 'Múltiples microorganismos identificados en un mismo cultivo';
+COMMENT ON COLUMN bacteria_resultado_organismos.probabilidad_identificacion IS 'Porcentaje de confianza en la identificación (0-100)';
+COMMENT ON COLUMN bacteria_resultado_organismos.bionumero IS 'Código bioquímico de identificación del VITEK';
+```
+
+---
+
+## Script 04: bacteria_mensajes_real
+
+```sql
+CREATE TABLE bacteria_mensajes_real (
+    id SERIAL PRIMARY KEY,
+    orden_numero VARCHAR(20) NOT NULL,
+    tubo_codigo_barra VARCHAR(15),
+    tipo_mensaje VARCHAR(10) NOT NULL,
+    direccion VARCHAR(10) NOT NULL,
+    protocolo VARCHAR(10) NOT NULL DEFAULT 'ASTM',
+    mensaje_completo TEXT NOT NULL,
+    mensaje_procesado JSONB,
+    timestamp_mensaje TIMESTAMP DEFAULT NOW(),
+    timestamp_procesamiento TIMESTAMP,
+    estado_procesamiento VARCHAR(20) DEFAULT 'PENDIENTE',
+    error_procesamiento TEXT,
+    error_codigo VARCHAR(20),
+    reintentos INTEGER DEFAULT 0,
+    max_reintentos INTEGER DEFAULT 3,
+    procesado_por VARCHAR(100),
+    equipo_origen VARCHAR(50),
+    session_id VARCHAR(100),
+    fecha_ultima_actualiza TIMESTAMP DEFAULT NOW(),
+    
+    CONSTRAINT chk_tipo_mensaje_valido 
+        CHECK (tipo_mensaje IN ('REQUEST', 'RESPONSE', 'ACK', 'NACK')),
+    CONSTRAINT chk_direccion_valida 
+        CHECK (direccion IN ('ENVIO', 'RECIBO')),
+    CONSTRAINT chk_protocolo_valido 
+        CHECK (protocolo IN ('ASTM', 'HL7')),
+    CONSTRAINT chk_estado_procesamiento_valido 
+        CHECK (estado_procesamiento IN ('PENDIENTE', 'PROCESADO', 'ERROR', 'DESCARTADO')),
+    CONSTRAINT chk_reintentos_validos 
+        CHECK (reintentos >= 0 AND reintentos <= max_reintentos),
+    CONSTRAINT chk_mensaje_no_vacio 
+        CHECK (LENGTH(TRIM(mensaje_completo)) > 0)
+);
+```
+
+```sql
+CREATE INDEX idx_bacteria_mensajes_orden ON bacteria_mensajes_real(orden_numero);
+CREATE INDEX idx_bacteria_mensajes_tubo ON bacteria_mensajes_real(tubo_codigo_barra);
+CREATE INDEX idx_bacteria_mensajes_timestamp ON bacteria_mensajes_real(timestamp_mensaje);
+CREATE INDEX idx_bacteria_mensajes_estado ON bacteria_mensajes_real(estado_procesamiento);
+CREATE INDEX idx_bacteria_mensajes_session ON bacteria_mensajes_real(session_id);
+```
+
+```sql
+CREATE OR REPLACE FUNCTION update_mensaje_timestamp()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.fecha_ultima_actualiza = NOW();
+    
+    IF NEW.estado_procesamiento = 'PROCESADO' AND OLD.estado_procesamiento != 'PROCESADO' THEN
+        NEW.timestamp_procesamiento = NOW();
+    END IF;
+    
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_mensaje_update_timestamp
+    BEFORE UPDATE ON bacteria_mensajes_real
+    FOR EACH ROW
+    EXECUTE FUNCTION update_mensaje_timestamp();
+```
+
+```sql
+CREATE OR REPLACE FUNCTION incrementar_reintento_mensaje()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.estado_procesamiento = 'ERROR' AND NEW.reintentos < NEW.max_reintentos THEN
+        NEW.reintentos = NEW.reintentos + 1;
+        NEW.estado_procesamiento = 'PENDIENTE';
+    END IF;
+    
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_auto_retry_mensaje
+    BEFORE UPDATE OF estado_procesamiento ON bacteria_mensajes_real
+    FOR EACH ROW
+    WHEN (NEW.estado_procesamiento = 'ERROR')
+    EXECUTE FUNCTION incrementar_reintento_mensaje();
+```
+
+```sql
+COMMENT ON TABLE bacteria_mensajes_real IS 'Trazabilidad de mensajes ASTM/HL7 con sistema REAL';
+COMMENT ON COLUMN bacteria_mensajes_real.direccion IS 'ENVIO (hacia REAL) o RECIBO (desde REAL)';
+COMMENT ON COLUMN bacteria_mensajes_real.mensaje_procesado IS 'Mensaje parseado en formato JSON';
+```
+
+---
+
+## Script 05: Índices Optimización
+
+```sql
+CREATE INDEX idx_bacteria_resultado_orden_fecha_compuesto
+    ON bacteria_resultado_encabezado(orden_numero, fecha_registro_resultado DESC, resultado_validado);
+
+CREATE INDEX idx_bacteria_resultado_real_session_estado
+    ON bacteria_resultado_encabezado(real_session_id, estado_sincronizacion)
+    WHERE real_session_id IS NOT NULL;
+
+CREATE INDEX idx_bacteria_pendientes_gobierno
+    ON bacteria_resultado_encabezado(fecha_registro_resultado DESC, orden_numero)
+    WHERE resultado_validado = TRUE 
+    AND enviado_telemedicina = FALSE;
+
+CREATE INDEX idx_bacteria_real_errores
+    ON bacteria_resultado_encabezado(fecha_registro_resultado DESC, error_real)
+    WHERE estado_sincronizacion = 'ERROR';
+
+CREATE INDEX idx_mensajes_orden_timestamp
+    ON bacteria_mensajes_real(orden_numero, timestamp_mensaje DESC);
+
+CREATE INDEX idx_mensajes_pendientes_retry
+    ON bacteria_mensajes_real(reintentos, timestamp_mensaje ASC)
+    WHERE estado_procesamiento = 'PENDIENTE' AND reintentos < max_reintentos;
+
+CREATE UNIQUE INDEX uk_bacteria_session_message
+    ON bacteria_resultado_encabezado(real_session_id, astm_message_id)
+    WHERE real_session_id IS NOT NULL AND astm_message_id IS NOT NULL;
+```
+
+```sql
+ANALYZE bacteria_resultado_encabezado;
+ANALYZE bacteria_resultado_detalle;
+ANALYZE aux_examenes_real;
+ANALYZE bacteria_resultado_organismos;
+ANALYZE bacteria_mensajes_real;
+```
+
+---
+
+## Script 06: Datos Iniciales
+
+```sql
+INSERT INTO aux_examenes_real (examen_analiza_id, examen_real_codigo, examen_real_nombre, tipo_muestra_real, observaciones) VALUES
+('UROCU001', 'UROCULTURE', 'CULTIVO DE ORINA', 3, 'Mapeo urocultivo estándar'),
+('HEMCU001', 'BLOODCULTURE', 'CULTIVO DE SANGRE', 2, 'Mapeo hemocultivo estándar'),
+('COPCU001', 'STOOLCULTURE', 'CULTIVO DE HECES', 1, 'Mapeo coprocultivo estándar'),
+('SECCU001', 'WOUNDCULTURE', 'CULTIVO DE HERIDA', 4, 'Mapeo cultivo de secreciones')
+ON CONFLICT (examen_analiza_id, examen_real_codigo) DO NOTHING;
+```
+
+```sql
+INSERT INTO bacteria_tipo_resultado (codigo, nombre) VALUES
+('POSITIVO', 'Cultivo Positivo - Microorganismo Identificado'),
+('NEGATIVO', 'Cultivo Negativo - Sin Crecimiento'),
+('CONTAMINADO', 'Muestra Contaminada'),
+('INSUFICIENTE', 'Muestra Insuficiente'),
+('PENDIENTE', 'Análisis en Proceso')
+ON CONFLICT (codigo) DO NOTHING;
+```
+
+```sql
+SELECT setval('bacteria_resultado_encabezado_id_seq', 
+    COALESCE((SELECT MAX(id) FROM bacteria_resultado_encabezado), 1));
+    
+SELECT setval('bacteria_resultado_detalle_id_seq', 
+    COALESCE((SELECT MAX(id) FROM bacteria_resultado_detalle), 1));
+```
+
+---
+
+## Script 07: Validaciones Finales
+
+```sql
+CREATE OR REPLACE FUNCTION validar_integracion_real()
+RETURNS TABLE(
+    componente TEXT,
+    estado TEXT,
+    detalles TEXT
+) AS $$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        'aux_examenes_real'::TEXT,
+        CASE WHEN EXISTS (SELECT 1 FROM aux_examenes_real WHERE activo = TRUE)
+             THEN 'OK'::TEXT 
+             ELSE 'ERROR'::TEXT 
+        END,
+        'Mapeos activos: ' || COALESCE((SELECT COUNT(*)::TEXT FROM aux_examenes_real WHERE activo = TRUE), '0');
+    
+    RETURN QUERY
+    SELECT 
+        'campos_real_encabezado'::TEXT,
+        CASE WHEN EXISTS (
+            SELECT 1 FROM information_schema.columns 
+            WHERE table_name = 'bacteria_resultado_encabezado' 
+            AND column_name = 'real_session_id'
+        ) THEN 'OK'::TEXT ELSE 'ERROR'::TEXT END,
+        'Campos REAL agregados correctamente';
+    
+    RETURN QUERY
+    SELECT 
+        'triggers_activos'::TEXT,
+        CASE WHEN EXISTS (
+            SELECT 1 FROM information_schema.triggers 
+            WHERE trigger_name LIKE '%bacteria%' 
+            OR trigger_name LIKE '%aux_examenes%'
+        ) THEN 'OK'::TEXT ELSE 'WARNING'::TEXT END,
+        'Triggers de automatización verificados';
+END;
+$$ LANGUAGE plpgsql;
+```
+
+```sql
+SELECT * FROM validar_integracion_real();
+```
+
+---
+
+## Script Rollback
+
+```sql
+DROP TABLE IF EXISTS bacteria_mensajes_real CASCADE;
+DROP TABLE IF EXISTS bacteria_resultado_organismos CASCADE;
+DROP TABLE IF EXISTS aux_examenes_real CASCADE;
+
+ALTER TABLE bacteria_resultado_encabezado 
+DROP COLUMN IF EXISTS equipo_vitek_id,
+DROP COLUMN IF EXISTS real_session_id,
+DROP COLUMN IF EXISTS astm_message_id,
+DROP COLUMN IF EXISTS hl7_message_id,
+DROP COLUMN IF EXISTS codigo_barra_muestra,
+DROP COLUMN IF EXISTS metodo_identificacion,
+DROP COLUMN IF EXISTS multiple_organismos,
+DROP COLUMN IF EXISTS organismo_principal_id,
+DROP COLUMN IF EXISTS organismos_secundarios,
+DROP COLUMN IF EXISTS real_raw_data,
+DROP COLUMN IF EXISTS estado_sincronizacion,
+DROP COLUMN IF EXISTS fecha_envio_real,
+DROP COLUMN IF EXISTS fecha_respuesta_real,
+DROP COLUMN IF EXISTS error_real,
+DROP COLUMN IF EXISTS version_real,
+DROP COLUMN IF EXISTS operador_equipo,
+DROP COLUMN IF EXISTS numero_corrida,
+DROP COLUMN IF EXISTS control_calidad,
+DROP COLUMN IF EXISTS comentarios_tecnicos,
+DROP COLUMN IF EXISTS requiere_confirmacion,
+DROP COLUMN IF EXISTS confirmado_por,
+DROP COLUMN IF EXISTS fecha_confirmacion,
+DROP COLUMN IF EXISTS fecha_ultima_actualiza,
+DROP COLUMN IF EXISTS telemedicina_enviado,
+DROP COLUMN IF EXISTS telemedicina_fecha_envio,
+DROP COLUMN IF EXISTS telemedicina_response,
+DROP COLUMN IF EXISTS telemedicina_error,
+DROP COLUMN IF EXISTS telemedicina_reintentos;
+
+SELECT 'ROLLBACK COMPLETADO' as status;
 ```
