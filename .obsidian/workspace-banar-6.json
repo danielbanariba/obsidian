@@ -4,63 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "10551cb7b6847801",
+        "id": "446adb59d5a6e935",
         "type": "tabs",
         "children": [
           {
-            "id": "5f8f5ddcfee28d41",
+            "id": "c72a0602091d6059",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript/Librerias/React.md",
+                "file": "Comandos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React"
-            }
-          },
-          {
-            "id": "81c8b3aae9398bed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/Vite.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vite"
-            }
-          },
-          {
-            "id": "7944a8422d82d761",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/Vite.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vite"
-            }
-          },
-          {
-            "id": "91854835d712ecdb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Javascript/Frontend/NEXT.js.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NEXT.js"
+              "title": "Comandos"
             }
           }
         ]
@@ -95,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"Analiza/\" ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -120,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6eb8f24e261a9895",
@@ -137,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/FastAPI.md",
+                "file": "Comandos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de FastAPI"
+              "title": "Enlaces entrantes de Comandos"
             }
           },
           {
@@ -198,8 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,52 +168,53 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5f8f5ddcfee28d41",
+  "active": "c72a0602091d6059",
   "lastOpenFiles": [
-    "Javascript/Vite.md",
-    "Javascript/Librerias/React.md",
-    "Javascript/Frontend/Angular.md",
-    "Javascript/Frontend/NEXT.js.md",
-    "Javascript/Frontend/AstroJS.md",
-    "Analiza/proxy/MANUAL_CONFIGURACION_FIREFOX.md",
-    "Pasted image 20251019163403.png",
-    "Pasted image 20251014225425.png",
-    "Pasted image 20251014225253.png",
-    "Analiza/proxy/DOCUMENTACION_PROXY_VPN.md",
-    "Analiza/proxy/fireforx.png",
-    "Analiza/proxy/diagrama.png",
-    "Analiza/proxy/CLAUDE.md",
-    "Analiza/proxy/proxy.ovpn;C",
-    "Analiza/proxy/whitelist.txt",
-    "Analiza/proxy/squid.conf",
-    "Analiza/proxy/proxy.ovpn",
-    "Analiza/proxy/monitor.sh",
-    "Analiza/proxy/Dockerfile",
-    "Analiza/proxy/deploy.sh",
-    "Analiza/proxy",
-    "Python/FastAPI.md",
+    "DevOps/Docker.md",
+    "Analiza/Tuvet/Logica de Negocio.md",
+    "Pasted image 20250923145425.png",
+    "Pasted image 20250923145401.png",
+    "Pasted image 20250923145336.png",
     "Flutter/Comandos.md",
-    "Javascript/Frontend/TailwindCSS.md",
-    "Linux/Git.md",
-    "Flutter/Flutter.md",
-    "Flutter/Dart.md",
+    "01. IA/Claude Code/Comandos.md",
+    "01. IA/Claude Code/Aprender.md",
+    "Pasted image 20250609092717.png",
+    "01. IA/n8n/Sin título.md",
+    "Analiza/Tuvet",
+    "Pasted image 20250828145746.png",
+    "01. IA/Claude Code",
+    "Renta.md",
+    "01. IA/n8n",
     "Pasted image 20250730133352.png",
     "Pasted image 20250730133315.png",
     "Pasted image 20250730133304.png",
     "Pasted image 20250730133206.png",
     "Pasted image 20250730133147.png",
     "Analiza/API Cultivos/Sin título.md",
-    "Renta.md",
     "Analiza/API Cultivos/Requerimentos.md",
     "Analiza/Base de datos/Validacion de estados en tablas.md",
     "Analiza/API Cultivos/Contexto del proyecto.md",
-    "ChahtGPT/Analiza/Contexto del proyecto completo.md",
-    "ChahtGPT/Analiza",
+    "01. IA/Analiza/Contexto del proyecto completo.md",
+    "01. IA/Analiza",
     "Analiza/Base de datos/Validación de Tablas BD.md",
     "Analiza/Base de datos/Revision y validacion de APIs.md",
     "Analiza/Base de datos/Mapeo HL7.md",
     "Analiza/Base de datos",
-    "ChahtGPT/Daniel Banariba/cv-adapter-prompt.md",
-    "ChahtGPT/GuabaBIT/test-case-prompt.md"
+    "01. IA/Daniel Banariba/cv-adapter-prompt.md",
+    "01. IA/GuabaBIT/test-case-prompt.md",
+    "01. IA/GuabaBIT/user-story.md",
+    "01. IA/GuabaBIT/BUG.md",
+    "01. IA/GuabaBIT/Documentar API.md",
+    "01. IA/GuabaBIT/Documentacion Tecnica.md",
+    "01. IA/GuabaBIT/API Testing ApiDOG.md",
+    "01. IA/GuabaBIT/API Testing.md",
+    "01. IA/GuabaBIT/API Testing ApiDOG 1.md",
+    "01. IA/GuabaBIT/API Testing 2.md",
+    "01. IA/GuabaBIT/API Testing 1.md",
+    "01. IA/GuabaBIT",
+    "01. IA/Daniel Banariba",
+    "Sin nombre",
+    "Analiza",
+    "Flutter"
   ]
 }

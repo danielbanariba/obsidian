@@ -22,7 +22,7 @@ Levantar el servidor
 fastapi dev
 ```
 
-
+  
 
 ---
 ## URL
@@ -73,3 +73,8 @@ pip install sqlmodel
 ```
 
 
+
+---
+## Reglas importantes para el LLM
+
+1) Siempre tipar el tipo de variable, por el ejemplo 

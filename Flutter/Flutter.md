@@ -21,7 +21,9 @@ https://docs.flutter.dev/get-started/install/windows/mobile
 flutter doctor
 ```
 
-
+```shell
+flutter build apk --release
+```
 
 ---
 ## Iniciar un nuevo proyecto

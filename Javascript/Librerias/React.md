@@ -12,16 +12,10 @@ Doc: https://legacy.reactjs.org/docs/state-and-lifecycle.html
 ---
 ## Comandos
 
-Para poder empezar a usar REACT, necesitaremos tener instalado [[NodeJS]] y en la consola de Comandos escribimos lo siguiente para crear un proyecto en react.
+Vamos a crear un proyecto usando [[Vite]] ya que es mas rapido y menos pesado 
 ```shell
-npx create-react-app <<"Nombre de la aplicacion">>
+npm create vite@5.2.3
 ```
-
-Levantar la aplicacion
-```shell
-npm start
-```
-
 
 
 ---
@@ -157,5 +151,30 @@ const mockedUser = {
 
 
 ---
-## [[Testing]]
-Para hacer las pruebas vamos a usar la libreria de [Testing Libray](https://testing-library.com/docs/)
+
+
+
+
+---
+## 
+
+## Nota importantes:
+
+NUNCA USAR **CreateReactApp**
+Las reglas las tenemos que configurar en **eslint.config.js**
+
+---
+## Preguntas de entrevistas
+
+  
+Porque mi aplicacion aparece el "StrictMode"?
+```jsx
+createRoot(document.getElementById('root').render)(
+  <StrictMode>
+    <App/>		
+  </StrictMode>
+)
+```
+
+Para saber si existen problemas potenciales en la aplicacion, primero lo crea, despues lo destruye y lo vuelve a crear, por eso cuando cnsumimos una api nos aparece que la llamamos dos veces.
+
